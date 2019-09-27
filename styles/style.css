@@ -8,7 +8,7 @@ html {
 body {
   display: block;
   width: 80%;
-  margin: 1% auto;
+  margin: 0 auto;
 }
 
 article {
@@ -51,7 +51,7 @@ h2 {
 
 #navigation li {
   float: left;
-  margin: auto 20px 0px 20px;
+  margin: auto 20px;
 }
 
 #navigation a {
@@ -91,5 +91,44 @@ p, aside {
 /* Contact me section */
 
 #about_me {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  border: none;
+}
+
+#description {
+  display: inline-block;
+}
+
+.paragraphs {
+  display: inline;
+  float: left;
+  width: 60%;
+}
+
+#description img {
+  float: right;
+  width: 30%;
+  height: 30%;
+}
+
+#contact {
+  margin-top: 50px;
+  background-color: #BBADD5;
+  padding: 15px;
+  text-align: center;
+}
+
+address {
+  display: inline-block;
+  margin: auto;
+}
+
+#contact address img {
+  width: 4%;
+  height: 4%;
+  margin: auto 20px;
+}
+
+#contact address img:hover {
+  margin: auto 25px;
 }
