@@ -1,0 +1,86 @@
+/* General style */
+
+html {
+  font-size: 26px;
+  font-family: "Fira Mono";
+}
+
+body {
+  display: block;
+  width: 80%;
+  margin: 1% auto;
+}
+
+article {
+  margin-bottom: 90px;
+}
+
+header {
+  font-size: 120%;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 110%;
+  font-weight: normal;
+  margin: 0 0 5px 0;
+}
+
+h2 {
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0 0 5px 0;
+}
+
+/* Navigation bar */
+#navigation {
+  display: block;
+  border-bottom: 1px solid #BBADD5;
+  margin: auto;
+  text-align: center;
+  padding: 1%;
+}
+
+#navigation ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+}
+
+#navigation li {
+  float: left;
+  margin: auto 20px 0px 20px;
+}
+
+#navigation a {
+  text-decoration: none;
+  color: #636363;
+  font-size: 70%;
+  font-family: "Fira Mono"
+}
+
+#navigation a:hover {
+  color: #BBADD5;
+}
+
+/* Introduction section */
+
+#introduction {
+  margin-top: 80px;
+}
+
+p, aside {
+  font-family: "NowRegular";
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Work section */
+
+#work section {
+  margin-bottom: 100px;
+}
+
+/* Contact me section */

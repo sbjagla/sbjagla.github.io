@@ -1,0 +1,72 @@
+/* General style */
+
+html {
+  font-size: 20px;
+  font-family: "Fira Mono";
+}
+
+body {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+header {
+  font-size: 150%;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 120%;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 110%;
+  font-weight: normal;
+}
+
+/* Navigation bar */
+#navigation {
+  font-size: 100%;
+  font-weight: normal;
+  display: block;
+  border: 1px solid black;
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
+
+#navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navigation li {
+  float: left;
+}
+
+#navigation a {
+  padding: 8px;
+  text-decoration: none;
+  color: #636363;
+}
+
+#navigation a:hover {
+  color: #000000;
+}
+
+/* Introduction section */
+
+p, aside {
+  font-family: "NowRegular";
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Work section */
+
+/* Contact me section */
