@@ -127,15 +127,17 @@ p, aside {
 
 address {
   display: inline-block;
-  margin: auto;
+  margin: 10px;
 }
 
 #contact address img {
   width: 4%;
   height: 4%;
-  margin: auto 20px;
+  margin: 10px 20px;
 }
 
 #contact address img:hover {
-  margin: auto 25px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid black;
+  margin: 10px 20px 4px 20px;
 }
