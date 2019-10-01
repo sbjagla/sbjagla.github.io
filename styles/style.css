@@ -60,7 +60,7 @@ a {
 
 #navigation a {
   color: #636363;
-  font-size: 70%;
+  font-size: 60%;
   font-family: "Fira Mono";
   font-weight: normal;
 }
@@ -77,8 +77,6 @@ a {
 
 p, aside {
   font-family: "NowRegular";
-  font-weight: normal;
-  font-style: normal;
   margin: 5px 0;
 }
 
@@ -96,11 +94,6 @@ p, aside {
 }
 
 /* Contact me section */
-
-#about_me {
-  margin-bottom: 0px;
-  border: none;
-}
 
 #description {
   display: inline-block;
@@ -137,7 +130,7 @@ address {
 }
 
 #contact address img:hover {
-  padding-bottom: 4px;
-  border-bottom: 2px solid black;
-  margin: 10px 20px 4px 20px;
+  border-bottom: 2px solid black; /*This will give a highlight */
+  padding-bottom: 4px; /*The highlight needs to be a bit under the element*/
+  margin: 10px 20px 4px 20px; /* Need to offset the difference the highlight and padding give */
 }

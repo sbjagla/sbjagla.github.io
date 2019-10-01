@@ -1,0 +1,104 @@
+/* General style */
+
+html {
+  font-size: 26px;
+  font-family: "Fira Mono";
+}
+
+body {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+section {
+  margin: 100px 0;
+  padding-bottom: 100px;
+  border-bottom: 2px solid #BBADD5;
+}
+
+header {
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 110%;
+  font-weight: normal;
+  margin: 0 0 20px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navigation bar */
+#navigation {
+  display: block;
+  border-bottom: 2px solid #BBADD5;
+  text-align: center;
+}
+
+#navigation ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: auto;
+  padding: 0;
+}
+
+#navigation li {
+  float: left;
+  margin: auto 20px;
+}
+
+#navigation a {
+  color: #636363;
+  font-size: 60%;
+  font-family: "Fira Mono";
+  font-weight: normal;
+}
+
+#navigation a:hover {
+  color: #BBADD5;
+}
+
+/* Introduction section */
+
+#introduction {
+  padding: 150px 30px;
+  margin: 0;
+}
+
+p {
+  font-family: "NowRegular";
+  margin: 10px 0;
+}
+
+
+/* Contact me section */
+
+#contact {
+  display: inline-block;
+  margin: 0 0 30px 0;
+  background-color: #BBADD5;
+  padding: 15px;
+  text-align: center;
+}
+
+address {
+  display: inline-block;
+  margin: 10px;
+}
+
+#contact address img {
+  width: 4%;
+  height: 4%;
+  margin: 10px 20px;
+}
+
+#contact address img:hover {
+  padding-bottom: 4px;
+  border-bottom: 2px solid black;
+  margin: 10px 20px 4px 20px;
+}
