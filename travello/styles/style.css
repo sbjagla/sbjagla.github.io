@@ -12,6 +12,7 @@ body {
 }
 
 section {
+  width: 100%;
   margin: 100px 0;
   padding-bottom: 100px;
   border-bottom: 2px solid #BBADD5;
@@ -29,9 +30,29 @@ h1 {
   margin: 0 0 20px 0;
 }
 
+p, figcaption {
+  font-family: "NowRegular";
+  margin: 10px 0;
+}
+
 a {
   text-decoration: none;
 }
+
+figure {
+  width: 40%;
+  margin: 0 auto;
+}
+
+figcaption {
+  font-size: 80%;
+}
+
+img {
+  width: 100%;
+}
+
+
 
 /* Navigation bar */
 #navigation {
@@ -70,9 +91,20 @@ a {
   margin: 0;
 }
 
-p {
-  font-family: "NowRegular";
-  margin: 10px 0;
+/* Main section */
+
+.sketches {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sketches img {
+  width: 50%
+}
+
+#persona {
+  text-align: center;
 }
 
 

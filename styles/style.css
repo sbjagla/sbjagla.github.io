@@ -35,6 +35,11 @@ h2 {
   margin: 0 0 5px 0;
 }
 
+p, aside {
+  font-family: "NowRegular";
+  margin: 5px 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -73,11 +78,6 @@ a {
 
 #introduction {
   padding: 150px 30px;
-}
-
-p, aside {
-  font-family: "NowRegular";
-  margin: 5px 0;
 }
 
 /* Work section */
