@@ -2,7 +2,7 @@
 
 html {
   font-size: 26px;
-  font-family: "Fira Mono";
+  font-family: "NowRegular";
 }
 
 body {
@@ -15,6 +15,10 @@ article {
   margin-bottom: 50px;
   padding-bottom: 50px;
   border-bottom: 2px solid #BBADD5;
+}
+
+h1, header {
+  font-family: "Fira Mono";
 }
 
 header {
@@ -36,7 +40,6 @@ h2 {
 }
 
 p, aside {
-  font-family: "NowRegular";
   margin: 5px 0;
 }
 
