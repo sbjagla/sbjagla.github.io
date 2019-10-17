@@ -63,7 +63,7 @@ img {
 /* Navigation bar */
 #navigation {
   display: block;
-  border-bottom: 2px solid #6D6085;
+  border-bottom: 2px solid #BBADD5;
   text-align: center;
 }
 
@@ -80,9 +80,14 @@ img {
 }
 
 #navigation a {
+  color: #636363;
   font-size: 60%;
   font-family: "Fira Mono";
   font-weight: normal;
+}
+
+#navigation a:hover {
+  color: #BBADD5;
 }
 
 /* Introduction section */
