@@ -98,6 +98,10 @@ a {
 
 /* Contact me section */
 
+#about_me {
+  border-bottom: 0;
+}
+
 #description {
   display: inline-block;
 }
