@@ -1,7 +1,7 @@
 /* General style */
 
 html {
-  font-size: 26px;
+  font-size: calc(1em + 1.5vmin);
   font-family: "NowRegular";
 }
 
@@ -34,7 +34,7 @@ h1 {
   margin: 0 0 20px 0;
 }
 
-p {
+p, figcaption {
   margin: 10px 0;
 }
 
@@ -47,12 +47,23 @@ a:hover {
   color: #2F283D;
 }
 
+figure {
+  width: 30%;
+  margin: 30px auto;
+  text-align: center;
+  font-size: 80%;
+}
+
+img {
+  width: 80%;
+}
+
 
 
 /* Navigation bar */
 #navigation {
   display: block;
-  border-bottom: 2px solid #6D6085;
+  border-bottom: 2px solid #BBADD5;
   text-align: center;
 }
 
@@ -69,9 +80,14 @@ a:hover {
 }
 
 #navigation a {
+  color: #636363;
   font-size: 60%;
   font-family: "Fira Mono";
   font-weight: normal;
+}
+
+#navigation a:hover {
+  color: #BBADD5;
 }
 
 /* Introduction section */
@@ -79,10 +95,8 @@ a:hover {
 #introduction {
   padding: 150px 30px;
   margin: 0;
+  border-bottom: 0;
 }
-
-/* Main section */
-
 
 
 /* Contact me section */

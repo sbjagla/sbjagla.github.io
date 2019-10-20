@@ -108,7 +108,12 @@ img {
   width: 60%;
 }
 
-/* List in of possible tasks */
+#last_section {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+/* List */
 
 .list {
   font-size: 90%;
