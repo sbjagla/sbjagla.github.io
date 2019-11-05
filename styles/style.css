@@ -1,7 +1,7 @@
 /* ----- General style ----- */
 /* TODO: zmienić vw na rem */
 html {
-  font-size: 1.75vw; /* TODO: czcionka jest za mała przy 900px, trzeba ją zmienić */
+  font-size: calc(20px + 0.5vw); /* TODO: czcionka jest za mała przy 900px, trzeba ją zmienić */
   font-family: "NowRegular";
 }
 
@@ -60,13 +60,16 @@ nav {
 }
 
 #navigation ul {
+  margin: auto;
+  width: 60%;
   /* Delete inherited list style */
   list-style-type: none;
   padding: 0.5vw 0 0.5vw 0;
   /* Justify the content so it spreads evenly on all screens */
-  display: flex; /* TODO: to się źle skaluje, trzeba zobaczyć czy da się grid zrobić albo parę wierszy i kolumn we flexie */
+  display: flex;
   flex-flow: row;
   justify-content: center;
+  align-items: center;
   margin: auto;
   flex-wrap: wrap;
 }
@@ -238,12 +241,9 @@ address {
     width: 85%;
   }
 
-  nav {
-    width: 80%;
-  }
-
   #navigation ul {
   padding: 3vw 0 1.5vw 0;
+  width: 100%;
   }
 
   #navigation a {
