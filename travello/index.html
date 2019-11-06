@@ -2,9 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link href="styles/style.css" rel="stylesheet">
+    <link href="../styles/style.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta property="og:title" content="Travello - Sebastian Jagla" />
-    <meta property="og:image" content="https://sjagla.com/images/final.png" />
+    <meta property="og:image" content="https://sjagla.com/images/final.png"/>
 
     <!-- fonts -->
     <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
@@ -12,15 +15,15 @@
 
     <title>Travello - Sebastian Jagla</title>
   </head>
-  <body>
+  <body class="project">
 
     <header id="navigation">
       <nav>
-        <ul>
+        <ul id="navigation_list">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../index.html#work">My work</a></li>
           <li><a href="../index.html#about_me">About me</a></li>
-          <li><a href="files/CV_Sebastian_Jagla_(ENG).pdf">My CV</a></li>
+          <li id="CV"><a href="files/CV_Sebastian_Jagla_(ENG).pdf">My CV</a></li>
         </ul>
       </nav>
     </header>
@@ -283,12 +286,19 @@
         </p>
 
         <aside>
-          During the designing process I followed the
-          <a href="https://elementary.io/es/docs/human-interface-guidelines#human-interface-guidelines">
-            "Human Interface Guidelines"</a> produced by the elementary OS team
-            as well as other sources. I mention this as I am very thankful
-            for the practical advice in the guidelines.
+          <p>
+            During the designing process I followed the
+            <a href="https://elementary.io/es/docs/human-interface-guidelines#human-interface-guidelines">
+              "Human Interface Guidelines"</a> produced by the elementary OS team
+              as well as other sources. I mention this as I am very thankful
+              for the practical advice in the guidelines.
+          </p>
+          <p>
+            In the mid-fi and hi-fi prototype I used icons by
+            <a href="https://fontawesome.com/cheatsheet">Font Awesome</a>.
+          </p>
         </aside>
+
 
       </section>
 
@@ -316,7 +326,6 @@
         <p>The whole final prototype can be found <a href="https://www.figma.com/file/eRyv92rtXedkfvhK0OueVk/Final-design-Travello?node-id=0%3A1">
           here</a>.
         </p>
-
       </section>
 
       <section id="last_section">
@@ -342,24 +351,26 @@
 
     </article>
 
-    <section id="contact">
-      <p>
-        If you wish to contact me, pick any of these.
-      </p>
-      <address>
-        <a href="mailto:sjagla@fastmail.com" id="mail">
-          <img src="../images/mail.png" alt="Mail: sjagla@fastmail.com">
-        </a>
+    <article id="about_me">
+      <section id="contact">
+        <p>
+          If you wish to contact me, pick any of these.
+        </p>
+        <address>
+          <a href="mailto:sjagla@fastmail.com" id="mail">
+            <img src="../images/mail.png" alt="Mail: contact@sjagla.com">
+          </a>
 
-        <a href="https://www.linkedin.com/in/sebastian-jagla" id="linkedin">
-          <img src="../images/linkedin.png" alt="Linkedin">
-        </a>
+          <a href="https://www.linkedin.com/in/sebastian-jagla" id="linkedin">
+            <img src="../images/linkedin.png" alt="Linkedin">
+          </a>
 
-        <a href="https://twitter.com/sebastian_jagla" id="twitter">
-          <img src="../images/twitter.png" alt="Twitter">
-        </a>
-      </address>
-    </section>
+          <a href="https://twitter.com/sebastian_jagla" id="twitter">
+            <img src="../images/twitter.png" alt="Twitter">
+          </a>
+        </address>
+      </section>
+    </article>
 
   </body>
 </html>
