@@ -1,1 +1,11 @@
-// VARIABLES
+// style.scss
+@use 'base';
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $regular-font-stack;
+  font-weight: 900;
+}

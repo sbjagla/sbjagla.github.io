@@ -1,0 +1,62 @@
+// _base.scss
+
+
+// fonts
+@font-face {
+  font-family: 'Work Sans';
+    src: url(files/work-sans/WorkSans-Hairline.otf);
+    font-weight: 500;
+}
+@font-face {
+  font-family: 'Work Sans';
+    src: url(files/work-sans/WorkSans-Regular.otf);
+    font-weight: 600;
+}
+@font-face {
+  font-family: 'Work Sans';
+    src: url(files/work-sans/WorkSans-Light.otf);
+    font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+    src: url(files/work-sans/WorkSans-Regular.otf);
+    font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+    src: url(files/work-sans/WorkSans-Semibold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+    src: url(files/work-sans/WorkSans-Bold.otf);
+    font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+    src: url(files/work-sans/WorkSans-Black.otf);
+    font-weight: 900;
+}
+
+
+$regular-font-stack: "WorkSansRegular", Neue Helvetica, Helvetica;
+
+
+// general
+$main-color: #5400F2;
+$background-color: #000000;
+
+// case studies
+$border-radius: 2.5rem;
+$border-width: 0.4rem;
+
+$wide-screen-width: 54rem;
+$wide-screen-height: 30rem;
+
+// general designs
+
+// about me
