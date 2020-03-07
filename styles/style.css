@@ -1,17 +1,224 @@
-/* Error: Undefined variable.
- *   ,
- * 9 |   font-family: $regular-font-stack;
- *   |                ^^^^^^^^^^^^^^^^^^^
- *   '
- *   style.scss 9:16  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 9 \2502    font-family: $regular-font-stack;\a   \2502                 ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   style.scss 9:16  root stylesheet";
+@font-face {
+  font-family: Work Sans;
+  src: url("../files/work-sans/WorkSans-Hairline.otf");
+  font-weight: 300;
 }
+@font-face {
+  font-family: Work Sans;
+  src: url("../files/work-sans/WorkSans-Light.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Work Sans;
+  src: url("../files/work-sans/WorkSans-Regular.otf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Work Sans;
+  src: url("../files/work-sans/WorkSans-Medium.otf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: Work Sans;
+  src: url("../files/work-sans/WorkSans-Semibold.otf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Work Sans;
+  src: url("../files/work-sans/WorkSans-Bold.otf");
+  font-weight: 800;
+}
+@font-face {
+  font-family: Work Sans;
+  src: url("../files/work-sans/WorkSans-Black.otf");
+  font-weight: 900;
+}
+ul, li, a, h1, h2, p {
+  list-style: none;
+  color: #E5E5E5;
+  font-weight: 500;
+  text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-areas: "header header header" "intro intro intro" "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" "aboutMe aboutMe aboutMe";
+  grid-template-columns: auto 95vw auto;
+  grid-template-rows: auto;
+  grid-row-gap: 15rem;
+  font-family: Work Sans, Neue Helvetica, Helvetica, sans-serif;
+  font-weight: 900;
+  background-color: #000000;
+}
+
+@media screen and (min-device-width: 600px) {
+  body {
+    grid-template-areas: ". header ." ". intro ." "caseStudies caseStudies caseStudies" ". generalWork ." ". aboutMe .";
+    grid-template-columns: auto minmax(70vw, 110rem) auto;
+  }
+}
+article h1 {
+  font-size: 7rem;
+  font-weight: 600;
+  color: #253800;
+  line-height: 85%;
+  position: relative;
+  top: 8%;
+}
+article h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #ABFF0D;
+}
+
+header {
+  grid-area: header;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header nav ul li {
+  margin: 0 3rem 0 0;
+}
+header nav ul li:first-child {
+  flex-basis: 100%;
+}
+header nav ul li:first-child a {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+header nav ul li a {
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+
+#intro {
+  grid-area: intro;
+  margin: 4rem;
+}
+#intro h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #E5E5E5;
+  margin: 0 0 1rem 0;
+}
+#intro h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #E5E5E5;
+  margin: 0;
+}
+
+@media screen and (min-device-width: 600px) {
+  #intro h1 {
+    font-size: 10rem;
+  }
+  #intro h2 {
+    font-size: 7rem;
+  }
+}
+#caseStudies {
+  grid-area: caseStudies;
+}
+#caseStudies a section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+#caseStudies a section .image {
+  position: relative;
+  display: block;
+  width: 18rem;
+  height: 32.5rem;
+  border-style: solid;
+  border-color: #5400F2;
+  border-radius: 2.5rem;
+  border-width: 0.4rem;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+#caseStudies a section .image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4.5rem;
+  right: -0.6rem;
+  width: 0.3rem;
+  height: 3rem;
+  background-color: #5400F2;
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+#caseStudies a section#stronaDominika .image {
+  background-image: url("../images/dominik-mobile-preview.png");
+}
+#caseStudies a section#travello .image {
+  background-image: url("../images/travello-mobile-preview.png");
+}
+#caseStudies a section#tacticalTroops .image {
+  background-image: url("../images/travello-mobile-preview.png");
+}
+#caseStudies a section h2 {
+  margin-top: 2rem;
+  color: #ABFF0D;
+}
+#caseStudies a section p {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: 23.4rem;
+  text-align: center;
+}
+
+@media screen and (min-device-width: 600px) {
+  #caseStudies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #caseStudies h1 {
+    height: fit-content;
+    flex-basis: 100%;
+    margin-left: 15vw;
+  }
+  #caseStudies a section#stronaDominika .image, #caseStudies a section#tacticalTroops .image {
+    width: 54rem;
+    height: 30rem;
+  }
+  #caseStudies a section#stronaDominika .image::after, #caseStudies a section#tacticalTroops .image::after {
+    display: none;
+  }
+  #caseStudies a section#stronaDominika .image {
+    background-image: url("../images/dominik-desktop-preview.png");
+  }
+  #caseStudies a section#tacticalTroops .image {
+    background-image: url("../images/dominik-desktop-preview.png");
+  }
+}
+#generalWork {
+  grid-area: generalWork;
+}
+#generalWork a section h2 {
+  color: #253800;
+}
+
+#aboutMe {
+  grid-area: aboutMe;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,61 +1,96 @@
 // _base.scss
 
 
-// fonts
+// fonts faces
 @font-face {
-  font-family: 'Work Sans';
-    src: url(files/work-sans/WorkSans-Hairline.otf);
+  font-family: Work Sans;
+    src: url('../files/work-sans/WorkSans-Hairline.otf');
+    font-weight: 300;
+}
+@font-face {
+  font-family: Work Sans;
+    src: url('../files/work-sans/WorkSans-Light.otf');
+    font-weight: 400;
+}
+@font-face {
+  font-family: Work Sans;
+    src: url('../files/work-sans/WorkSans-Regular.otf');
     font-weight: 500;
 }
 @font-face {
-  font-family: 'Work Sans';
-    src: url(files/work-sans/WorkSans-Regular.otf);
-    font-weight: 600;
-}
-@font-face {
-  font-family: 'Work Sans';
-    src: url(files/work-sans/WorkSans-Light.otf);
-    font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Work Sans';
-    src: url(files/work-sans/WorkSans-Regular.otf);
+  font-family: Work Sans;
+    src: url('../files/work-sans/WorkSans-Medium.otf');
     font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Work Sans';
-    src: url(files/work-sans/WorkSans-Semibold.otf);
+  font-family: Work Sans;
+    src: url('../files/work-sans/WorkSans-Semibold.otf');
     font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Work Sans';
-    src: url(files/work-sans/WorkSans-Bold.otf);
+  font-family: Work Sans;
+    src: url('../files/work-sans/WorkSans-Bold.otf');
     font-weight: 800;
 }
 
 @font-face {
-  font-family: 'Work Sans';
-    src: url(files/work-sans/WorkSans-Black.otf);
+  font-family: Work Sans;
+    src: url('../files/work-sans/WorkSans-Black.otf');
     font-weight: 900;
 }
 
 
-$regular-font-stack: "WorkSansRegular", Neue Helvetica, Helvetica;
+$regular-font-stack: Work Sans, Neue Helvetica, Helvetica, sans-serif;
 
 
-// general
+// layout
+$body-padding: 0.5rem;
+$section-width: 110rem;
+$section-margin-height: 4rem;
+
+// colors
 $main-color: #5400F2;
 $background-color: #000000;
+$title-text-color: #E5E5E5;
+$subtitle-text-color: #E5E5E5;
+$medium-text-color: #ABFF0D;
+$case-title-color: #253800;
+$base-text-color: #E5E5E5;
+
+// fonts
+$title-text-size: 5rem;
+$subtitle-text-size: 3rem;
+$medium-text-size: 2.5rem;
+$case-title-size: 7rem;
+$base-text-size: 1.8rem;
+$navigation-text-size: 1.8rem;
+
+$desktop-title-text-size: 10rem;
+$desktop-subtitle-text-size: 7rem;
+$desktop-medium-text-size: 3rem;
+
+
+$title-text-weight: 700;
+$subtitle-text-weight: 500;
+$medium-text-weight: 600;
+$case-title-weight: 600;
+$base-text-weight: 500;
+$navigation-text-weight: 500;
+
+$text-margin: 1rem;
+
+// header
+$li-margin: 3rem;
 
 // case studies
 $border-radius: 2.5rem;
 $border-width: 0.4rem;
-
-$wide-screen-width: 54rem;
-$wide-screen-height: 30rem;
+$phone-width: 18rem;
+$phone-height: 32.5rem;
+$desktop-width: 54rem;
+$desktop-height: 30rem;
 
 // general designs
 
