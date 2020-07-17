@@ -56,29 +56,36 @@ body {
   grid-template-columns: auto 95vw auto;
   grid-template-rows: auto;
   grid-row-gap: 15rem;
-  font-family: Work Sans, Neue Helvetica, Helvetica, sans-serif;
+  font-family: "Work Sans", Helvetica, sans-serif;
   font-weight: 900;
-  background-color: #000000;
+  background-color: #141414;
 }
 
 @media screen and (min-device-width: 600px) {
   body {
-    grid-template-areas: ". header ." ". intro ." "caseStudies caseStudies caseStudies" ". generalWork ." ". aboutMe .";
-    grid-template-columns: auto minmax(70vw, 110rem) auto;
+    grid-template-areas: ". header ." ". intro ." "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" ". aboutMe .";
+    grid-template-columns: auto minmax(80vw, 110rem) auto;
+    grid-row-gap: 15rem;
   }
 }
-article h1 {
+#caseStudies h1, #generalWork h1, #aboutMe h1 {
   font-size: 7rem;
   font-weight: 600;
-  color: #253800;
+  color: #BABABA91;
   line-height: 85%;
   position: relative;
-  top: 8%;
+  top: 5rem;
 }
-article h2 {
+#caseStudies h2, #generalWork h2, #aboutMe h2 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #ABFF0D;
+  color: #B259FD;
+}
+
+p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #E5E5E5;
 }
 
 header {
@@ -90,10 +97,11 @@ header nav ul {
   flex-wrap: wrap;
 }
 header nav ul li {
-  margin: 0 3rem 0 0;
+  margin-right: 3rem;
 }
 header nav ul li:first-child {
   flex-basis: 100%;
+  margin-bottom: 1rem;
 }
 header nav ul li:first-child a {
   font-size: 2.5rem;
@@ -104,21 +112,35 @@ header nav ul li a {
   white-space: nowrap;
 }
 
+@media screen and (min-device-width: 600px) {
+  header nav ul li {
+    margin-right: 10rem;
+  }
+}
 #intro {
   grid-area: intro;
-  margin: 4rem;
 }
 #intro h1 {
+  grid-area: title;
+  position: relative;
   font-size: 5rem;
   font-weight: 700;
   color: #E5E5E5;
-  margin: 0 0 1rem 0;
 }
 #intro h2 {
-  font-size: 3rem;
+  grid-area: subtitle;
+  font-size: 4rem;
   font-weight: 500;
-  color: #E5E5E5;
+  color: #BABABA;
   margin: 0;
+}
+#intro p {
+  grid-area: description;
+  font-size: 3rem;
+  color: #737373;
+}
+#intro h2, #intro p {
+  margin-top: 1.6rem;
 }
 
 @media screen and (min-device-width: 600px) {
@@ -128,32 +150,46 @@ header nav ul li a {
   #intro h2 {
     font-size: 7rem;
   }
+  #intro p {
+    margin-left: 0.5rem;
+  }
 }
-#caseStudies {
-  grid-area: caseStudies;
+@media screen and (min-device-width: 1000px) {
+  #intro {
+    display: grid;
+    grid-template-areas: "title description" "subtitle description";
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 1fr;
+    column-gap: 12%;
+    margin: 8vh 0;
+  }
+  #intro p {
+    font-size: 5rem;
+    font-weight: 400;
+  }
 }
-#caseStudies a section {
+#caseStudies a section, #generalWork a section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 4rem 0;
 }
-#caseStudies a section .image {
+#caseStudies a section .image, #generalWork a section .image {
   position: relative;
   display: block;
   width: 18rem;
   height: 32.5rem;
   border-style: solid;
-  border-color: #5400F2;
+  border-color: #D2D2D2;
   border-radius: 2.5rem;
   border-width: 0.4rem;
-  background-color: #000000;
+  background-color: #141414;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
 }
-#caseStudies a section .image::after {
+#caseStudies a section .image::after, #generalWork a section .image::after {
   content: "";
   display: block;
   position: absolute;
@@ -161,64 +197,167 @@ header nav ul li a {
   right: -0.6rem;
   width: 0.3rem;
   height: 3rem;
-  background-color: #5400F2;
+  background-color: #B4ACB4;
   border-radius: 0 0.2rem 0.2rem 0;
 }
-#caseStudies a section#stronaDominika .image {
-  background-image: url("../images/dominik-mobile-preview.png");
-}
-#caseStudies a section#travello .image {
-  background-image: url("../images/travello-mobile-preview.png");
-}
-#caseStudies a section#tacticalTroops .image {
-  background-image: url("../images/travello-mobile-preview.png");
-}
-#caseStudies a section h2 {
-  margin-top: 2rem;
-  color: #ABFF0D;
-}
-#caseStudies a section p {
+#caseStudies a section h2, #generalWork a section h2 {
   margin-top: 1rem;
+  color: #B259FD;
+}
+#caseStudies a section p, #generalWork a section p {
   font-size: 1.8rem;
   font-weight: 500;
   width: 23.4rem;
   text-align: center;
 }
 
+#caseStudies {
+  grid-area: caseStudies;
+}
+#caseStudies a section#esensei .image {
+  background-image: url("../images/dominik-mobile-preview.png");
+}
+#caseStudies a section#travello .image {
+  background-image: url("../images/travello-mobile-preview.png");
+}
+#caseStudies a section#beauty .image {
+  background-image: url("../images/travello-mobile-preview.png");
+}
+
+#generalWork {
+  grid-area: generalWork;
+}
+#generalWork a section .image {
+  width: 13.8461538462rem;
+  height: 25rem;
+}
+#generalWork a section#knowledgePit .image {
+  background-image: url("../images/knowledgePit-desktop-preview.png");
+}
+#generalWork a section#senseiRoyale .image {
+  background-image: url("../images/icons-preview.png");
+  width: 25rem;
+}
+#generalWork a section#senseiRoyale .image:after {
+  display: none;
+}
+#generalWork a section#moodle .image {
+  background-image: url("../images/moodle-preview.svg");
+  width: 25rem;
+}
+#generalWork a section#moodle .image:after {
+  display: none;
+}
+#generalWork a section h2 {
+  margin-top: 1rem;
+  color: #2CE396;
+}
+
 @media screen and (min-device-width: 600px) {
-  #caseStudies {
+  #caseStudies, #generalWork {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  #caseStudies h1 {
+  #caseStudies h1, #generalWork h1 {
     height: fit-content;
     flex-basis: 100%;
-    margin-left: 15vw;
+    margin-left: 9vw;
   }
-  #caseStudies a section#stronaDominika .image, #caseStudies a section#tacticalTroops .image {
+
+  #caseStudies a section#esensei .image, #caseStudies a section#beauty .image {
     width: 54rem;
     height: 30rem;
   }
-  #caseStudies a section#stronaDominika .image::after, #caseStudies a section#tacticalTroops .image::after {
+  #caseStudies a section#esensei .image::after, #caseStudies a section#beauty .image::after {
     display: none;
   }
-  #caseStudies a section#stronaDominika .image {
-    background-image: url("../images/dominik-desktop-preview.png");
+  #caseStudies a section#esensei .image {
+    background-image: url("../images/esensei-desktop-preview.svg");
   }
-  #caseStudies a section#tacticalTroops .image {
-    background-image: url("../images/dominik-desktop-preview.png");
+  #caseStudies a section#beauty .image {
+    background-image: url("../images/beauty-desktop-preview.png");
   }
-}
-#generalWork {
-  grid-area: generalWork;
-}
-#generalWork a section h2 {
-  color: #253800;
-}
 
+  #generalWork .break {
+    height: 0;
+    flex-basis: 100%;
+  }
+  #generalWork a section#knowledgePit .image {
+    width: 41.5384615385rem;
+    height: 23.0769230769rem;
+  }
+  #generalWork a section#knowledgePit .image::after {
+    display: none;
+  }
+  #generalWork a section#esensei .image {
+    background-image: url("../images/esensei-desktop-preview.svg");
+  }
+  #generalWork a section#beauty .image {
+    background-image: url("../images/beauty-desktop-preview.png");
+  }
+}
+@media screen and (min-device-width: 1600px) {
+  #generalWork .break {
+    display: none;
+  }
+}
 #aboutMe {
   grid-area: aboutMe;
+  display: grid;
+  grid-template-areas: "sectionTitle sectionTitle" "aside ." "bio image" "contactInfo contactInfo";
+  grid-template-columns: auto auto;
+  column-gap: 12%;
+  row-gap: 1rem;
+}
+#aboutMe h1 {
+  grid-area: sectionTitle;
+  top: 0;
+  line-height: 100%;
+}
+#aboutMe aside, #aboutMe #paragraphs p, #aboutMe #contact p {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+#aboutMe aside {
+  grid-area: aside;
+  color: #626262;
+}
+#aboutMe #paragraphs {
+  grid-area: bio;
+}
+#aboutMe #paragraphs p {
+  color: #E5E5E5;
+}
+#aboutMe img {
+  grid-area: image;
+  justify-self: center;
+  width: 60%;
+  height: auto;
+  border-radius: 1rem;
+}
+#aboutMe #contact {
+  grid-area: contactInfo;
+  justify-self: center;
+  margin: 8rem 0;
+  font-size: 3rem;
+  font-weight: 600;
+}
+#aboutMe #contact address {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3.2rem;
+}
+#aboutMe #contact address a {
+  display: block;
+  height: max-content;
+  width: max-content;
+}
+#aboutMe #contact address a img {
+  height: auto;
+  width: 6rem;
 }
 
 /*# sourceMappingURL=style.css.map */

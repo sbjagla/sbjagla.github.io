@@ -42,26 +42,35 @@
 }
 
 
-$regular-font-stack: Work Sans, Neue Helvetica, Helvetica, sans-serif;
+$regular-font-stack: 'Work Sans', Helvetica, sans-serif;
 
 
 // layout
 $body-padding: 0.5rem;
 $section-width: 110rem;
+$row-gap: 15rem;
+$desktop-row-gap: 30rem;
 $section-margin-height: 4rem;
 
 // colors
 $main-color: #5400F2;
-$background-color: #000000;
+$background-color: #141414;
 $title-text-color: #E5E5E5;
-$subtitle-text-color: #E5E5E5;
-$medium-text-color: #ABFF0D;
-$case-title-color: #253800;
+$subtitle-text-color: #BABABA;
+$intro-text-color: #737373;
+$medium-text-color: #0F26BD;
+$section-title-color: #BABABA91;
+$case-title-color: #EFCC57;
 $base-text-color: #E5E5E5;
+$aside-text-color: #626262;
+$border-color: #D2D2D2;
+$border-button-color: #B4ACB4;
+$unkown: #022050;
 
 // fonts
 $title-text-size: 5rem;
-$subtitle-text-size: 3rem;
+$subtitle-text-size: 4rem;
+$intro-text-size: 3rem;
 $medium-text-size: 2.5rem;
 $case-title-size: 7rem;
 $base-text-size: 1.8rem;
@@ -69,11 +78,13 @@ $navigation-text-size: 1.8rem;
 
 $desktop-title-text-size: 10rem;
 $desktop-subtitle-text-size: 7rem;
+$desktop-intro-text-size: 5rem;
 $desktop-medium-text-size: 3rem;
 
 
 $title-text-weight: 700;
 $subtitle-text-weight: 500;
+$intro-text-weight: 400;
 $medium-text-weight: 600;
 $case-title-weight: 600;
 $base-text-weight: 500;
@@ -83,6 +94,7 @@ $text-margin: 1rem;
 
 // header
 $li-margin: 3rem;
+$desktop-li-margin: 10rem;
 
 // case studies
 $border-radius: 2.5rem;
