@@ -4,50 +4,68 @@
     <meta charset="utf-8">
     <link href="../styles/style.css" rel="stylesheet">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:title" content="Travello - Sebastian Jagla" />
-    <meta property="og:image" content="https://sjagla.com/images/final.png"/>
-
-    <!-- fonts -->
-    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/now" type="text/css"/>
+     <meta property="og:title" content="Sebastian Jagla" />
+     <meta property="og:image" content="https://sjagla.com/images/final.png"/>
 
     <title>Travello - Sebastian Jagla</title>
   </head>
-  <body class="project">
 
-    <header id="navigation">
+  <body class="case" id="travello">
+
+    <!-- *** NAVIGATION *** -->
+    <header>
       <nav>
-        <ul id="navigation_list">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../index.html#work">My work</a></li>
-          <li><a href="../index.html#about_me">About me</a></li>
-          <li id="CV"><a href="files/CV_Sebastian_Jagla_(ENG).pdf">My CV</a></li>
+        <ul>
+          <li> <a href="../index.html">sebastian jagla</a> </li>
+          <li> <a href="../index.html#caseStudies">case studies</a> </li>
+          <li> <a href="../index.html#generalWork">general designs</a> </li>
+          <li> <a href="../index.html#aboutMe">about me</a> </li>
+          <li> <a href="files/CV_Sebastian_Jagla_(ENG).pdf">my cv</a> </li>
         </ul>
       </nav>
     </header>
 
-    <article>
+    <article class="caseExtended" id="travelloArticle">
 
-      <section id="introduction">
-        <header>
-        A trip-planning tool for groups - Travello
-        </header>
-        <p>Travello is a solution to major problems that arise when planning
-          trips in larger groups. Communication, keeping track of proposals and
-          choosing best options become difficult in groups larger than three
-          people. Even with three or four people planning the trip, keeping up
-          with everybody’s opinion on proposals from different stages of the
-          trip can be tricky. </p>
-        <p>
-          You can find the full report <a href="../files/final-report.pdf">
-          here</a> and the design <a href="https://www.figma.com/file/eRyv92rtXedkfvhK0OueVk/Final-design-Travello?node-id=0%3A1">
-          here</a>.
-        </p>
+      <nav class="secondaryNav">
+        <!-- TODO: wsio !!!nawet te linki -->
+        <ul>
+          <li> <a href="../index.html">Summary</a> </li>
+          <li> <a href="../index.html#caseStudies">Design problem</a> </li>
+          <li> <a href="../index.html#generalWork">Competitive analysis</a> </li>
+          <li> <a href="../index.html#aboutMe">Needs finding study</a> </li>
+          <li> <a href="../index.html#aboutMe">Sketches, personas and scenarios</a> </li>
+          <li> <a href="../index.html#aboutMe">Lo-Fi prototype and micro-usability test</a> </li>
+          <li> <a href="../index.html#aboutMe">Mid-Fi prototype and heuristic evaluation</a> </li>
+          <li> <a href="../index.html#aboutMe">Hi-Fi prototype</a> </li>
+          <li> <a href="../index.html#aboutMe">What I learnt</a> </li>
+          <li> <a href="../index.html#aboutMe">iOS redesign</a> </li>
+        </ul>
+      </nav>
+
+      <section class="caseIntroduction">
+        <h1>
+        Travello
+        </h1>
+        <img src="../images/travello-mobile-preview.png" alt="">
+        <div class="caseParagraphs">
+          <p>A solution to major problems that arise when planning
+            trips in larger groups. Communication, keeping track of proposals and
+            choosing best options become difficult in groups larger than three
+            people. Even with three or four people planning the trip, keeping up
+            with everybody’s opinion on proposals from different stages of the
+            trip can be tricky.</p>
+          <p>
+            You can find the full report <a href="../files/final-report.pdf">
+            here</a> and the design <a href="https://www.figma.com/file/eRyv92rtXedkfvhK0OueVk/Final-design-Travello?node-id=0%3A1">
+            here</a>.
+          </p>
+        </div>
       </section>
 
-      <section>
+      <section class="summary">
         <h1>Summary</h1>
         <p>
           This will be a summary (this) of a summary (this webpage) of a report
@@ -68,7 +86,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="designProblem">
         <h1>Design problem</h1>
         <p>At first, I thought about a fairly general solution for keeping track
           of proposals in any situation, such as looking for an apartment,
@@ -81,7 +99,7 @@
           have time to really adjust the service to a couple of services).</p>
       </section>
 
-      <section>
+      <section id="analysis">
         <h1>Competitive analysis</h1>
         <p>I looked for any solutions that would involve any form of
           organisation in travel. I searched through different search engines,
@@ -98,7 +116,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="needsStudy">
         <h1>Needs finding study</h1>
         <p>
           I conducted a semi-structured interview with 5 people recruited from
@@ -123,7 +141,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="sketches" class="multiple-flex two-images">
         <h1>Sketches, personas and scenarios</h1>
         <p>
           Using the needs identified in the needs finding study and the
@@ -135,7 +153,7 @@
           were many points of the design that could have been prioritised - like
           costs or fitting time constraints.
         </p>
-        <div class="multiple_image">
+        <div class="multiple-image">
           <figure>
             <img src="../images/sketch1.jpg" alt="A sketch with three columns.
             Every column contains proposals for stages of the trip. Proposals are
@@ -161,7 +179,7 @@
           be the safest approach because the participants represented the
           intended user base well and I would not introduced much bias.
         </p>
-        <figure class="single_image" id="persona">
+        <figure class="single-image" id="persona">
           <img src="../images/persona.png" alt="An image of a woman with three
           sections: demographics, motivators and limitations. All information
           in bullet points.">
@@ -171,15 +189,15 @@
           </figcaption>
         </figure>
         <p>
-          The scenarios were written (I wouldn't post my drawings online) and
-          closely tied to the personas and outlined the situations in which
+          The scenarios were written (also drawn, but they don't deserve an online life)
+          and closely tied to the personas and outlined the situations in which
           Travello should be useful. I used the scenarios in creating the design
           goals to outline any rough edges of the design (for example the
           tidiousness of going back and forth between the browser and Travello).
         </p>
       </section>
 
-      <section>
+      <section id="lofi">
         <h1>Lo-Fi prototype and micro-usability test</h1>
         <p>Taking into consideration the design goals that emerged from previous
         steps I decided on a web app based on login links (no need for an
@@ -190,7 +208,7 @@
           be certain that my wireframes can communicate the intention during
           the micro-usability test.
         </p>
-        <figure class="single_image">
+        <figure class="single-image">
           <img src="../images/wireframe.PNG" alt="">
           <figcaption>
             Wireframe of the main menu for Travello (either as a web app or
@@ -216,7 +234,7 @@
         </p>
       </section>
 
-      <section>
+      <section id="midfi" class="multiple-flex">
         <h1>Mid-Fi prototype and heuristic evaluation</h1>
         <p>
           The main design goals for the prototype were clarity and low barrier
@@ -241,7 +259,7 @@
           </ul>
         </p>
 
-        <div class="multiple_image">
+        <div class="multiple-image">
           <figure>
             <img src="../images/prototype1.png" alt="A sketch with three columns.
             Every column contains proposals for stages of the trip. Proposals are
@@ -302,7 +320,7 @@
 
       </section>
 
-      <section>
+      <section id="hifi">
         <h1>Hi-Fi prototype</h1>
         <p>The hi-fi prototype was not far from the one used in the final users
           test. The design did well in the System Usability Scale questionaire
@@ -315,8 +333,8 @@
           and giving the option buttons less priority by getting rid of their
           background. This way options do not dominate the rest of the screen.
         </p>
-        <figure class="single_image">
-          <img src="../images/final.png" alt="A version of the main screen where
+        <figure class="single-image">
+          <img src="../images/travello-mobile-preview.png" alt="A version of the main screen where
           the options don't have a background. Instead, the icons are larger.">
           <figcaption>
             The final trip menu - after changes to the option icons had been
@@ -328,7 +346,7 @@
         </p>
       </section>
 
-      <section id="last_section">
+      <section id="mistakes">
         <h1>What I learnt from my mistakes</h1>
         <p>Now the most improtant part. This was my first full-fledged project
         in UXD, which means I had a lot to learn from my mistakes. These are the
@@ -348,26 +366,22 @@
         </p>
       </section>
 
+      <section id="redesign">
+        <h1>iOS redesign</h1>
+      </section>
+
 
     </article>
 
-    <article id="about_me">
-      <section id="contact">
+    <article class="aboutMe">
+      <section class="contact">
         <p>
           If you wish to contact me, pick any of these.
         </p>
         <address>
-          <a href="mailto:sjagla@fastmail.com" id="mail">
-            <img src="../images/mail.png" alt="Mail: contact@sjagla.com">
-          </a>
-
-          <a href="https://www.linkedin.com/in/sebastian-jagla" id="linkedin">
-            <img src="../images/linkedin.png" alt="Linkedin">
-          </a>
-
-          <a href="https://twitter.com/sebastian_jagla" id="twitter">
-            <img src="../images/twitter.png" alt="Twitter">
-          </a>
+          <a href="mailto:sjagla@fastmail.com" id="mail"><img src="../images/mail-icon.svg" alt="Mail: contact@sjagla.com"></a>
+          <a href="https://www.linkedin.com/in/sebastian-jagla" id="linkedin"><img src="../images/linkedin-icon.svg" alt="Linkedin"></a>
+          <a href="https://twitter.com/sebastian_jagla" id="twitter"><img src="../images/twitter-icon.svg" alt="Twitter"></a>
         </address>
       </section>
     </article>

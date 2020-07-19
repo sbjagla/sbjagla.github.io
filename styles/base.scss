@@ -3,40 +3,40 @@
 
 // fonts faces
 @font-face {
-  font-family: Work Sans;
+  font-family: 'Work Sans';
     src: url('../files/work-sans/WorkSans-Hairline.otf');
     font-weight: 300;
 }
 @font-face {
-  font-family: Work Sans;
+  font-family: 'Work Sans';
     src: url('../files/work-sans/WorkSans-Light.otf');
     font-weight: 400;
 }
 @font-face {
-  font-family: Work Sans;
+  font-family: 'Work Sans';
     src: url('../files/work-sans/WorkSans-Regular.otf');
     font-weight: 500;
 }
 @font-face {
-  font-family: Work Sans;
+  font-family: 'Work Sans';
     src: url('../files/work-sans/WorkSans-Medium.otf');
     font-weight: 600;
 }
 
 @font-face {
-  font-family: Work Sans;
-    src: url('../files/work-sans/WorkSans-Semibold.otf');
+  font-family: 'Work Sans';
+    src: url('../files/work-sans/WorkSans-SemiBold.otf');
     font-weight: 700;
 }
 
 @font-face {
-  font-family: Work Sans;
+  font-family: 'Work Sans';
     src: url('../files/work-sans/WorkSans-Bold.otf');
     font-weight: 800;
 }
 
 @font-face {
-  font-family: Work Sans;
+  font-family: 'Work Sans';
     src: url('../files/work-sans/WorkSans-Black.otf');
     font-weight: 900;
 }
@@ -47,25 +47,28 @@ $regular-font-stack: 'Work Sans', Helvetica, sans-serif;
 
 // layout
 $body-padding: 0.5rem;
-$section-width: 110rem;
-$row-gap: 15rem;
-$desktop-row-gap: 30rem;
+$section-width: 80rem;
+$row-gap: 6rem;
+$desktop-row-gap: 15rem;
 $section-margin-height: 4rem;
 
 // colors
-$main-color: #5400F2;
-$background-color: #141414;
+$orange: #EFCC57;
+
+$main-color: #9A6BF0;
+$background-color: #1B1B1B;
 $title-text-color: #E5E5E5;
 $subtitle-text-color: #BABABA;
-$intro-text-color: #737373;
-$medium-text-color: #0F26BD;
+$intro-text-color: #848484;
+$medium-text-color: #5E73FF;
 $section-title-color: #BABABA91;
-$case-title-color: #EFCC57;
-$base-text-color: #E5E5E5;
+$case-title-color: $orange;
+$link-color: $orange;
+$base-text-color: #C2C2C2;
 $aside-text-color: #626262;
 $border-color: #D2D2D2;
 $border-button-color: #B4ACB4;
-$unkown: #022050;
+$hover-color: #EEF0F2;
 
 // fonts
 $title-text-size: 5rem;
@@ -80,6 +83,8 @@ $desktop-title-text-size: 10rem;
 $desktop-subtitle-text-size: 7rem;
 $desktop-intro-text-size: 5rem;
 $desktop-medium-text-size: 3rem;
+$desktop-semimedium-text-size: 2.6rem;
+$desktop-base-text-size: 2rem;
 
 
 $title-text-weight: 700;
@@ -90,7 +95,7 @@ $case-title-weight: 600;
 $base-text-weight: 500;
 $navigation-text-weight: 500;
 
-$text-margin: 1rem;
+$text-margin: 1.6rem;
 
 // header
 $li-margin: 3rem;
@@ -107,3 +112,34 @@ $desktop-height: 30rem;
 // general designs
 
 // about me
+
+// mockups
+
+// ********* MOCKUPS *********
+
+%phone-mockup {
+  position: relative;
+  display: block;
+  width: $phone-width;
+  height: $phone-height;
+  border-style: solid;
+    border-color: $border-color;
+    border-radius: $border-radius;
+    border-width: $border-width;
+  background-color: $background-color;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+      top: 1.5 * 3rem;
+      right: -2 * 0.3rem;
+    width: 0.3rem;
+    height: 3rem;
+    background-color: $border-button-color;
+    border-radius: 0 0.2rem 0.2rem 0;
+  }
+}

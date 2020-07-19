@@ -1,0 +1,339 @@
+// _supbages.scss
+@use 'base' as *;
+
+// ********* GENERAL *********
+
+.secondaryNav {
+  // TODO:
+  display: none;
+}
+
+.case {
+  grid-template-areas: "header header header"
+                        "article article article"
+                        "aboutMe aboutMe aboutMe";
+}
+
+@media screen and (min-device-width: 600px) {
+  .case {
+    grid-template-areas: ". header ."
+                          "article article article"
+                          ". aboutMe .";
+    p, ul li {
+      font-size: $desktop-base-text-size;
+    }
+  }
+}
+
+.caseExtended {
+  grid-area: article;
+
+  // display
+  display: grid;
+  grid-template-columns: auto 95vw auto;
+  grid-template-rows: auto;
+  grid-row-gap: $row-gap;
+
+  h1 {
+    font-size: $medium-text-size;
+    font-weight: $subtitle-text-weight;
+    color: $title-text-color;
+
+    margin-bottom: -$text-margin/2;
+  }
+
+  p {
+    padding-top: $text-margin;
+    padding-bottom: $text-margin;
+  }
+
+  a {
+    color: $link-color;
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  img {
+    width: 80%;
+  }
+
+  ul {
+    padding: 0 0 0 3*$text-margin;
+
+    li {
+      margin-bottom: $text-margin;
+
+      &:before {
+        content: "\2022";
+        color: $main-color;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+
+  .caseIntroduction {
+    h1 {
+      font-size: $title-text-size;
+      font-weight: $subtitle-text-weight;
+      color: $title-text-color;
+
+      margin-top: $text-margin;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: $subtitle-text-size;
+      font-weight: $subtitle-text-weight;
+      color: $subtitle-text-color;
+    }
+
+    .caseParagraphs {
+      font-size: $intro-text-size;
+      font-weight: $intro-text-weight;
+      color: $intro-text-color;
+    }
+
+    img {
+      @extend %phone-mockup;
+      height: 1.5 * $phone-height;
+      width: 1.5 * $phone-width;
+
+      margin: 2*$text-margin auto;
+    }
+  }
+
+  figure {
+    margin: 2*$text-margin $text-margin;
+
+    img {
+      display: block;
+      margin: 0 auto $text-margin auto;
+    }
+
+    figcaption {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: $base-text-size;
+      font-weight: $base-text-weight;
+      color: $base-text-color;
+      line-height: 1.7;
+      text-align: center;
+    }
+  }
+
+  .multiple-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .multiple-flex {
+    h1, p, ul {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  .caseExtended {
+    grid-template-columns: auto minmax(70vw, $section-width) auto;
+    grid-row-gap: $row-gap;
+
+    .multiple-flex {
+      h1, p, ul {
+        width: 74vw;
+        max-width: $section-width;
+      }
+    }
+
+    h1 {
+      font-size: $subtitle-text-size;
+    }
+
+    ul {
+      padding: 0 0 0 3*$text-margin;
+    }
+  }
+}
+
+@media screen and (min-device-width: 1000px) {
+  .caseExtended {
+    grid-template-columns: auto minmax(44vw, $section-width) auto;
+
+    .caseIntroduction {
+      display: grid;
+      grid-template-areas: "image description"
+                            "title description";
+      grid-template-columns: 1fr 1.6fr;
+      grid-template-rows: auto 1fr;
+      column-gap: 5%;
+
+      margin: 0 10vw;
+
+      h1 {
+        grid-area: title;
+
+        justify-self: center;
+        font-size: $desktop-subtitle-text-size;
+      }
+
+      img {
+        grid-area: image;
+
+        justify-self: center;
+        align-self: center;
+      }
+
+      .caseParagraphs {
+        grid-area: description;
+
+        align-self: center;
+        p {
+          font-size: $desktop-semimedium-text-size;
+        }
+      }
+    }
+
+    figure {
+      width: 20vw;
+      margin: 4*$text-margin;
+
+      figcaption {
+        width: 20vw;
+      }
+    }
+
+    .multiple-flex {
+
+      h1, p, ul {
+        width: 50vw;
+        max-width: 84rem;
+      }
+
+      &.two-images {
+        .multiple-image {
+          width: 60vw;
+        }
+      }
+
+      .multiple-image {
+        flex-direction: row;
+        justify-content: space-around;
+
+        width: 80vw;
+        margin: 0 auto;
+
+        figure {
+          width: 20vw;
+
+          img {
+            width: 16vw;
+          }
+        }
+      }
+    }
+
+    .single-image {
+      width: 30vw;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+// ********* TRAVELLO *********
+
+#travello {
+  .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                          "summary summary summary"
+                          "designProblem designProblem designProblem"
+                          "analysis analysis analysis"
+                          "needsStudy needsStudy needsStudy"
+                          "sketches sketches sketches"
+                          "lofi lofi lofi"
+                          "midfi midfi midfi"
+                          "hifi hifi hifi"
+                          "mistakes mistakes mistakes"
+                          "redesign redesign redesign";
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  #travello {
+    .caseExtended {
+      grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                            ". summary ."
+                            ". designProblem ."
+                            ". analysis ."
+                            ". needsStudy ."
+                            "sketches sketches sketches"
+                            ". lofi ."
+                            "midfi midfi midfi"
+                            ". hifi ."
+                            ". mistakes ."
+                            ". redesign .";
+    }
+  }
+}
+
+.caseIntroduction {
+  grid-area: caseIntroduction;
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.designProblem {
+  grid-area: designProblem;
+}
+
+#analysis {
+  grid-area: analysis;
+}
+
+#needsStudy {
+  grid-area: needsStudy;
+}
+
+#sketches {
+  grid-area: sketches;
+}
+
+#lofi {
+  grid-area: lofi;
+}
+
+#midfi {
+  grid-area: midfi;
+}
+
+#hifi {
+  grid-area: hifi;
+}
+
+#mistakes {
+  grid-area: mistakes;
+}
+
+#redesign {
+  grid-area: redesign;
+}

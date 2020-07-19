@@ -1,0 +1,78 @@
+// _header.scss
+
+@use 'base' as *;
+
+header {
+  grid-area: header;
+
+  nav {
+    // TODO: zastanowić się jak powinna wyglądać nawigacja na mobilnym
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      li {
+        margin-right: $li-margin;
+
+        line-height: 1.4;
+
+        &:first-child {
+          // TODO: jak zrobić logo pojawiące się w nawigacji dopiero po przejechaniu?
+          flex-basis: 100%;
+          margin-bottom: 1rem;
+
+          a {
+            font-size: $medium-text-size;
+            font-weight: $medium-text-weight;
+          }
+        }
+
+        a {
+          font-size: $navigation-text-size;
+          white-space: nowrap;
+        }
+
+        &:not(:first-child) {
+          // this animation stolen from https://emilkowalski.github.io/css-effects-snippets/
+            display: inline-block;
+            position: relative;
+
+            &:after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              transform: scaleX(0);
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              background-color: $main-color;
+              transform-origin: bottom right;
+              transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  header {
+
+    nav {
+
+      ul {
+
+        li {
+          margin-right: $desktop-li-margin;
+        }
+      }
+    }
+  }
+}

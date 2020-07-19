@@ -1,0 +1,89 @@
+// _about.scss
+@use 'base' as *;
+
+// ********* ABOUT ME *********
+// TODO: przerobić dla mobilnych (np. czcionka p na telefonie jest za duża; gridu nie powinno być)
+.aboutMe {
+  grid-area: aboutMe;
+
+  display: grid;
+  grid-template-areas: "sectionTitle sectionTitle"
+                        "aside image"
+                        "bio image"
+                        "contactInfo contactInfo";
+  grid-template-columns: auto auto;
+  column-gap: 12%;
+  row-gap: $text-margin;
+
+  h1 {
+    grid-area: sectionTitle;
+
+    font-size: $case-title-size;
+    font-weight: $case-title-weight;
+    color: $section-title-color;
+    line-height: 100%;
+  }
+
+  aside, .paragraphs p, .contact p {
+    font-size: $medium-text-size;
+    font-weight: $base-text-weight;
+  }
+
+  aside {
+    grid-area: aside;
+
+    color: $aside-text-color;
+  }
+
+  .paragraphs {
+    grid-area: bio;
+
+    p {
+      color: $base-text-color;
+    }
+  }
+
+  .picture {
+    grid-area: image;
+    justify-self: center;
+
+
+    width: 60%;
+    height: auto;
+    border-radius: 1rem;
+  }
+
+  .contact {
+    grid-area: contactInfo;
+    justify-self: center;
+
+    margin: 8rem 0;
+
+    font-size: $intro-text-size;
+    font-weight: $medium-text-weight;
+
+    address {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+
+      margin-top: 3.2rem;
+      a {
+        display: block;
+        height: max-content;
+        width: max-content;
+
+        img {
+          height: auto;
+          width: 6rem;
+          transition: transform 250ms ease-in-out;
+
+          &:hover {
+            transform: scale(1.10);
+          }
+        }
+      }
+    }
+  }
+}

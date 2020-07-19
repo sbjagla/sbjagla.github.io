@@ -1,91 +1,63 @@
+@charset "UTF-8";
 @font-face {
-  font-family: Work Sans;
+  font-family: "Work Sans";
   src: url("../files/work-sans/WorkSans-Hairline.otf");
   font-weight: 300;
 }
 @font-face {
-  font-family: Work Sans;
+  font-family: "Work Sans";
   src: url("../files/work-sans/WorkSans-Light.otf");
   font-weight: 400;
 }
 @font-face {
-  font-family: Work Sans;
+  font-family: "Work Sans";
   src: url("../files/work-sans/WorkSans-Regular.otf");
   font-weight: 500;
 }
 @font-face {
-  font-family: Work Sans;
+  font-family: "Work Sans";
   src: url("../files/work-sans/WorkSans-Medium.otf");
   font-weight: 600;
 }
 @font-face {
-  font-family: Work Sans;
-  src: url("../files/work-sans/WorkSans-Semibold.otf");
+  font-family: "Work Sans";
+  src: url("../files/work-sans/WorkSans-SemiBold.otf");
   font-weight: 700;
 }
 @font-face {
-  font-family: Work Sans;
+  font-family: "Work Sans";
   src: url("../files/work-sans/WorkSans-Bold.otf");
   font-weight: 800;
 }
 @font-face {
-  font-family: Work Sans;
+  font-family: "Work Sans";
   src: url("../files/work-sans/WorkSans-Black.otf");
   font-weight: 900;
 }
-ul, li, a, h1, h2, p {
-  list-style: none;
-  color: #E5E5E5;
-  font-weight: 500;
-  text-decoration: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
-}
-
-:root {
-  font-size: 62.5%;
-}
-
-body {
-  padding: 0.5rem;
-  display: grid;
-  grid-template-areas: "header header header" "intro intro intro" "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" "aboutMe aboutMe aboutMe";
-  grid-template-columns: auto 95vw auto;
-  grid-template-rows: auto;
-  grid-row-gap: 15rem;
-  font-family: "Work Sans", Helvetica, sans-serif;
-  font-weight: 900;
-  background-color: #141414;
-}
-
-@media screen and (min-device-width: 600px) {
-  body {
-    grid-template-areas: ". header ." ". intro ." "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" ". aboutMe .";
-    grid-template-columns: auto minmax(80vw, 110rem) auto;
-    grid-row-gap: 15rem;
-  }
-}
-#caseStudies h1, #generalWork h1, #aboutMe h1 {
-  font-size: 7rem;
-  font-weight: 600;
-  color: #BABABA91;
-  line-height: 85%;
+.caseExtended .caseIntroduction img, #caseStudies a section .image, #generalWork a section .image {
   position: relative;
-  top: 5rem;
+  display: block;
+  width: 18rem;
+  height: 32.5rem;
+  border-style: solid;
+  border-color: #D2D2D2;
+  border-radius: 2.5rem;
+  border-width: 0.4rem;
+  background-color: #1B1B1B;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
-#caseStudies h2, #generalWork h2, #aboutMe h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #B259FD;
-}
-
-p {
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #E5E5E5;
+.caseExtended .caseIntroduction img::after, #caseStudies a section .image::after, #generalWork a section .image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4.5rem;
+  right: -0.6rem;
+  width: 0.3rem;
+  height: 3rem;
+  background-color: #B4ACB4;
+  border-radius: 0 0.2rem 0.2rem 0;
 }
 
 header {
@@ -98,6 +70,7 @@ header nav ul {
 }
 header nav ul li {
   margin-right: 3rem;
+  line-height: 1.4;
 }
 header nav ul li:first-child {
   flex-basis: 100%;
@@ -111,14 +84,44 @@ header nav ul li a {
   font-size: 1.8rem;
   white-space: nowrap;
 }
+header nav ul li:not(:first-child) {
+  display: inline-block;
+  position: relative;
+}
+header nav ul li:not(:first-child):after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9A6BF0;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+header nav ul li:not(:first-child):hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 
 @media screen and (min-device-width: 600px) {
   header nav ul li {
     margin-right: 10rem;
   }
 }
+.main {
+  grid-template-areas: "header header header" "intro intro intro" "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" "aboutMe aboutMe aboutMe";
+}
+
+@media screen and (min-device-width: 600px) {
+  .main {
+    grid-template-areas: ". header ." ". intro ." "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" ". aboutMe .";
+  }
+}
 #intro {
   grid-area: intro;
+  margin: 8vh 0;
 }
 #intro h1 {
   grid-area: title;
@@ -137,7 +140,7 @@ header nav ul li a {
 #intro p {
   grid-area: description;
   font-size: 3rem;
-  color: #737373;
+  color: #848484;
 }
 #intro h2, #intro p {
   margin-top: 1.6rem;
@@ -151,7 +154,7 @@ header nav ul li a {
     font-size: 7rem;
   }
   #intro p {
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
   }
 }
 @media screen and (min-device-width: 1000px) {
@@ -161,7 +164,6 @@ header nav ul li a {
     grid-template-columns: auto auto;
     grid-template-rows: auto 1fr;
     column-gap: 12%;
-    margin: 8vh 0;
   }
   #intro p {
     font-size: 5rem;
@@ -175,40 +177,32 @@ header nav ul li a {
   align-items: center;
   margin: 4rem 0;
 }
-#caseStudies a section .image, #generalWork a section .image {
-  position: relative;
-  display: block;
-  width: 18rem;
-  height: 32.5rem;
-  border-style: solid;
-  border-color: #D2D2D2;
-  border-radius: 2.5rem;
-  border-width: 0.4rem;
-  background-color: #141414;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-#caseStudies a section .image::after, #generalWork a section .image::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 4.5rem;
-  right: -0.6rem;
-  width: 0.3rem;
-  height: 3rem;
-  background-color: #B4ACB4;
-  border-radius: 0 0.2rem 0.2rem 0;
-}
 #caseStudies a section h2, #generalWork a section h2 {
-  margin-top: 1rem;
-  color: #B259FD;
+  margin-top: 1.6rem;
+  color: #5E73FF;
+  transition: color 0.25s ease-in-out;
 }
 #caseStudies a section p, #generalWork a section p {
   font-size: 1.8rem;
   font-weight: 500;
   width: 23.4rem;
   text-align: center;
+}
+#caseStudies a:hover section h2, #generalWork a:hover section h2 {
+  color: #EEF0F2;
+}
+#caseStudies h1, #generalWork h1 {
+  font-size: 7rem;
+  font-weight: 600;
+  color: #BABABA91;
+  line-height: 85%;
+  position: relative;
+  top: 5rem;
+}
+#caseStudies h2, #generalWork h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #5E73FF;
 }
 
 #caseStudies {
@@ -249,8 +243,8 @@ header nav ul li a {
   display: none;
 }
 #generalWork a section h2 {
-  margin-top: 1rem;
-  color: #2CE396;
+  margin-top: 1.6rem;
+  color: #EFCC57;
 }
 
 @media screen and (min-device-width: 600px) {
@@ -302,62 +296,352 @@ header nav ul li a {
     display: none;
   }
 }
-#aboutMe {
+.secondaryNav {
+  display: none;
+}
+
+.case {
+  grid-template-areas: "header header header" "article article article" "aboutMe aboutMe aboutMe";
+}
+
+@media screen and (min-device-width: 600px) {
+  .case {
+    grid-template-areas: ". header ." "article article article" ". aboutMe .";
+  }
+  .case p, .case ul li {
+    font-size: 2rem;
+  }
+}
+.caseExtended {
+  grid-area: article;
+  display: grid;
+  grid-template-columns: auto 95vw auto;
+  grid-template-rows: auto;
+  grid-row-gap: 6rem;
+}
+.caseExtended h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #E5E5E5;
+  margin-bottom: -0.8rem;
+}
+.caseExtended p {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+.caseExtended a {
+  color: #EFCC57;
+  transition: color 0.25s ease-in-out;
+}
+.caseExtended a:hover {
+  color: #EEF0F2;
+}
+.caseExtended img {
+  width: 80%;
+}
+.caseExtended ul {
+  padding: 0 0 0 4.8rem;
+}
+.caseExtended ul li {
+  margin-bottom: 1.6rem;
+}
+.caseExtended ul li:before {
+  content: "•";
+  color: #9A6BF0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.caseExtended .caseIntroduction h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  color: #E5E5E5;
+  margin-top: 1.6rem;
+  text-align: center;
+}
+.caseExtended .caseIntroduction h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #BABABA;
+}
+.caseExtended .caseIntroduction .caseParagraphs {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #848484;
+}
+.caseExtended .caseIntroduction img {
+  height: 48.75rem;
+  width: 27rem;
+  margin: 3.2rem auto;
+}
+.caseExtended figure {
+  margin: 3.2rem 1.6rem;
+}
+.caseExtended figure img {
+  display: block;
+  margin: 0 auto 1.6rem auto;
+}
+.caseExtended figure figcaption {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #C2C2C2;
+  line-height: 1.7;
+  text-align: center;
+}
+.caseExtended .multiple-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
+  margin: 0 auto;
+}
+
+@media screen and (min-device-width: 600px) {
+  .caseExtended {
+    grid-template-columns: auto minmax(70vw, 80rem) auto;
+    grid-row-gap: 6rem;
+  }
+  .caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
+    width: 74vw;
+    max-width: 80rem;
+  }
+  .caseExtended h1 {
+    font-size: 4rem;
+  }
+  .caseExtended ul {
+    padding: 0 0 0 4.8rem;
+  }
+}
+@media screen and (min-device-width: 1000px) {
+  .caseExtended {
+    grid-template-columns: auto minmax(44vw, 80rem) auto;
+  }
+  .caseExtended .caseIntroduction {
+    display: grid;
+    grid-template-areas: "image description" "title description";
+    grid-template-columns: 1fr 1.6fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 5%;
+    margin: 0 10vw;
+  }
+  .caseExtended .caseIntroduction h1 {
+    grid-area: title;
+    justify-self: center;
+    font-size: 7rem;
+  }
+  .caseExtended .caseIntroduction img {
+    grid-area: image;
+    justify-self: center;
+    align-self: center;
+  }
+  .caseExtended .caseIntroduction .caseParagraphs {
+    grid-area: description;
+    align-self: center;
+  }
+  .caseExtended .caseIntroduction .caseParagraphs p {
+    font-size: 2.6rem;
+  }
+  .caseExtended figure {
+    width: 20vw;
+    margin: 6.4rem;
+  }
+  .caseExtended figure figcaption {
+    width: 20vw;
+  }
+  .caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
+    width: 50vw;
+    max-width: 84rem;
+  }
+  .caseExtended .multiple-flex.two-images .multiple-image {
+    width: 60vw;
+  }
+  .caseExtended .multiple-flex .multiple-image {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .caseExtended .multiple-flex .multiple-image figure {
+    width: 20vw;
+  }
+  .caseExtended .multiple-flex .multiple-image figure img {
+    width: 16vw;
+  }
+  .caseExtended .single-image {
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .caseExtended .single-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#travello .caseExtended {
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "analysis analysis analysis" "needsStudy needsStudy needsStudy" "sketches sketches sketches" "lofi lofi lofi" "midfi midfi midfi" "hifi hifi hifi" "mistakes mistakes mistakes" "redesign redesign redesign";
+}
+
+@media screen and (min-device-width: 600px) {
+  #travello .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." ". analysis ." ". needsStudy ." "sketches sketches sketches" ". lofi ." "midfi midfi midfi" ". hifi ." ". mistakes ." ". redesign .";
+  }
+}
+.caseIntroduction {
+  grid-area: caseIntroduction;
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.designProblem {
+  grid-area: designProblem;
+}
+
+#analysis {
+  grid-area: analysis;
+}
+
+#needsStudy {
+  grid-area: needsStudy;
+}
+
+#sketches {
+  grid-area: sketches;
+}
+
+#lofi {
+  grid-area: lofi;
+}
+
+#midfi {
+  grid-area: midfi;
+}
+
+#hifi {
+  grid-area: hifi;
+}
+
+#mistakes {
+  grid-area: mistakes;
+}
+
+#redesign {
+  grid-area: redesign;
+}
+
+.aboutMe {
   grid-area: aboutMe;
   display: grid;
-  grid-template-areas: "sectionTitle sectionTitle" "aside ." "bio image" "contactInfo contactInfo";
+  grid-template-areas: "sectionTitle sectionTitle" "aside image" "bio image" "contactInfo contactInfo";
   grid-template-columns: auto auto;
   column-gap: 12%;
-  row-gap: 1rem;
+  row-gap: 1.6rem;
 }
-#aboutMe h1 {
+.aboutMe h1 {
   grid-area: sectionTitle;
-  top: 0;
+  font-size: 7rem;
+  font-weight: 600;
+  color: #BABABA91;
   line-height: 100%;
 }
-#aboutMe aside, #aboutMe #paragraphs p, #aboutMe #contact p {
+.aboutMe aside, .aboutMe .paragraphs p, .aboutMe .contact p {
   font-size: 2.5rem;
   font-weight: 500;
 }
-#aboutMe aside {
+.aboutMe aside {
   grid-area: aside;
   color: #626262;
 }
-#aboutMe #paragraphs {
+.aboutMe .paragraphs {
   grid-area: bio;
 }
-#aboutMe #paragraphs p {
-  color: #E5E5E5;
+.aboutMe .paragraphs p {
+  color: #C2C2C2;
 }
-#aboutMe img {
+.aboutMe .picture {
   grid-area: image;
   justify-self: center;
   width: 60%;
   height: auto;
   border-radius: 1rem;
 }
-#aboutMe #contact {
+.aboutMe .contact {
   grid-area: contactInfo;
   justify-self: center;
   margin: 8rem 0;
   font-size: 3rem;
   font-weight: 600;
 }
-#aboutMe #contact address {
+.aboutMe .contact address {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin-top: 3.2rem;
 }
-#aboutMe #contact address a {
+.aboutMe .contact address a {
   display: block;
   height: max-content;
   width: max-content;
 }
-#aboutMe #contact address a img {
+.aboutMe .contact address a img {
   height: auto;
   width: 6rem;
+  transition: transform 250ms ease-in-out;
+}
+.aboutMe .contact address a img:hover {
+  transform: scale(1.1);
+}
+
+ul, li, a, h1, h2, p {
+  list-style: none;
+  color: #C2C2C2;
+  font-weight: 500;
+  text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: auto 95vw auto;
+  grid-template-rows: auto;
+  grid-row-gap: 6rem;
+  font-family: "Work Sans", Helvetica, sans-serif;
+  font-weight: 900;
+  background-color: #1B1B1B;
+}
+
+p, ul li {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #C2C2C2;
+  line-height: 1.7;
+}
+
+@media screen and (min-device-width: 600px) {
+  body {
+    grid-template-columns: auto minmax(80vw, 80rem) auto;
+    grid-row-gap: 15rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
