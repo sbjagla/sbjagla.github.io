@@ -3,61 +3,126 @@
 @use 'base' as *;
 
 header {
-  grid-area: header;
+  // display
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: bottom 0.3s;
+  overflow: hidden;
+
+  // position
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 92.5%; // TODO:  na ekranie MDPI przycina menu
+  z-index: 100;
+
+  // size
+  width: 100%;
+
+  // color
+  background-color: $background-color;
+
+  h1 {
+    margin-left: 5%;
+    a {
+      font-size: $navigation-title-mobile-text-size;
+      font-weight: $subtitle-text-weight;
+      font-family: $title-font-stack;
+    }
+  }
+
+  .menuToggle {
+  // display
+  display: block;
+  position: relative;
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	outline: inherit;
+
+  // size
+  width: 26px;
+  height: 40px;
+
+  margin-right: 10%;
+
+    &::before, &::after {
+      // display
+      content: "";
+      display: block;
+
+      // position
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      // size
+      width: 26px;
+      height: 1px;
+      background-color: $title-text-color;
+      transition: all 0.3s;
+      transition-timing-function: ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(15px);
+    }
+
+    &::after {
+      transform: translateY(23px);
+    }
+  }
 
   nav {
-    // TODO: zastanowić się jak powinna wyglądać nawigacja na mobilnym
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    // position
+    position: absolute;
+    top: 7.5vh;
+
+    // size
+    width: 100vw;
+    height: 0;
+
+    // color
+    background-color: $background-color;
+
+    // animation
+    transition: all 0.5s ease;
+    overflow: hidden;
 
     ul {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-
+      // outter navigation
+      display: block;
+      margin: 8rem auto $text-margin auto;
+      min-width: 27rem;
+      width: 24%;
       li {
-        margin-right: $li-margin;
-
-        line-height: 1.4;
-
-        &:first-child {
-          // TODO: jak zrobić logo pojawiące się w nawigacji dopiero po przejechaniu?
-          flex-basis: 100%;
-          margin-bottom: 1rem;
-
-          a {
-            font-size: $medium-text-size;
-            font-weight: $medium-text-weight;
-          }
-        }
-
-        a {
-          font-size: $navigation-text-size;
-          white-space: nowrap;
-        }
-
-        &:not(:first-child) {
-          // this animation stolen from https://emilkowalski.github.io/css-effects-snippets/
-            display: inline-block;
-            position: relative;
-
-            &:after {
-              content: '';
-              position: absolute;
-              width: 100%;
-              transform: scaleX(0);
-              height: 2px;
-              bottom: 0;
-              left: 0;
-              background-color: $main-color;
-              transform-origin: bottom right;
-              transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-            }
-
-            &:hover::after {
-              transform: scaleX(1);
-              transform-origin: bottom left;
-            }
-        }
+        // separating outter list elements
+        margin-top: 3*$text-margin;
       }
+    }
+  }
+
+  &.menu-is-open {
+    nav {
+      // size
+      height: 100vh;
+    }
+
+    .menuToggle::before {
+      transform: translate(0, 20px) rotate(45deg);
+    }
+
+    .menuToggle::after {
+      transform: translate(0, 20px) rotate(-45deg);
     }
   }
 }
@@ -72,6 +137,86 @@ header {
         li {
           margin-right: $desktop-li-margin;
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 1200px) {
+  header {
+    bottom: 89%;
+
+    padding: $body-padding $body-padding $body-padding 14%;
+
+    h1 {
+      flex-basis: 100%;
+      margin-left: 0;
+      margin-top: 1rem;
+
+      a {
+        font-size: $medium-text-size;
+        font-weight: $medium-text-weight;
+      }
+    }
+
+    .menuToggle {
+      display: none;
+    }
+
+    nav {
+      display: inherit;
+      position: static;
+      width: max-content;
+      height: max-content;
+      background-color: none;
+
+
+
+
+      ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        width: max-content;
+
+        li {
+          // this animation stolen from https://emilkowalski.github.io/css-effects-snippets/
+            display: inline-block;
+            position: relative;
+            line-height: 1.4;
+            margin-top: $text-margin;
+            margin-bottom: $text-margin;
+
+            &:after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              transform: scaleX(0);
+              height: 2px;
+              bottom: 0;
+              left: 0;
+              background-color: $title-text-color;
+              transform-origin: bottom right;
+              transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+            }
+
+            &:hover::after {
+              transform: scaleX(1);
+              transform-origin: bottom left;
+            }
+
+          a {
+            font-size: $desktop-base-text-size;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+    &.menu-is-open {
+      nav {
+        // size
+        height: max-content;
       }
     }
   }

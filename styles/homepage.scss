@@ -5,8 +5,9 @@
 // ********* GENERAL *********
 
 .main {
-  grid-template-areas: "header header header"
-                        "intro intro intro"
+  position: absolute;
+  top: 11%;
+  grid-template-areas:  "intro intro intro"
                         "caseStudies caseStudies caseStudies"
                         "generalWork generalWork generalWork"
                         "aboutMe aboutMe aboutMe";
@@ -14,8 +15,7 @@
 
 @media screen and (min-device-width: 600px) {
   .main {
-    grid-template-areas: ". header ."
-                          ". intro ."
+    grid-template-areas:  ". intro ."
                           "caseStudies caseStudies caseStudies"
                           "generalWork generalWork generalWork"
                           ". aboutMe .";
@@ -25,16 +25,16 @@
 // ********* INTRODUCTION *********
 
 #intro {
-  // TODO: tutaj trzeba będzie dołożyć animację na tle
   grid-area: intro;
 
-  margin: 8vh 0;
+  margin: 26vh 0 8vh 0;
 
   h1 {
     grid-area: title;
+    font-family: $title-font-stack;
 
     position: relative;
-    font-size: $title-text-size;
+    font-size: calc(#{$title-text-size} + 1vw);
     font-weight: $title-text-weight;
     color: $title-text-color;
   }
@@ -42,7 +42,7 @@
   h2 {
     grid-area: subtitle;
 
-    font-size: $subtitle-text-size;
+    font-size: calc(#{$subtitle-text-size} + 0.5vw);
     font-weight: $subtitle-text-weight;
     color: $subtitle-text-color;
     margin: 0;
@@ -61,34 +61,37 @@
 }
 
 
-@media screen and (min-device-width: 600px) {
+@media screen and (min-device-width: 1000px) {
   #intro {
+    display: grid;
+    grid-template-areas: "title description"
+                          "subtitle description";
+    grid-template-columns: 1.6fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 8%;
+    p {
+      margin-left: 1.5rem;
+    }
+
+    h2 {
+      font-family: calc(#{$subtitle-text-size} + 0.2vw);
+    }
+  }
+}
+
+@media screen and (min-device-width: 1500px) {
+  #intro {
+    p {
+      font-size: $desktop-intro-text-size;
+      font-weight: $intro-text-weight;
+    }
+
     h1 {
       font-size: $desktop-title-text-size;
     }
 
     h2 {
       font-size: $desktop-subtitle-text-size;
-    }
-
-    p {
-      margin-left: 1.5rem;
-    }
-  }
-}
-
-@media screen and (min-device-width: 1000px) {
-  #intro {
-    display: grid;
-    grid-template-areas: "title description"
-                          "subtitle description";
-    grid-template-columns: auto auto;
-    grid-template-rows: auto 1fr;
-    column-gap: 12%;
-
-    p {
-      font-size: $desktop-intro-text-size;
-      font-weight: $intro-text-weight;
     }
   }
 }
@@ -215,7 +218,7 @@
 
       h2 {
         margin-top: $text-margin;
-        color: $case-title-color;
+        color: $orange-case-title-color;
       }
     }
   }

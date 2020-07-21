@@ -3,6 +3,10 @@
 
 // fonts faces
 @font-face {
+  font-family: 'Library';
+    src: url('../files/library-3-am.otf');
+}
+@font-face {
   font-family: 'Work Sans';
     src: url('../files/work-sans/WorkSans-Hairline.otf');
     font-weight: 300;
@@ -43,7 +47,7 @@
 
 
 $regular-font-stack: 'Work Sans', Helvetica, sans-serif;
-
+$title-font-stack: 'Library', 'Work Sans', Helvetica, sans-serif;
 
 // layout
 $body-padding: 0.5rem;
@@ -56,15 +60,16 @@ $section-margin-height: 4rem;
 $orange: #EFCC57;
 
 $main-color: #9A6BF0;
-$background-color: #1B1B1B;
-$title-text-color: #E5E5E5;
+$background-color: #141414;
+$title-text-color: #4B79FF;
+$case-title-color: rgba(75,121,255, 0.8);
 $subtitle-text-color: #BABABA;
 $intro-text-color: #848484;
-$medium-text-color: #5E73FF;
+$medium-text-color: #5AFFB0;
 $section-title-color: #BABABA91;
-$case-title-color: $orange;
+$orange-case-title-color: $orange;
 $link-color: $orange;
-$base-text-color: #C2C2C2;
+$base-text-color: #ECECEC;
 $aside-text-color: #626262;
 $border-color: #D2D2D2;
 $border-button-color: #B4ACB4;
@@ -72,16 +77,17 @@ $hover-color: #EEF0F2;
 
 // fonts
 $title-text-size: 5rem;
-$subtitle-text-size: 4rem;
+$subtitle-text-size: 3.5rem;
 $intro-text-size: 3rem;
 $medium-text-size: 2.5rem;
+$navigation-title-mobile-text-size: 2.2rem;
 $case-title-size: 7rem;
 $base-text-size: 1.8rem;
 $navigation-text-size: 1.8rem;
 
-$desktop-title-text-size: 10rem;
-$desktop-subtitle-text-size: 7rem;
-$desktop-intro-text-size: 5rem;
+$desktop-title-text-size: 9rem;
+$desktop-subtitle-text-size: 6.2rem;
+$desktop-intro-text-size: 3.5rem;
 $desktop-medium-text-size: 3rem;
 $desktop-semimedium-text-size: 2.6rem;
 $desktop-base-text-size: 2rem;

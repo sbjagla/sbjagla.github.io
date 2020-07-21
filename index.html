@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet">
+    <script src="main.js"></script>
 
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,14 +18,19 @@
   <body class="main" >
 
     <!-- *** NAVIGATION *** -->
-    <header>
+    <header id="navbar">
+
+      <h1> <a href="#">sebastian jagla</a> </h1>
+
+      <!-- visible menu toggle -->
+      <button class="menuToggle" onclick="toggleMenu()"></button>
+
       <nav>
         <ul>
-          <li> <a href="#intro">sebastian jagla</a> </li>
-          <li> <a href="#caseStudies">case studies</a> </li>
-          <li> <a href="#generalWork">general designs</a> </li>
-          <li> <a href="#aboutMe">about me</a> </li>
-          <li> <a href="files/CV_Sebastian_Jagla_(ENG).pdf">my cv</a> </li>
+          <li> <a class="navLink" href="#caseStudies">case studies</a> </li>
+          <li> <a class="navLink" href="#generalWork">general designs</a> </li>
+          <li> <a class="navLink" href="#aboutMe">about me</a> </li>
+          <li> <a class="navLink" href="files/CV_Sebastian_Jagla_(ENG).pdf">my cv</a> </li>
         </ul>
       </nav>
     </header>
@@ -72,42 +78,42 @@
 
       <!-- general work -->
 
-      <article id="generalWork">
-        <h1>general work</h1>
+    <article id="generalWork">
+      <h1>general work</h1>
 
-        <a href="stronaDominika/index.html">
-          <section id="senseiRoyale">
-            <div class="image imageDesktop"></div>
-            <h2>Sensei Royale icon pack</h2>
-            <p>icons for a companion website for Clash Royale mobile game</p>
-          </section>
-        </a>
+      <a href="stronaDominika/index.html">
+        <section id="senseiRoyale">
+          <div class="image imageDesktop"></div>
+          <h2>Sensei Royale icon pack</h2>
+          <p>icons for a companion website for Clash Royale mobile game</p>
+        </section>
+      </a>
 
-        <a href="travello/index.html">
-          <section id="knowledgePit">
-            <div class="image imageDesktop"></div>
-            <h2>KnowledgePit</h2>
-            <p>landing page for a machine learning contest platform</p>
-          </section>
-        </a>
+      <a href="travello/index.html">
+        <section id="knowledgePit">
+          <div class="image imageDesktop"></div>
+          <h2>KnowledgePit</h2>
+          <p>landing page for a machine learning contest platform</p>
+        </section>
+      </a>
 
-        <a href="stronaDominika/index.html">
-          <section id="moodle">
-            <div class="image imageDesktop"></div>
-            <h2>UX for Moodle MIMUW</h2>
-            <p>researched and designed ways of improving the interface of an e-learning platform</p>
-          </section>
-        </a>
+      <a href="stronaDominika/index.html">
+        <section id="moodle">
+          <div class="image imageDesktop"></div>
+          <h2>UX for Moodle MIMUW</h2>
+          <p>researched and designed ways of improving the interface of an e-learning platform</p>
+        </section>
+      </a>
 
-        <div class="break"> </div>
+      <div class="break"> </div>
 
-        <a href="stronaDominika/index.html">
-          <section id="moodle2">
-            <div class="image imageDesktop"></div>
-            <h2>UX for Moodle MIMUW</h2>
-            <p>researched and designed ways of improving the interface of an e-learning platform</p>
-          </section>
-        </a>
+      <a href="stronaDominika/index.html">
+        <section id="moodle2">
+          <div class="image imageDesktop"></div>
+          <h2>UX for Moodle MIMUW</h2>
+          <p>researched and designed ways of improving the interface of an e-learning platform</p>
+        </section>
+      </a>
 
     </article>
 

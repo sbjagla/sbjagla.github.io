@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="../styles/style.css" rel="stylesheet">
+    <script src="../main.js"></script>
 
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -15,35 +16,24 @@
   <body class="case" id="travello">
 
     <!-- *** NAVIGATION *** -->
-    <header>
+    <header id="navbar">
+
+      <h1> <a href="../index.html">sebastian jagla</a> </h1>
+
+      <!-- visible menu toggle -->
+      <button class="menuToggle" onclick="toggleMenu()"></button>
+
       <nav>
         <ul>
-          <li> <a href="../index.html">sebastian jagla</a> </li>
-          <li> <a href="../index.html#caseStudies">case studies</a> </li>
-          <li> <a href="../index.html#generalWork">general designs</a> </li>
-          <li> <a href="../index.html#aboutMe">about me</a> </li>
-          <li> <a href="files/CV_Sebastian_Jagla_(ENG).pdf">my cv</a> </li>
+          <li> <a class="navLink" href="../index.html#caseStudies">case studies</a> </li>
+          <li> <a class="navLink" href="../index.html#generalWork">general designs</a> </li>
+          <li> <a class="navLink" href="../index.html#aboutMe">about me</a> </li>
+          <li> <a class="navLink" href="../index.htmlfiles/CV_Sebastian_Jagla_(ENG).pdf">my cv</a> </li>
         </ul>
       </nav>
     </header>
 
     <article class="caseExtended" id="travelloArticle">
-
-      <nav class="secondaryNav">
-        <!-- TODO: wsio !!!nawet te linki -->
-        <ul>
-          <li> <a href="../index.html">Summary</a> </li>
-          <li> <a href="../index.html#caseStudies">Design problem</a> </li>
-          <li> <a href="../index.html#generalWork">Competitive analysis</a> </li>
-          <li> <a href="../index.html#aboutMe">Needs finding study</a> </li>
-          <li> <a href="../index.html#aboutMe">Sketches, personas and scenarios</a> </li>
-          <li> <a href="../index.html#aboutMe">Lo-Fi prototype and micro-usability test</a> </li>
-          <li> <a href="../index.html#aboutMe">Mid-Fi prototype and heuristic evaluation</a> </li>
-          <li> <a href="../index.html#aboutMe">Hi-Fi prototype</a> </li>
-          <li> <a href="../index.html#aboutMe">What I learnt</a> </li>
-          <li> <a href="../index.html#aboutMe">iOS redesign</a> </li>
-        </ul>
-      </nav>
 
       <section class="caseIntroduction">
         <h1>

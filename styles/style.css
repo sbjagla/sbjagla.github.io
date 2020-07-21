@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @font-face {
+  font-family: "Library";
+  src: url("../files/library-3-am.otf");
+}
+@font-face {
   font-family: "Work Sans";
   src: url("../files/work-sans/WorkSans-Hairline.otf");
   font-weight: 300;
@@ -43,7 +47,7 @@
   border-color: #D2D2D2;
   border-radius: 2.5rem;
   border-width: 0.4rem;
-  background-color: #1B1B1B;
+  background-color: #141414;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -61,48 +65,89 @@
 }
 
 header {
-  grid-area: header;
-}
-header nav ul {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
+  transition: bottom 0.3s;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 92.5%;
+  z-index: 100;
+  width: 100%;
+  background-color: #141414;
+}
+header h1 {
+  margin-left: 5%;
+}
+header h1 a {
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: "Library", "Work Sans", Helvetica, sans-serif;
+}
+header .menuToggle {
+  display: block;
+  position: relative;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: inherit;
+  width: 26px;
+  height: 40px;
+  margin-right: 10%;
+}
+header .menuToggle::before, header .menuToggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 1px;
+  background-color: #4B79FF;
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+}
+header .menuToggle::before {
+  transform: translateY(15px);
+}
+header .menuToggle::after {
+  transform: translateY(23px);
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  top: 7.5vh;
+  width: 100vw;
+  height: 0;
+  background-color: #141414;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+header nav ul {
+  display: block;
+  margin: 8rem auto 1.6rem auto;
+  min-width: 27rem;
+  width: 24%;
 }
 header nav ul li {
-  margin-right: 3rem;
-  line-height: 1.4;
+  margin-top: 4.8rem;
 }
-header nav ul li:first-child {
-  flex-basis: 100%;
-  margin-bottom: 1rem;
+header.menu-is-open nav {
+  height: 100vh;
 }
-header nav ul li:first-child a {
-  font-size: 2.5rem;
-  font-weight: 600;
+header.menu-is-open .menuToggle::before {
+  transform: translate(0, 20px) rotate(45deg);
 }
-header nav ul li a {
-  font-size: 1.8rem;
-  white-space: nowrap;
-}
-header nav ul li:not(:first-child) {
-  display: inline-block;
-  position: relative;
-}
-header nav ul li:not(:first-child):after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #9A6BF0;
-  transform-origin: bottom right;
-  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
-}
-header nav ul li:not(:first-child):hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+header.menu-is-open .menuToggle::after {
+  transform: translate(0, 20px) rotate(-45deg);
 }
 
 @media screen and (min-device-width: 600px) {
@@ -110,29 +155,93 @@ header nav ul li:not(:first-child):hover::after {
     margin-right: 10rem;
   }
 }
+@media screen and (min-device-width: 1200px) {
+  header {
+    bottom: 89%;
+    padding: 0.5rem 0.5rem 0.5rem 14%;
+  }
+  header h1 {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  header h1 a {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  header .menuToggle {
+    display: none;
+  }
+  header nav {
+    display: inherit;
+    position: static;
+    width: max-content;
+    height: max-content;
+    background-color: none;
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: max-content;
+  }
+  header nav ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 1.4;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+  }
+  header nav ul li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4B79FF;
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  header nav ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  header nav ul li a {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+  header.menu-is-open nav {
+    height: max-content;
+  }
+}
 .main {
-  grid-template-areas: "header header header" "intro intro intro" "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" "aboutMe aboutMe aboutMe";
+  position: absolute;
+  top: 11%;
+  grid-template-areas: "intro intro intro" "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" "aboutMe aboutMe aboutMe";
 }
 
 @media screen and (min-device-width: 600px) {
   .main {
-    grid-template-areas: ". header ." ". intro ." "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" ". aboutMe .";
+    grid-template-areas: ". intro ." "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" ". aboutMe .";
   }
 }
 #intro {
   grid-area: intro;
-  margin: 8vh 0;
+  margin: 26vh 0 8vh 0;
 }
 #intro h1 {
   grid-area: title;
+  font-family: "Library", "Work Sans", Helvetica, sans-serif;
   position: relative;
-  font-size: 5rem;
+  font-size: calc(5rem + 1vw);
   font-weight: 700;
-  color: #E5E5E5;
+  color: #4B79FF;
 }
 #intro h2 {
   grid-area: subtitle;
-  font-size: 4rem;
+  font-size: calc(3.5rem + 0.5vw);
   font-weight: 500;
   color: #BABABA;
   margin: 0;
@@ -146,28 +255,31 @@ header nav ul li:not(:first-child):hover::after {
   margin-top: 1.6rem;
 }
 
-@media screen and (min-device-width: 600px) {
-  #intro h1 {
-    font-size: 10rem;
-  }
-  #intro h2 {
-    font-size: 7rem;
-  }
-  #intro p {
-    margin-left: 1.5rem;
-  }
-}
 @media screen and (min-device-width: 1000px) {
   #intro {
     display: grid;
     grid-template-areas: "title description" "subtitle description";
-    grid-template-columns: auto auto;
+    grid-template-columns: 1.6fr 1fr;
     grid-template-rows: auto 1fr;
-    column-gap: 12%;
+    column-gap: 8%;
   }
   #intro p {
-    font-size: 5rem;
+    margin-left: 1.5rem;
+  }
+  #intro h2 {
+    font-family: calc(3.5rem + 0.2vw);
+  }
+}
+@media screen and (min-device-width: 1500px) {
+  #intro p {
+    font-size: 3.5rem;
     font-weight: 400;
+  }
+  #intro h1 {
+    font-size: 9rem;
+  }
+  #intro h2 {
+    font-size: 6.2rem;
   }
 }
 #caseStudies a section, #generalWork a section {
@@ -179,7 +291,7 @@ header nav ul li:not(:first-child):hover::after {
 }
 #caseStudies a section h2, #generalWork a section h2 {
   margin-top: 1.6rem;
-  color: #5E73FF;
+  color: #5AFFB0;
   transition: color 0.25s ease-in-out;
 }
 #caseStudies a section p, #generalWork a section p {
@@ -202,7 +314,7 @@ header nav ul li:not(:first-child):hover::after {
 #caseStudies h2, #generalWork h2 {
   font-size: 2.5rem;
   font-weight: 600;
-  color: #5E73FF;
+  color: #5AFFB0;
 }
 
 #caseStudies {
@@ -322,7 +434,8 @@ header nav ul li:not(:first-child):hover::after {
 .caseExtended h1 {
   font-size: 2.5rem;
   font-weight: 500;
-  color: #E5E5E5;
+  color: rgba(75, 121, 255, 0.8);
+  font-family: "Library", "Work Sans", Helvetica, sans-serif;
   margin-bottom: -0.8rem;
 }
 .caseExtended p {
@@ -356,12 +469,12 @@ header nav ul li:not(:first-child):hover::after {
 .caseExtended .caseIntroduction h1 {
   font-size: 5rem;
   font-weight: 500;
-  color: #E5E5E5;
+  color: #4B79FF;
   margin-top: 1.6rem;
   text-align: center;
 }
 .caseExtended .caseIntroduction h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 500;
   color: #BABABA;
 }
@@ -387,7 +500,7 @@ header nav ul li:not(:first-child):hover::after {
   margin-right: auto;
   font-size: 1.8rem;
   font-weight: 500;
-  color: #C2C2C2;
+  color: #ECECEC;
   line-height: 1.7;
   text-align: center;
 }
@@ -411,7 +524,7 @@ header nav ul li:not(:first-child):hover::after {
     max-width: 80rem;
   }
   .caseExtended h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .caseExtended ul {
     padding: 0 0 0 4.8rem;
@@ -427,12 +540,12 @@ header nav ul li:not(:first-child):hover::after {
     grid-template-columns: 1fr 1.6fr;
     grid-template-rows: auto 1fr;
     column-gap: 5%;
-    margin: 0 10vw;
+    margin: 0 10vw 10vh 10vw;
   }
   .caseExtended .caseIntroduction h1 {
     grid-area: title;
     justify-self: center;
-    font-size: 7rem;
+    font-size: 6.2rem;
   }
   .caseExtended .caseIntroduction img {
     grid-area: image;
@@ -555,8 +668,12 @@ header nav ul li:not(:first-child):hover::after {
   line-height: 100%;
 }
 .aboutMe aside, .aboutMe .paragraphs p, .aboutMe .contact p {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
+  text-align: center;
+}
+.aboutMe .contact p {
+  width: 70vw;
 }
 .aboutMe aside {
   grid-area: aside;
@@ -566,7 +683,7 @@ header nav ul li:not(:first-child):hover::after {
   grid-area: bio;
 }
 .aboutMe .paragraphs p {
-  color: #C2C2C2;
+  color: #ECECEC;
 }
 .aboutMe .picture {
   grid-area: image;
@@ -596,16 +713,28 @@ header nav ul li:not(:first-child):hover::after {
 }
 .aboutMe .contact address a img {
   height: auto;
-  width: 6rem;
+  width: 5rem;
   transition: transform 250ms ease-in-out;
 }
 .aboutMe .contact address a img:hover {
   transform: scale(1.1);
 }
 
+@media screen and (min-device-width: 1000px) {
+  .aboutMe aside, .aboutMe .paragraphs p, .aboutMe .contact p {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .aboutMe .contact p {
+    width: max-content;
+  }
+  .aboutMe .contact address a img {
+    width: 6rem;
+  }
+}
 ul, li, a, h1, h2, p {
   list-style: none;
-  color: #C2C2C2;
+  color: #ECECEC;
   font-weight: 500;
   text-decoration: none;
   margin-block-start: 0;
@@ -627,13 +756,13 @@ body {
   grid-row-gap: 6rem;
   font-family: "Work Sans", Helvetica, sans-serif;
   font-weight: 900;
-  background-color: #1B1B1B;
+  background-color: #141414;
 }
 
 p, ul li {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #C2C2C2;
+  color: #ECECEC;
   line-height: 1.7;
 }
 

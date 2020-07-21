@@ -37,7 +37,8 @@
   h1 {
     font-size: $medium-text-size;
     font-weight: $subtitle-text-weight;
-    color: $title-text-color;
+    color: $case-title-color;
+    font-family: $title-font-stack;
 
     margin-bottom: -$text-margin/2;
   }
@@ -175,7 +176,7 @@
       grid-template-rows: auto 1fr;
       column-gap: 5%;
 
-      margin: 0 10vw;
+      margin: 0 10vw 10vh 10vw;
 
       h1 {
         grid-area: title;
