@@ -38,7 +38,7 @@
   src: url("../files/work-sans/WorkSans-Black.otf");
   font-weight: 900;
 }
-.caseExtended .caseIntroduction img, #caseStudies a section .image, #generalWork a section .image {
+.caseExtended .caseIntroduction .image, #caseStudies a section .image, #generalWork a section .image {
   position: relative;
   display: block;
   width: 18rem;
@@ -52,7 +52,7 @@
   background-position: center center;
   background-size: cover;
 }
-.caseExtended .caseIntroduction img::after, #caseStudies a section .image::after, #generalWork a section .image::after {
+.caseExtended .caseIntroduction .image::after, #caseStudies a section .image::after, #generalWork a section .image::after {
   content: "";
   display: block;
   position: absolute;
@@ -76,7 +76,7 @@ header {
   left: 0;
   top: 0;
   right: 0;
-  bottom: 92.5%;
+  bottom: 87%;
   z-index: 100;
   width: 100%;
   background-color: #141414;
@@ -229,7 +229,7 @@ header.menu-is-open .menuToggle::after {
 }
 #intro {
   grid-area: intro;
-  margin: 26vh 0 8vh 0;
+  margin: 10vh 0 8vh 0;
 }
 #intro h1 {
   grid-area: title;
@@ -262,6 +262,7 @@ header.menu-is-open .menuToggle::after {
     grid-template-columns: 1.6fr 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 8%;
+    margin: 26vh 0 8vh 0;
   }
   #intro p {
     margin-left: 1.5rem;
@@ -483,7 +484,7 @@ header.menu-is-open .menuToggle::after {
   font-weight: 400;
   color: #848484;
 }
-.caseExtended .caseIntroduction img {
+.caseExtended .caseIntroduction .image {
   height: 48.75rem;
   width: 27rem;
   margin: 3.2rem auto;
@@ -529,6 +530,13 @@ header.menu-is-open .menuToggle::after {
   .caseExtended ul {
     padding: 0 0 0 4.8rem;
   }
+  .caseExtended .caseIntroduction .imageDesktop {
+    width: 54rem;
+    height: 30rem;
+  }
+  .caseExtended .caseIntroduction .imageDesktop::after {
+    display: none;
+  }
 }
 @media screen and (min-device-width: 1000px) {
   .caseExtended {
@@ -547,7 +555,7 @@ header.menu-is-open .menuToggle::after {
     justify-self: center;
     font-size: 6.2rem;
   }
-  .caseExtended .caseIntroduction img {
+  .caseExtended .caseIntroduction .image {
     grid-area: image;
     justify-self: center;
     align-self: center;
@@ -602,6 +610,9 @@ header.menu-is-open .menuToggle::after {
 #travello .caseExtended {
   grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "analysis analysis analysis" "needsStudy needsStudy needsStudy" "sketches sketches sketches" "lofi lofi lofi" "midfi midfi midfi" "hifi hifi hifi" "mistakes mistakes mistakes" "redesign redesign redesign";
 }
+#travello .caseExtended .image {
+  background-image: url("../images/travello-mobile-preview.png");
+}
 
 @media screen and (min-device-width: 600px) {
   #travello .caseExtended {
@@ -650,6 +661,33 @@ header.menu-is-open .menuToggle::after {
 
 #redesign {
   grid-area: redesign;
+}
+
+#beauty .caseExtended {
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "IA IA IA" "visualCon visualCon visualCon" "finalDesign finalDesign finalDesign";
+}
+#beauty .caseExtended .image {
+  background-image: url("../images/beauty-mobile-preview.png");
+}
+
+@media screen and (min-device-width: 600px) {
+  #beauty .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." ". IA ." "visualCon visualCon visualCon" "finalDesign finalDesign finalDesign";
+  }
+  #beauty .caseExtended .image {
+    background-image: url("../images/beauty-desktop-preview.png");
+  }
+}
+#informationArchitecture {
+  grid-area: IA;
+}
+
+#visualConcepts {
+  grid-area: visualCon;
+}
+
+#finalDesign {
+  grid-area: finalDesign;
 }
 
 .aboutMe {

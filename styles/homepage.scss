@@ -27,7 +27,7 @@
 #intro {
   grid-area: intro;
 
-  margin: 26vh 0 8vh 0;
+  margin: 10vh 0 8vh 0;
 
   h1 {
     grid-area: title;
@@ -69,6 +69,8 @@
     grid-template-columns: 1.6fr 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 8%;
+
+    margin: 26vh 0 8vh 0;
     p {
       margin-left: 1.5rem;
     }
@@ -141,8 +143,7 @@
       color: $section-title-color;
       line-height: 85%;
     position: relative;
-      top: 5rem; // TODO: ogarnąć jak obniżyć napis, żeby było git na wszystkich ekranach
-      // procenty nie, bo na mobilnym ten div jest bardzo długi
+      top: 5rem;
   }
 
   h2 {

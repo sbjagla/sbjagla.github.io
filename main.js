@@ -32,7 +32,7 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.bottom = "89%";
+    document.getElementById("navbar").style.bottom = "87%";
   } else if (toggleStatus === false) {
     document.getElementById("navbar").style.bottom = "100%";
   }

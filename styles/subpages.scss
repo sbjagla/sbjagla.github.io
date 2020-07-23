@@ -100,7 +100,7 @@
       color: $intro-text-color;
     }
 
-    img {
+    .image {
       @extend %phone-mockup;
       height: 1.5 * $phone-height;
       width: 1.5 * $phone-width;
@@ -161,6 +161,17 @@
     ul {
       padding: 0 0 0 3*$text-margin;
     }
+
+    .caseIntroduction {
+      .imageDesktop {
+        width: $desktop-width;
+        height: $desktop-height;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -185,7 +196,7 @@
         font-size: $desktop-subtitle-text-size;
       }
 
-      img {
+      .image {
         grid-area: image;
 
         justify-self: center;
@@ -274,6 +285,10 @@
                           "hifi hifi hifi"
                           "mistakes mistakes mistakes"
                           "redesign redesign redesign";
+
+    .image {
+      background-image: url('../images/travello-mobile-preview.png');
+    }
   }
 }
 
@@ -337,4 +352,50 @@
 
 #redesign {
   grid-area: redesign;
+}
+
+
+// ********* BEAUTY&BEAUTY *********
+
+#beauty {
+  .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                          "summary summary summary"
+                          "designProblem designProblem designProblem"
+                          "IA IA IA"
+                          "visualCon visualCon visualCon"
+                          "finalDesign finalDesign finalDesign";
+
+    .image {
+      background-image: url('../images/beauty-mobile-preview.png');
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  #beauty {
+    .caseExtended {
+      grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                            ". summary ."
+                            ". designProblem ."
+                            ". IA ."
+                            "visualCon visualCon visualCon"
+                            "finalDesign finalDesign finalDesign";
+      .image {
+        background-image: url('../images/beauty-desktop-preview.png');
+      }
+    }
+  }
+}
+
+#informationArchitecture {
+  grid-area: IA;
+}
+
+#visualConcepts {
+  grid-area: visualCon;
+}
+
+#finalDesign {
+  grid-area: finalDesign;
 }
