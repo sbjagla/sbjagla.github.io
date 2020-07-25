@@ -51,9 +51,19 @@ p, ul li {
   line-height: 1.7;
 }
 
+.break {
+  display: none;
+}
+
 @media screen and (min-device-width: 600px) {
   body {
     grid-template-columns: auto minmax(80vw, $section-width) auto;
     grid-row-gap: $desktop-row-gap;
+
+    .break {
+      display: inherit;
+      height: 0;
+      flex-basis: 100%;
+    }
   }
 }

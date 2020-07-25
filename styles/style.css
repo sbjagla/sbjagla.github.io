@@ -4,39 +4,53 @@
   src: url("../files/library-3-am.otf");
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url("../files/work-sans/WorkSans-Hairline.otf");
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 300;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Light.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Light.woff?v=3.13") format("woff");
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url("../files/work-sans/WorkSans-Light.otf");
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 400;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Regular.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Regular.woff?v=3.13") format("woff");
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url("../files/work-sans/WorkSans-Regular.otf");
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 500;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Medium.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Medium.woff?v=3.13") format("woff");
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url("../files/work-sans/WorkSans-Medium.otf");
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 600;
+  font-display: swap;
+  src: url("../files/Inter/Inter-SemiBold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-SemiBold.woff?v=3.13") format("woff");
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url("../files/work-sans/WorkSans-SemiBold.otf");
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 700;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Bold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Bold.woff?v=3.13") format("woff");
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url("../files/work-sans/WorkSans-Bold.otf");
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 800;
+  font-display: swap;
+  src: url("../files/Inter/Inter-ExtraBold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-ExtraBold.woff?v=3.13") format("woff");
 }
 @font-face {
-  font-family: "Work Sans";
-  src: url("../files/work-sans/WorkSans-Black.otf");
+  font-family: "Inter";
+  font-style: normal;
   font-weight: 900;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Black.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Black.woff?v=3.13") format("woff");
 }
 .caseExtended .caseIntroduction .image, #caseStudies a section .image, #generalWork a section .image {
   position: relative;
@@ -87,7 +101,7 @@ header h1 {
 header h1 a {
   font-size: 2.2rem;
   font-weight: 500;
-  font-family: "Library", "Work Sans", Helvetica, sans-serif;
+  font-family: "Library", Helvetica, sans-serif;
 }
 header .menuToggle {
   display: block;
@@ -233,7 +247,7 @@ header.menu-is-open .menuToggle::after {
 }
 #intro h1 {
   grid-area: title;
-  font-family: "Library", "Work Sans", Helvetica, sans-serif;
+  font-family: "Library", Helvetica, sans-serif;
   position: relative;
   font-size: calc(5rem + 1vw);
   font-weight: 700;
@@ -258,8 +272,8 @@ header.menu-is-open .menuToggle::after {
 @media screen and (min-device-width: 1000px) {
   #intro {
     display: grid;
-    grid-template-areas: "title description" "subtitle description";
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-areas: "title title ." "subtitle description description";
+    grid-template-columns: 1.5fr 1fr 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 8%;
     margin: 26vh 0 8vh 0;
@@ -274,7 +288,7 @@ header.menu-is-open .menuToggle::after {
 @media screen and (min-device-width: 1500px) {
   #intro p {
     font-size: 3.5rem;
-    font-weight: 400;
+    font-weight: 300;
   }
   #intro h1 {
     font-size: 9rem;
@@ -386,10 +400,6 @@ header.menu-is-open .menuToggle::after {
     background-image: url("../images/beauty-desktop-preview.png");
   }
 
-  #generalWork .break {
-    height: 0;
-    flex-basis: 100%;
-  }
   #generalWork a section#knowledgePit .image {
     width: 41.5384615385rem;
     height: 23.0769230769rem;
@@ -409,10 +419,6 @@ header.menu-is-open .menuToggle::after {
     display: none;
   }
 }
-.secondaryNav {
-  display: none;
-}
-
 .case {
   grid-template-areas: "header header header" "article article article" "aboutMe aboutMe aboutMe";
 }
@@ -436,7 +442,7 @@ header.menu-is-open .menuToggle::after {
   font-size: 2.5rem;
   font-weight: 500;
   color: rgba(75, 121, 255, 0.8);
-  font-family: "Library", "Work Sans", Helvetica, sans-serif;
+  font-family: "Library", Helvetica, sans-serif;
   margin-bottom: -0.8rem;
 }
 .caseExtended p {
@@ -452,6 +458,15 @@ header.menu-is-open .menuToggle::after {
 }
 .caseExtended img {
   width: 80%;
+}
+.caseExtended .multiple-image .image {
+  width: 18rem;
+  height: 32.5rem;
+  display: block;
+  background-color: #141414;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 .caseExtended ul {
   padding: 0 0 0 4.8rem;
@@ -481,8 +496,10 @@ header.menu-is-open .menuToggle::after {
 }
 .caseExtended .caseIntroduction .caseParagraphs {
   font-size: 3rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #848484;
+  margin: auto;
+  width: 74vw;
 }
 .caseExtended .caseIntroduction .image {
   height: 48.75rem;
@@ -492,7 +509,7 @@ header.menu-is-open .menuToggle::after {
 .caseExtended figure {
   margin: 3.2rem 1.6rem;
 }
-.caseExtended figure img {
+.caseExtended figure img, .caseExtended figure .image {
   display: block;
   margin: 0 auto 1.6rem auto;
 }
@@ -505,14 +522,19 @@ header.menu-is-open .menuToggle::after {
   line-height: 1.7;
   text-align: center;
 }
-.caseExtended .multiple-image {
+.caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
+  margin: 0 auto;
+}
+.caseExtended .multiple-flex .multiple-image {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
-  margin: 0 auto;
+.caseExtended .multiple-flex .multiple-image.div-image figure {
+  width: max-content;
+  height: max-content;
 }
 
 @media screen and (min-device-width: 600px) {
@@ -530,11 +552,11 @@ header.menu-is-open .menuToggle::after {
   .caseExtended ul {
     padding: 0 0 0 4.8rem;
   }
-  .caseExtended .caseIntroduction .imageDesktop {
+  .caseExtended .multiple-flex .multiple-image .imageDesktop {
     width: 54rem;
     height: 30rem;
   }
-  .caseExtended .caseIntroduction .imageDesktop::after {
+  .caseExtended .multiple-flex .multiple-image .imageDesktop::after {
     display: none;
   }
 }
@@ -545,7 +567,7 @@ header.menu-is-open .menuToggle::after {
   .caseExtended .caseIntroduction {
     display: grid;
     grid-template-areas: "image description" "title description";
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 5%;
     margin: 0 10vw 10vh 10vw;
@@ -560,12 +582,22 @@ header.menu-is-open .menuToggle::after {
     justify-self: center;
     align-self: center;
   }
+  .caseExtended .caseIntroduction .image.imageDesktop {
+    width: 54rem;
+    height: 30rem;
+  }
+  .caseExtended .caseIntroduction .image.imageDesktop:after {
+    display: none;
+  }
   .caseExtended .caseIntroduction .caseParagraphs {
     grid-area: description;
     align-self: center;
+    margin: 0;
+    width: inherit;
   }
   .caseExtended .caseIntroduction .caseParagraphs p {
-    font-size: 2.6rem;
+    font-size: 3.5rem;
+    font-weight: 300;
   }
   .caseExtended figure {
     width: 20vw;
@@ -575,7 +607,7 @@ header.menu-is-open .menuToggle::after {
     width: 20vw;
   }
   .caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
-    width: 50vw;
+    width: 44vw;
     max-width: 84rem;
   }
   .caseExtended .multiple-flex.two-images .multiple-image {
@@ -584,14 +616,15 @@ header.menu-is-open .menuToggle::after {
   .caseExtended .multiple-flex .multiple-image {
     flex-direction: row;
     justify-content: space-around;
-    width: 80vw;
+    width: 95vw;
     margin: 0 auto;
   }
   .caseExtended .multiple-flex .multiple-image figure {
     width: 20vw;
   }
-  .caseExtended .multiple-flex .multiple-image figure img {
-    width: 16vw;
+  .caseExtended .multiple-flex .multiple-image figure .imageDesktop {
+    width: 54rem;
+    height: 30rem;
   }
   .caseExtended .single-image {
     width: 30vw;
@@ -610,7 +643,7 @@ header.menu-is-open .menuToggle::after {
 #travello .caseExtended {
   grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "analysis analysis analysis" "needsStudy needsStudy needsStudy" "sketches sketches sketches" "lofi lofi lofi" "midfi midfi midfi" "hifi hifi hifi" "mistakes mistakes mistakes" "redesign redesign redesign";
 }
-#travello .caseExtended .image {
+#travello .caseExtended .caseIntroduction .image {
   background-image: url("../images/travello-mobile-preview.png");
 }
 
@@ -664,18 +697,53 @@ header.menu-is-open .menuToggle::after {
 }
 
 #beauty .caseExtended {
-  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "IA IA IA" "visualCon visualCon visualCon" "finalDesign finalDesign finalDesign";
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "IA IA IA" "visualCon visualCon visualCon" "biggestDecision biggestDecision biggestDecision" "finalDesign finalDesign finalDesign";
 }
-#beauty .caseExtended .image {
+#beauty .caseExtended .caseIntroduction .image {
   background-image: url("../images/beauty-mobile-preview.png");
+}
+#beauty .caseExtended .multiple-image:not(.div-image) figure {
+  width: inherit;
+}
+#beauty .caseExtended #finalDesign #start {
+  background-image: url("../beauty/files/mobile-intro.png");
+}
+#beauty .caseExtended #finalDesign #procedure1 {
+  background-image: url("../beauty/files/mobile-procedure1.png");
+}
+#beauty .caseExtended #finalDesign #procedure2 {
+  background-image: url("../beauty/files/mobile-procedure2.png");
+}
+#beauty .caseExtended #finalDesign #priceList {
+  background-image: url("../beauty/files/mobile-contact.png");
 }
 
 @media screen and (min-device-width: 600px) {
   #beauty .caseExtended {
-    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." ". IA ." "visualCon visualCon visualCon" "finalDesign finalDesign finalDesign";
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." ". IA ." "visualCon visualCon visualCon" ". biggestDecision ." "finalDesign finalDesign finalDesign";
   }
-  #beauty .caseExtended .image {
+  #beauty .caseExtended .caseIntroduction .image {
     background-image: url("../images/beauty-desktop-preview.png");
+  }
+  #beauty .caseExtended #finalDesign #start {
+    background-image: url("../beauty/files/desktop-intro.png");
+  }
+  #beauty .caseExtended #finalDesign #procedure1 {
+    background-image: url("../beauty/files/desktop-procedure1.png");
+  }
+  #beauty .caseExtended #finalDesign #procedure2 {
+    background-image: url("../beauty/files/desktop-procedure2.png");
+  }
+  #beauty .caseExtended #finalDesign #priceList {
+    background-image: url("../beauty/files/desktop-contact.png");
+  }
+}
+@media screen and (min-device-width: 1500px) {
+  #beauty .caseExtended .multiple-image:not(.div-image) figure {
+    width: 22vw;
+  }
+  #beauty .caseExtended .multiple-image:not(.div-image) figure img {
+    width: 100%;
   }
 }
 #informationArchitecture {
@@ -686,8 +754,15 @@ header.menu-is-open .menuToggle::after {
   grid-area: visualCon;
 }
 
+#biggestDecision {
+  grid-area: biggestDecision;
+}
+
 #finalDesign {
   grid-area: finalDesign;
+}
+#finalDesign #linkParagraph {
+  text-align: center;
 }
 
 .aboutMe {
@@ -770,6 +845,10 @@ header.menu-is-open .menuToggle::after {
     width: 6rem;
   }
 }
+.case .aboutMe .contact {
+  margin-top: 0;
+}
+
 ul, li, a, h1, h2, p {
   list-style: none;
   color: #ECECEC;
@@ -792,7 +871,7 @@ body {
   grid-template-columns: auto 95vw auto;
   grid-template-rows: auto;
   grid-row-gap: 6rem;
-  font-family: "Work Sans", Helvetica, sans-serif;
+  font-family: Source Sans Pro, Helvetica, sans-serif;
   font-weight: 900;
   background-color: #141414;
 }
@@ -804,10 +883,19 @@ p, ul li {
   line-height: 1.7;
 }
 
+.break {
+  display: none;
+}
+
 @media screen and (min-device-width: 600px) {
   body {
     grid-template-columns: auto minmax(80vw, 80rem) auto;
     grid-row-gap: 15rem;
+  }
+  body .break {
+    display: inherit;
+    height: 0;
+    flex-basis: 100%;
   }
 }
 

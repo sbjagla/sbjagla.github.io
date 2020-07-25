@@ -64,9 +64,9 @@
 @media screen and (min-device-width: 1000px) {
   #intro {
     display: grid;
-    grid-template-areas: "title description"
-                          "subtitle description";
-    grid-template-columns: 1.6fr 1fr;
+    grid-template-areas: "title title ."
+                          "subtitle description description";
+    grid-template-columns: 1.5fr 1fr 1fr;
     grid-template-rows: auto 1fr;
     column-gap: 8%;
 
@@ -270,11 +270,6 @@
   }
 
   #generalWork {
-    .break {
-      height: 0;
-      flex-basis: 100%;
-    }
-
     a {
       section {
         // specific sizes for designs

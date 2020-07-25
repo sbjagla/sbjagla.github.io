@@ -3,11 +3,6 @@
 
 // ********* GENERAL *********
 
-.secondaryNav {
-  // TODO:
-  display: none;
-}
-
 .case {
   grid-template-areas: "header header header"
                         "article article article"
@@ -61,6 +56,17 @@
     width: 80%;
   }
 
+  .multiple-image .image {
+    width: $phone-width;
+    height: $phone-height;
+
+    display: block;
+    background-color: $background-color;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+  }
+
   ul {
     padding: 0 0 0 3*$text-margin;
 
@@ -98,6 +104,9 @@
       font-size: $intro-text-size;
       font-weight: $intro-text-weight;
       color: $intro-text-color;
+
+      margin: auto;
+      width: 74vw;
     }
 
     .image {
@@ -112,7 +121,7 @@
   figure {
     margin: 2*$text-margin $text-margin;
 
-    img {
+    img, .image {
       display: block;
       margin: 0 auto $text-margin auto;
     }
@@ -128,16 +137,24 @@
     }
   }
 
-  .multiple-image {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
   .multiple-flex {
     h1, p, ul {
       margin: 0 auto;
+    }
+
+    .multiple-image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &.div-image {
+        figure {
+          width: max-content;
+          height: max-content;
+        }
+      }
     }
   }
 }
@@ -162,13 +179,15 @@
       padding: 0 0 0 3*$text-margin;
     }
 
-    .caseIntroduction {
-      .imageDesktop {
-        width: $desktop-width;
-        height: $desktop-height;
+    .multiple-flex {
+      .multiple-image {
+        .imageDesktop {
+          width: $desktop-width;
+          height: $desktop-height;
 
-        &::after {
-          display: none;
+          &::after {
+            display: none;
+          }
         }
       }
     }
@@ -183,7 +202,7 @@
       display: grid;
       grid-template-areas: "image description"
                             "title description";
-      grid-template-columns: 1fr 1.6fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-rows: auto 1fr;
       column-gap: 5%;
 
@@ -201,14 +220,26 @@
 
         justify-self: center;
         align-self: center;
+        &.imageDesktop {
+          width: $desktop-width;
+          height: $desktop-height;
+
+          &:after {
+            display: none;
+          }
+        }
       }
 
       .caseParagraphs {
         grid-area: description;
 
         align-self: center;
+
+        margin: 0;
+        width: inherit;
         p {
-          font-size: $desktop-semimedium-text-size;
+          font-size: $desktop-intro-text-size;
+          font-weight: 300;
         }
       }
     }
@@ -225,7 +256,7 @@
     .multiple-flex {
 
       h1, p, ul {
-        width: 50vw;
+        width: 44vw;
         max-width: 84rem;
       }
 
@@ -239,14 +270,15 @@
         flex-direction: row;
         justify-content: space-around;
 
-        width: 80vw;
+        width: 95vw;
         margin: 0 auto;
 
         figure {
           width: 20vw;
 
-          img {
-            width: 16vw;
+          .imageDesktop {
+            width: $desktop-width;
+            height: $desktop-height;
           }
         }
       }
@@ -286,8 +318,10 @@
                           "mistakes mistakes mistakes"
                           "redesign redesign redesign";
 
-    .image {
-      background-image: url('../images/travello-mobile-preview.png');
+    .caseIntroduction {
+      .image {
+        background-image: url('../images/travello-mobile-preview.png');
+      }
     }
   }
 }
@@ -364,10 +398,40 @@
                           "designProblem designProblem designProblem"
                           "IA IA IA"
                           "visualCon visualCon visualCon"
+                          "biggestDecision biggestDecision biggestDecision"
                           "finalDesign finalDesign finalDesign";
 
-    .image {
-      background-image: url('../images/beauty-mobile-preview.png');
+    .caseIntroduction {
+      .image {
+        background-image: url('../images/beauty-mobile-preview.png');
+      }
+    }
+
+    .multiple-image {
+      &:not(.div-image) {
+        figure {
+          width: inherit;
+        }
+      }
+    }
+
+    #finalDesign {
+      #start {
+        background-image: url('../beauty/files/mobile-intro.png');
+      }
+
+      #procedure1 {
+        background-image: url('../beauty/files/mobile-procedure1.png');
+      }
+
+      #procedure2 {
+        background-image: url('../beauty/files/mobile-procedure2.png');
+
+      }
+
+      #priceList {
+        background-image: url('../beauty/files/mobile-contact.png');
+      }
     }
   }
 }
@@ -380,9 +444,51 @@
                             ". designProblem ."
                             ". IA ."
                             "visualCon visualCon visualCon"
+                            ". biggestDecision ."
                             "finalDesign finalDesign finalDesign";
-      .image {
-        background-image: url('../images/beauty-desktop-preview.png');
+      .caseIntroduction {
+        .image {
+          background-image: url('../images/beauty-desktop-preview.png');
+        }
+      }
+
+      #finalDesign {
+        #start {
+          background-image: url('../beauty/files/desktop-intro.png');
+        }
+
+        #procedure1 {
+          background-image: url('../beauty/files/desktop-procedure1.png');
+        }
+
+        #procedure2 {
+          background-image: url('../beauty/files/desktop-procedure2.png');
+
+        }
+
+        #priceList {
+          background-image: url('../beauty/files/desktop-contact.png');
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 1500px) {
+  #beauty {
+    .caseExtended {
+      .multiple-image {
+        &:not(.div-image) {
+          figure {
+            width: 22vw;
+
+
+
+            img {
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }
@@ -396,6 +502,14 @@
   grid-area: visualCon;
 }
 
+#biggestDecision {
+  grid-area: biggestDecision;
+}
+
 #finalDesign {
   grid-area: finalDesign;
+
+  #linkParagraph {
+    text-align: center;
+  }
 }
