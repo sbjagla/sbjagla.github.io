@@ -31,10 +31,9 @@ ul, li, a, h1, h2, p {
 }
 
 body {
-  padding: $body-padding;
   // display
   display: grid;
-  grid-template-columns: auto 95vw auto;
+  grid-template-columns: auto 90vw auto;
   grid-template-rows: auto;
   grid-row-gap: $row-gap;
 

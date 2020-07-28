@@ -7,10 +7,11 @@
 
   display: grid;
   grid-template-areas: "sectionTitle sectionTitle"
-                        "aside image"
-                        "bio image"
+                        "aside aside"
+                        "bio bio"
+                        "image image"
                         "contactInfo contactInfo";
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   column-gap: 12%;
   row-gap: $text-margin;
 
@@ -26,11 +27,11 @@
   aside, .paragraphs p, .contact p {
     font-size: $base-text-size;
     font-weight: $base-text-weight;
-    text-align: center;
   }
 
   .contact p {
     width: 70vw;
+    text-align: center;
   }
 
   aside {
@@ -94,6 +95,11 @@
 
 @media screen and (min-device-width: 1000px) {
   .aboutMe {
+    grid-template-areas: "sectionTitle sectionTitle"
+                          "aside image"
+                          "bio image"
+                          "contactInfo contactInfo";
+
     aside, .paragraphs p, .contact p {
       font-size: $medium-text-size;
       text-align: left;

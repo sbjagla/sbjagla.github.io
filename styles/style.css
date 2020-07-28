@@ -243,26 +243,26 @@ header.menu-is-open .menuToggle::after {
 }
 #intro {
   grid-area: intro;
-  margin: 10vh 0 8vh 0;
+  margin: 22vh 0 20vh 0;
 }
 #intro h1 {
   grid-area: title;
   font-family: "Library", Helvetica, sans-serif;
   position: relative;
-  font-size: calc(5rem + 1vw);
+  font-size: calc(3.2rem + 1vw);
   font-weight: 700;
   color: #4B79FF;
 }
 #intro h2 {
   grid-area: subtitle;
-  font-size: calc(3.5rem + 0.5vw);
+  font-size: calc(3rem + 0.5vw);
   font-weight: 500;
   color: #BABABA;
   margin: 0;
 }
 #intro p {
   grid-area: description;
-  font-size: 3rem;
+  font-size: 2.2rem;
   color: #848484;
 }
 #intro h2, #intro p {
@@ -282,7 +282,7 @@ header.menu-is-open .menuToggle::after {
     margin-left: 1.5rem;
   }
   #intro h2 {
-    font-family: calc(3.5rem + 0.2vw);
+    font-family: calc(3rem + 0.2vw);
   }
 }
 @media screen and (min-device-width: 1500px) {
@@ -305,8 +305,9 @@ header.menu-is-open .menuToggle::after {
   margin: 4rem 0;
 }
 #caseStudies a section h2, #generalWork a section h2 {
-  margin-top: 1.6rem;
+  margin-top: 2rem;
   color: #5AFFB0;
+  font-weight: 500;
   transition: color 0.25s ease-in-out;
 }
 #caseStudies a section p, #generalWork a section p {
@@ -314,6 +315,7 @@ header.menu-is-open .menuToggle::after {
   font-weight: 500;
   width: 23.4rem;
   text-align: center;
+  color: #B5B5B5;
 }
 #caseStudies a:hover section h2, #generalWork a:hover section h2 {
   color: #EEF0F2;
@@ -324,7 +326,7 @@ header.menu-is-open .menuToggle::after {
   color: #BABABA91;
   line-height: 85%;
   position: relative;
-  top: 5rem;
+  top: 4rem;
 }
 #caseStudies h2, #generalWork h2 {
   font-size: 2.5rem;
@@ -336,13 +338,13 @@ header.menu-is-open .menuToggle::after {
   grid-area: caseStudies;
 }
 #caseStudies a section#esensei .image {
-  background-image: url("../images/dominik-mobile-preview.png");
+  background-image: url("../images/esensei-mobile-preview.png");
 }
 #caseStudies a section#travello .image {
   background-image: url("../images/travello-mobile-preview.png");
 }
 #caseStudies a section#beauty .image {
-  background-image: url("../images/travello-mobile-preview.png");
+  background-image: url("../images/beauty-mobile-preview.png");
 }
 
 #generalWork {
@@ -353,7 +355,7 @@ header.menu-is-open .menuToggle::after {
   height: 25rem;
 }
 #generalWork a section#knowledgePit .image {
-  background-image: url("../images/knowledgePit-desktop-preview.png");
+  background-image: url("../images/knowledgePit-mobile-preview.png");
 }
 #generalWork a section#senseiRoyale .image {
   background-image: url("../images/icons-preview.png");
@@ -370,7 +372,6 @@ header.menu-is-open .menuToggle::after {
   display: none;
 }
 #generalWork a section h2 {
-  margin-top: 1.6rem;
   color: #EFCC57;
 }
 
@@ -394,7 +395,7 @@ header.menu-is-open .menuToggle::after {
     display: none;
   }
   #caseStudies a section#esensei .image {
-    background-image: url("../images/esensei-desktop-preview.svg");
+    background-image: url("../images/esensei-desktop-preview.png");
   }
   #caseStudies a section#beauty .image {
     background-image: url("../images/beauty-desktop-preview.png");
@@ -407,11 +408,8 @@ header.menu-is-open .menuToggle::after {
   #generalWork a section#knowledgePit .image::after {
     display: none;
   }
-  #generalWork a section#esensei .image {
-    background-image: url("../images/esensei-desktop-preview.svg");
-  }
-  #generalWork a section#beauty .image {
-    background-image: url("../images/beauty-desktop-preview.png");
+  #generalWork a section#knowledgePit .image {
+    background-image: url("../images/knowledgePit-desktop-preview.png");
   }
 }
 @media screen and (min-device-width: 1600px) {
@@ -420,7 +418,7 @@ header.menu-is-open .menuToggle::after {
   }
 }
 .case {
-  grid-template-areas: "header header header" "article article article" "aboutMe aboutMe aboutMe";
+  grid-template-areas: ". header ." ". article ." ". aboutMe .";
 }
 
 @media screen and (min-device-width: 600px) {
@@ -434,7 +432,7 @@ header.menu-is-open .menuToggle::after {
 .caseExtended {
   grid-area: article;
   display: grid;
-  grid-template-columns: auto 95vw auto;
+  grid-template-columns: 95%;
   grid-template-rows: auto;
   grid-row-gap: 6rem;
 }
@@ -483,23 +481,25 @@ header.menu-is-open .menuToggle::after {
   margin-left: -1em;
 }
 .caseExtended .caseIntroduction h1 {
-  font-size: 5rem;
+  font-size: 3.2rem;
   font-weight: 500;
   color: #4B79FF;
   margin-top: 1.6rem;
   text-align: center;
 }
 .caseExtended .caseIntroduction h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 500;
   color: #BABABA;
 }
 .caseExtended .caseIntroduction .caseParagraphs {
-  font-size: 3rem;
-  font-weight: 300;
-  color: #848484;
   margin: auto;
   width: 74vw;
+}
+.caseExtended .caseIntroduction .caseParagraphs p {
+  color: #ECECEC;
+  font-size: 2.2rem;
+  font-weight: 300;
 }
 .caseExtended .caseIntroduction .image {
   height: 48.75rem;
@@ -547,7 +547,7 @@ header.menu-is-open .menuToggle::after {
     max-width: 80rem;
   }
   .caseExtended h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
   .caseExtended ul {
     padding: 0 0 0 4.8rem;
@@ -598,6 +598,7 @@ header.menu-is-open .menuToggle::after {
   .caseExtended .caseIntroduction .caseParagraphs p {
     font-size: 3.5rem;
     font-weight: 300;
+    color: #848484;
   }
   .caseExtended figure {
     width: 20vw;
@@ -607,7 +608,7 @@ header.menu-is-open .menuToggle::after {
     width: 20vw;
   }
   .caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
-    width: 44vw;
+    width: 45vw;
     max-width: 84rem;
   }
   .caseExtended .multiple-flex.two-images .multiple-image {
@@ -650,6 +651,11 @@ header.menu-is-open .menuToggle::after {
 @media screen and (min-device-width: 600px) {
   #travello .caseExtended {
     grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." ". analysis ." ". needsStudy ." "sketches sketches sketches" ". lofi ." "midfi midfi midfi" ". hifi ." ". mistakes ." ". redesign .";
+  }
+}
+@media screen and (min-device-width: 1000px) {
+  #travello .caseExtended .caseIntroduction .caseParagraphs p {
+    font-size: 2.8rem;
   }
 }
 .caseIntroduction {
@@ -765,11 +771,79 @@ header.menu-is-open .menuToggle::after {
   text-align: center;
 }
 
+#esensei-case .caseExtended {
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "visualCon visualCon visualCon" "biggestDecision biggestDecision biggestDecision" "visualConsistency visualConsistency visualConsistency" "finalDesign finalDesign finalDesign";
+}
+#esensei-case .caseExtended .caseIntroduction .image {
+  background-image: url("../images/esensei-mobile-preview.png");
+}
+#esensei-case .caseExtended .multiple-image:not(.div-image) figure {
+  width: 40vw;
+}
+#esensei-case .caseExtended #finalDesign #start {
+  background-image: url("../esensei/files/start-mobile.png");
+}
+#esensei-case .caseExtended #finalDesign #users {
+  background-image: url("../esensei/files/users-mobile.png");
+}
+#esensei-case .caseExtended #finalDesign #stages {
+  background-image: url("../esensei/files/stages-mobile.png");
+}
+
+@media screen and (min-device-width: 600px) {
+  #esensei-case .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." "visualCon visualCon visualCon" ". biggestDecision ." ". visualConsistency ." "finalDesign finalDesign finalDesign";
+  }
+  #esensei-case .caseExtended .caseIntroduction .image {
+    background-image: url("../images/esensei-desktop-preview.png");
+  }
+  #esensei-case .caseExtended #finalDesign #start {
+    background-image: url("../esensei/files/start.png");
+  }
+  #esensei-case .caseExtended #finalDesign #users {
+    background-image: url("../esensei/files/users.png");
+  }
+  #esensei-case .caseExtended #finalDesign #stages {
+    background-image: url("../esensei/files/stages.png");
+  }
+}
+#visualConsistency {
+  grid-area: visualConsistency;
+}
+
+.generalWork.caseExtended {
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary";
+}
+.generalWork.caseExtended .caseIntroduction .image {
+  background-image: url("../images/esensei-mobile-preview.png");
+}
+.generalWork.caseExtended.senseiRoyale .caseIntroduction .image {
+  background-image: url("../images/icons-preview.png");
+  width: 32.5rem;
+  height: 32.5rem;
+}
+.generalWork.caseExtended.knowledgePit .caseIntroduction .image {
+  background-image: url("../images/knowledgePit-mobile-preview.png");
+}
+.generalWork.caseExtended.moodle .caseIntroduction .image {
+  background-image: url("../images/moodle-preview.svg");
+  width: 32.5rem;
+  height: 32.5rem;
+}
+
+@media screen and (min-device-width: 600px) {
+  .generalWork.caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary .";
+  }
+  .generalWork.caseExtended.knowledgePit .caseIntroduction .image {
+    background-image: url("../images/knowledgePit-desktop-preview.png");
+  }
+}
 .aboutMe {
   grid-area: aboutMe;
   display: grid;
-  grid-template-areas: "sectionTitle sectionTitle" "aside image" "bio image" "contactInfo contactInfo";
-  grid-template-columns: auto auto;
+  grid-template-areas: "sectionTitle sectionTitle" "aside aside" "bio bio" "image image" "contactInfo contactInfo";
+  grid-template-columns: auto;
   column-gap: 12%;
   row-gap: 1.6rem;
 }
@@ -783,10 +857,10 @@ header.menu-is-open .menuToggle::after {
 .aboutMe aside, .aboutMe .paragraphs p, .aboutMe .contact p {
   font-size: 1.8rem;
   font-weight: 500;
-  text-align: center;
 }
 .aboutMe .contact p {
   width: 70vw;
+  text-align: center;
 }
 .aboutMe aside {
   grid-area: aside;
@@ -809,7 +883,7 @@ header.menu-is-open .menuToggle::after {
   grid-area: contactInfo;
   justify-self: center;
   margin: 8rem 0;
-  font-size: 3rem;
+  font-size: 2.2rem;
   font-weight: 600;
 }
 .aboutMe .contact address {
@@ -834,6 +908,9 @@ header.menu-is-open .menuToggle::after {
 }
 
 @media screen and (min-device-width: 1000px) {
+  .aboutMe {
+    grid-template-areas: "sectionTitle sectionTitle" "aside image" "bio image" "contactInfo contactInfo";
+  }
   .aboutMe aside, .aboutMe .paragraphs p, .aboutMe .contact p {
     font-size: 2.5rem;
     text-align: left;
@@ -866,9 +943,8 @@ ul, li, a, h1, h2, p {
 }
 
 body {
-  padding: 0.5rem;
   display: grid;
-  grid-template-columns: auto 95vw auto;
+  grid-template-columns: auto 90vw auto;
   grid-template-rows: auto;
   grid-row-gap: 6rem;
   font-family: Source Sans Pro, Helvetica, sans-serif;
