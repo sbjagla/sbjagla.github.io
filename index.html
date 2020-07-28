@@ -3,92 +3,130 @@
   <head>
     <meta charset="utf-8">
     <link href="styles/style.css" rel="stylesheet">
+    <script src="main.js"></script>
 
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <meta property="og:title" content="Sebastian Jagla" />
-     <meta property="og:image" content="https://sjagla.com/images/final.png"/>
-
-    <!-- fonts -->
-    <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/now" type="text/css"/>
+     <meta property="og:title" content="Sebastian Jagla">
+     <meta property="og:image" content="https://sjagla.com/images/final.png">
 
     <title>Sebastian Jagla</title>
   </head>
-  <body>
-    <header id="navigation">
-      <nav id="navigation_list">
+  <body class="main" >
+
+    <!-- *** NAVIGATION *** -->
+    <header id="navbar">
+
+      <h1> <a href="#">sebastian jagla</a> </h1>
+
+      <!-- visible menu toggle -->
+      <button class="menuToggle" onclick="toggleMenu()"></button>
+
+      <nav>
         <ul>
-          <li><a href="#work">My work</a></li>
-          <li><a href="#about_me">About me</a></li>
-          <li id="CV"><a href="files/CV_Sebastian_Jagla_(ENG).pdf">CV</a></li>
+          <li> <a class="navLink" href="#caseStudies">case studies</a> </li>
+          <li> <a class="navLink" href="#generalWork">general designs</a> </li>
+          <li> <a class="navLink" href="#aboutMe">about me</a> </li>
+          <li> <a class="navLink" href="files/CV_Sebastian_Jagla_(ENG).pdf">cv (warning: white background)</a> </li>
         </ul>
       </nav>
     </header>
 
-    <article id="introduction">
-      <header id="hello">
-        Hi, I'm Sebastian. Nice to meet you!
-      </header>
-      <section id="main_content">
-        <p>I am a student who plans on working in human-computer interaction
-        and user experience design. I love technology and making it more intuitive and
-        accessible to humans grinds my wheels.</p>
-        <aside>
-          I live in Warsaw and study cognitive science at the University of Warsaw.
-        </aside>
-      </section>
-    </article>
+    <!-- *** MAIN BODY *** -->
 
-    <article id="work">
-      <header>
-        Here is some of my work.
-      </header>
+    <!-- intro -->
+    <section id="intro">
+      <h1>sebastian jagla</h1>
+      <h2>interface designer</h2>
+      <p>i adore beautiful, usable and tech-related stuff. oh, philosophy as well. i'm a total nerd.</p>
+    </section>
+
+    <!-- case studies -->
+
+    <article id="caseStudies">
+
+      <h1>UX/UI case studies</h1>
+
+      <a href="beauty/index.html">
+        <section id="beauty">
+          <div class="image imageDesktop"></div>
+          <h2>Beauty&Beauty website</h2>
+          <p>beauty salon page</p>
+        </section>
+      </a>
+
       <a href="travello/index.html">
-        <section>
-          <h1>A trip-planning tool for groups</h1>
+        <section id="travello">
+          <div class="image"></div>
           <h2>Travello</h2>
-          <p>I created Travello as my first full-fledged UXD project. I conducted
-          a competitive analysis, a needs finding study through semi-structured interviews,
-          a micro-usability test and later a usual usability test on a prototype created in Figma.</p>
+          <p>trip planning tool</p>
         </section>
       </a>
-      <a href="portfolio/index.html">
-        <section>
-          <h1>A portfolio website from scratch</h1>
-          <h2>This website</h2>
-          <p>I learnt HTML and CSS to understand how my designs will be implemented
-          and as a first step in creating more believable prototypes.</p>
+
+      <a href="esensei/index.html">
+        <section id="esensei">
+          <div class="image imageDesktop"></div>
+          <h2>Esensei.net</h2>
+          <p>product page for an e-sports improvement solution</p>
         </section>
       </a>
+
     </article>
 
-    <article id="about_me">
-      <header>
-        About me.
-      </header>
+      <!-- general work -->
+
+    <article id="generalWork">
+      <h1>general work</h1>
+
+      <a href="senseiRoyale.html">
+        <section id="senseiRoyale">
+          <div class="image imageDesktop"></div>
+          <h2>Sensei Royale icon pack</h2>
+          <p>icons for a game companion website</p>
+        </section>
+      </a>
+
+      <a href="knowledgePit.html">
+        <section id="knowledgePit">
+          <div class="image imageDesktop"></div>
+          <h2>KnowledgePit</h2>
+          <p>landing page for a machine learning contest platform</p>
+        </section>
+      </a>
+
+      <a href="moodle.html">
+        <section id="moodle">
+          <div class="image imageDesktop"></div>
+          <h2>UX for Moodle MIMUW</h2>
+          <p>project for improving Moodle's interface</p>
+        </section>
+      </a>
+
+      <div class="break"> </div>
+
+
+    </article>
+
+    <!-- about me -->
+
+    <article class="aboutMe">
+      <h1>about me</h1>
       <aside>You're a curious one. I like that.</aside>
-      <section id="description">
-        <div class="paragraphs">
-          <p>I study cognitive science and am fascinated by human-computer interaction.
-          I'm also a firm believer in social change and would like to leave the world having
-          made it at least a little bit better. That's why I'm learning different ways on how
-          to contribute to Linux and plan on working in accessbility.</p>
-          <p>I care about accessbility in software and life in general.
-          Biology and ecology are dear to my heart. The same goes for preserving
-          this planet of ours.</p>
-        </div>
-        <img src="images/profil.JPG" alt="Me standing next to a column. I'm blond."
-        width="30%" height="20%">
-      </section>
-      <section id="contact">
+      <div class="paragraphs">
+        <p>I'm a UX/UI designer, but I studied cognitive science. I love design,
+          human-computer interaction, philosophy, open-source and some more.
+          I'm also a firm believer in social change and would like to leave the
+          world having made it at least a little bit better.</p>
+      </div>
+      <img class="picture" src="images/profil.JPG" alt="Me standing next to a column. I'm blond.">
+      <section class="contact">
         <p>
           If you wish to contact me, pick any of these.
         </p>
         <address>
-          <a href="mailto:sjagla@fastmail.com" id="mail"><img src="images/mail.png" alt="Mail: contact@sjagla.com"></a>
-          <a href="https://www.linkedin.com/in/sebastian-jagla" id="linkedin"><img src="images/linkedin.png" alt="Linkedin"></a>
-          <a href="https://twitter.com/sebastian_jagla" id="twitter"><img src="images/twitter.png" alt="Twitter"></a>
+          <a href="mailto:sjagla@fastmail.com" id="mail"><img src="images/mail-icon.svg" alt="Mail: contact@sjagla.com"></a>
+          <a href="https://www.linkedin.com/in/sebastian-jagla" id="linkedin"><img src="images/linkedin-icon.svg" alt="Linkedin"></a>
+          <a href="https://twitter.com/sebastian_jagla" id="twitter"><img src="images/twitter-icon.svg" alt="Twitter"></a>
         </address>
       </section>
     </article>

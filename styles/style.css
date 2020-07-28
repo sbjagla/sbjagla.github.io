@@ -1,307 +1,978 @@
-/* ----- General style ----- */
-/* TODO: zmienić vw na rem */
-html {
-  font-size: calc(20px + 0.5vw); /* TODO: czcionka jest za mała przy 900px, trzeba ją zmienić */
-  font-family: "NowRegular";
+@charset "UTF-8";
+@font-face {
+  font-family: "Library";
+  src: url("../files/library-3-am.otf");
 }
-
-body {
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Light.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Light.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Regular.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Regular.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Medium.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Medium.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../files/Inter/Inter-SemiBold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-SemiBold.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Bold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Bold.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../files/Inter/Inter-ExtraBold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-ExtraBold.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Black.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Black.woff?v=3.13") format("woff");
+}
+.caseExtended .caseIntroduction .image, #caseStudies a section .image, #generalWork a section .image {
+  position: relative;
   display: block;
-  width: 80%; /* changed in media query */
-  margin: 0 auto;
+  width: 18rem;
+  height: 32.5rem;
+  border-style: solid;
+  border-color: #D2D2D2;
+  border-radius: 2.5rem;
+  border-width: 0.4rem;
+  background-color: #141414;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
-
-
-article {
-  margin-bottom: 3vw;
-  padding-bottom: 3vw;
-  border-bottom: 2px solid #BBADD5;
-}
-
-h1, header {
-  font-family: "Fira Mono";
+.caseExtended .caseIntroduction .image::after, #caseStudies a section .image::after, #generalWork a section .image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4.5rem;
+  right: -0.6rem;
+  width: 0.3rem;
+  height: 3rem;
+  background-color: #B4ACB4;
+  border-radius: 0 0.2rem 0.2rem 0;
 }
 
 header {
-  font-size: 120%;
-  font-weight: bold;
-  margin-bottom: 1.75vw;
-}
-
-h1 {
-  font-size: 110%;
-  font-weight: normal;
-  margin: 0 0 0.5vw 0;
-}
-
-h2 {
-  font-size: 100%;
-  font-weight: normal;
-  margin: 0 0 0.5vw 0;
-}
-
-p, aside, figcaption {
-  margin: 0.5vw 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-
-/* ----- Navigation bar ----- */
-
-#navigation {
-  border-bottom: 2px solid #BBADD5;
-}
-
-nav {
-  margin: auto;
-}
-
-#navigation ul {
-  margin: auto;
-  width: 60%;
-  /* Delete inherited list style */
-  list-style-type: none;
-  padding: 0.5vw 0 0.5vw 0;
-  /* Justify the content so it spreads evenly on all screens */
   display: flex;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-#navigation li {
-  margin: 0 1em;
-}
-
-#navigation a {
-  color: #636363;
-  font-size: 60%;
-  font-family: "Fira Mono";
-  font-weight: normal;
-  margin: 0 0.5em;
-}
-
-#navigation a:hover {
-  color: #BBADD5;
-}
-
-
-/* ----- Introduction section ----- */
-
-#introduction {
-  padding: 9vw 2vw;
-}
-
-
-/* ---- Main section ----- */
-
-/* Work section on main site */
-#work section{
-  margin-top: 3vw;
-  padding: 20px;
-  background-color: #BBADD5;
-  color: black;
-}
-
-#work section:hover {
-  box-shadow: 0.5vw 0.5vw black;
-}
-
-/* Main section on project site*/
-
-.project article {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.project section {
-  width: 100%;
-  margin: 100px 0;
-  padding-bottom: 100px;
-  border-bottom: 2px solid #BBADD5;
-}
-
-.project #introduction {
-  margin: 0;
-}
-
-.project figure {
-  width: 30%;
-  margin: 30px auto;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.project img {
-  width: 80%;
-}
-
-.project .multiple_image {
-  display: flex;
-  justify-content: center;
-}
-
-.project #persona {
-  width: 60%;
-}
-
-.project #last_section {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-/* List on project site*/
-
-.list {
-  font-size: 90%;
-  list-style: none;
-  padding: 0;
-}
-
-.list li {
-  text-indent: -.7em;
-  padding: 0.5em 2em 0.5em 2em;
-}
-
-.list li::before {
-  padding-right: 1em;
-  content: "•";
-  color: #BBADD5;
-}
-
-
-/* ----- Contact me section ----- */
-
-#about_me {
-  border-bottom: 0;
-}
-
-#description {
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: bottom 0.3s;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 87%;
+  z-index: 100;
+  width: 100%;
+  background-color: #141414;
 }
-
-.paragraphs {
-  display: inline;
-  width: 60%;
+header h1 {
+  margin-left: 5%;
 }
-
-#description img {
-  max-width: 30%;
-  max-height: 30%;
+header h1 a {
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: "Library", Helvetica, sans-serif;
 }
-
-#contact {
-  margin-top: 3vw;
-  background-color: #BBADD5;
-  padding: 1vw;
+header .menuToggle {
+  display: block;
+  position: relative;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: inherit;
+  width: 26px;
+  height: 40px;
+  margin-right: 10%;
+}
+header .menuToggle::before, header .menuToggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 1px;
+  background-color: #4B79FF;
+  transition: all 0.3s;
+  transition-timing-function: ease-in-out;
+}
+header .menuToggle::before {
+  transform: translateY(15px);
+}
+header .menuToggle::after {
+  transform: translateY(23px);
+}
+header nav {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* doesn't work for some reason - adding auto margin to flex items */
-  align-content: center; /* doesn't work for some reason - adding auto margin to flex items */
+  justify-content: flex-start;
+  position: absolute;
+  top: 7.5vh;
+  width: 100vw;
+  height: 0;
+  background-color: #141414;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+header nav ul {
+  display: block;
+  margin: 8rem auto 1.6rem auto;
+  min-width: 27rem;
+  width: 24%;
+}
+header nav ul li {
+  margin-top: 4.8rem;
+}
+header.menu-is-open nav {
+  height: 100vh;
+}
+header.menu-is-open .menuToggle::before {
+  transform: translate(0, 20px) rotate(45deg);
+}
+header.menu-is-open .menuToggle::after {
+  transform: translate(0, 20px) rotate(-45deg);
 }
 
-#contact p {
-  margin: 0 auto;
+@media screen and (min-device-width: 600px) {
+  header nav ul li {
+    margin-right: 10rem;
+  }
 }
-
-address {
-  width: 50%;
-  margin: 1vw auto 0 auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-end;
-}
-
-#contact address img {
-  max-width: 2.75vw;
-  min-width: 30px;
-  margin-bottom: 6px;
-}
-
-#contact address img:hover { /* TODO: offset highlight properly */
-  border-bottom: 2px solid black; /*This will give a highlight */
-  padding-bottom: 4px; /*The highlight needs to be a bit under the element*/
-  margin-bottom: 0; /* Need to offset the difference the highlight and padding give */
-}
-
-
-@media screen and (max-width: 800px){
-  html {
-    font-size: 20px;
+@media screen and (min-device-width: 1200px) {
+  header {
+    bottom: 89%;
+    padding: 0.5rem 0.5rem 0.5rem 14%;
   }
-
-  body {
-    width: 85%;
+  header h1 {
+    flex-basis: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
   }
-
-  #navigation ul {
-  padding: 3vw 0 1.5vw 0;
-  width: 100%;
+  header h1 a {
+    font-size: 2.5rem;
+    font-weight: 600;
   }
-
-  #navigation a {
-    font-size: 70%;
+  header .menuToggle {
+    display: none;
   }
-
-  article {
-    margin-bottom: 30px;
-    padding-bottom: 30px;
+  header nav {
+    display: inherit;
+    position: static;
+    width: max-content;
+    height: max-content;
+    background-color: none;
   }
-
-  .project .multiple_image {
-    flex-direction: column;
+  header nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: max-content;
   }
-
-  .project figure {
-  width: 100%;
-  margin: 30px auto;
-  text-align: center;
+  header nav ul li {
+    display: inline-block;
+    position: relative;
+    line-height: 1.4;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
   }
-
-  #about_me {
-    padding-bottom: 0;
-  }
-
-  #description {
-    flex-direction: column;
-  }
-
-  .paragraphs {
+  header nav ul li:after {
+    content: "";
+    position: absolute;
     width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #4B79FF;
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
   }
-
-  #work section {
-  box-shadow: 1vw 1vw black;
+  header nav ul li:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
-
-  #work section:hover {
-  box-shadow: 1vw 1vw black;
+  header nav ul li a {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+  header.menu-is-open nav {
+    height: max-content;
+  }
+}
+.main {
+  position: absolute;
+  top: 11%;
+  grid-template-areas: "intro intro intro" "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" "aboutMe aboutMe aboutMe";
 }
 
-  #description img {
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 50vw;
-    max-width: 100%;
-    padding: 2vw 0;
+@media screen and (min-device-width: 600px) {
+  .main {
+    grid-template-areas: ". intro ." "caseStudies caseStudies caseStudies" "generalWork generalWork generalWork" ". aboutMe .";
   }
-
-  #contact address img {
-    margin: 0.75vw 3vw;
-  }
-
-  #contact address img:hover {
-  /* No highlight on touchscreen devices */
-  border-bottom: 0;
-  padding-bottom: 0;
+}
+#intro {
+  grid-area: intro;
+  margin: 22vh 0 20vh 0;
+}
+#intro h1 {
+  grid-area: title;
+  font-family: "Library", Helvetica, sans-serif;
+  position: relative;
+  font-size: calc(3.2rem + 1vw);
+  font-weight: 700;
+  color: #4B79FF;
+}
+#intro h2 {
+  grid-area: subtitle;
+  font-size: calc(3rem + 0.5vw);
+  font-weight: 500;
+  color: #BABABA;
   margin: 0;
 }
-
+#intro p {
+  grid-area: description;
+  font-size: 2.2rem;
+  color: #848484;
 }
+#intro h2, #intro p {
+  margin-top: 1.6rem;
+}
+
+@media screen and (min-device-width: 1000px) {
+  #intro {
+    display: grid;
+    grid-template-areas: "title title ." "subtitle description description";
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 8%;
+    margin: 26vh 0 8vh 0;
+  }
+  #intro p {
+    margin-left: 1.5rem;
+  }
+  #intro h2 {
+    font-family: calc(3rem + 0.2vw);
+  }
+}
+@media screen and (min-device-width: 1500px) {
+  #intro p {
+    font-size: 3.5rem;
+    font-weight: 300;
+  }
+  #intro h1 {
+    font-size: 9rem;
+  }
+  #intro h2 {
+    font-size: 6.2rem;
+  }
+}
+#caseStudies a section, #generalWork a section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0;
+}
+#caseStudies a section h2, #generalWork a section h2 {
+  margin-top: 2rem;
+  color: #5AFFB0;
+  font-weight: 500;
+  transition: color 0.25s ease-in-out;
+}
+#caseStudies a section p, #generalWork a section p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  width: 23.4rem;
+  text-align: center;
+  color: #B5B5B5;
+}
+#caseStudies a:hover section h2, #generalWork a:hover section h2 {
+  color: #EEF0F2;
+}
+#caseStudies h1, #generalWork h1 {
+  font-size: 7rem;
+  font-weight: 600;
+  color: #BABABA91;
+  line-height: 85%;
+  position: relative;
+  top: 4rem;
+}
+#caseStudies h2, #generalWork h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #5AFFB0;
+}
+
+#caseStudies {
+  grid-area: caseStudies;
+}
+#caseStudies a section#esensei .image {
+  background-image: url("../images/esensei-mobile-preview.png");
+}
+#caseStudies a section#travello .image {
+  background-image: url("../images/travello-mobile-preview.png");
+}
+#caseStudies a section#beauty .image {
+  background-image: url("../images/beauty-mobile-preview.png");
+}
+
+#generalWork {
+  grid-area: generalWork;
+}
+#generalWork a section .image {
+  width: 13.8461538462rem;
+  height: 25rem;
+}
+#generalWork a section#knowledgePit .image {
+  background-image: url("../images/knowledgePit-mobile-preview.png");
+}
+#generalWork a section#senseiRoyale .image {
+  background-image: url("../images/icons-preview.png");
+  width: 25rem;
+}
+#generalWork a section#senseiRoyale .image:after {
+  display: none;
+}
+#generalWork a section#moodle .image {
+  background-image: url("../images/moodle-preview.svg");
+  width: 25rem;
+}
+#generalWork a section#moodle .image:after {
+  display: none;
+}
+#generalWork a section h2 {
+  color: #EFCC57;
+}
+
+@media screen and (min-device-width: 600px) {
+  #caseStudies, #generalWork {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #caseStudies h1, #generalWork h1 {
+    height: fit-content;
+    flex-basis: 100%;
+    margin-left: 9vw;
+  }
+
+  #caseStudies a section#esensei .image, #caseStudies a section#beauty .image {
+    width: 54rem;
+    height: 30rem;
+  }
+  #caseStudies a section#esensei .image::after, #caseStudies a section#beauty .image::after {
+    display: none;
+  }
+  #caseStudies a section#esensei .image {
+    background-image: url("../images/esensei-desktop-preview.png");
+  }
+  #caseStudies a section#beauty .image {
+    background-image: url("../images/beauty-desktop-preview.png");
+  }
+
+  #generalWork a section#knowledgePit .image {
+    width: 41.5384615385rem;
+    height: 23.0769230769rem;
+  }
+  #generalWork a section#knowledgePit .image::after {
+    display: none;
+  }
+  #generalWork a section#knowledgePit .image {
+    background-image: url("../images/knowledgePit-desktop-preview.png");
+  }
+}
+@media screen and (min-device-width: 1600px) {
+  #generalWork .break {
+    display: none;
+  }
+}
+.case {
+  grid-template-areas: ". header ." ". article ." ". aboutMe .";
+}
+
+@media screen and (min-device-width: 600px) {
+  .case {
+    grid-template-areas: ". header ." "article article article" ". aboutMe .";
+  }
+  .case p, .case ul li {
+    font-size: 2rem;
+  }
+}
+.caseExtended {
+  grid-area: article;
+  display: grid;
+  grid-template-columns: 95%;
+  grid-template-rows: auto;
+  grid-row-gap: 6rem;
+}
+.caseExtended h1 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: rgba(75, 121, 255, 0.8);
+  font-family: "Library", Helvetica, sans-serif;
+  margin-bottom: -0.8rem;
+}
+.caseExtended p {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+.caseExtended a {
+  color: #EFCC57;
+  transition: color 0.25s ease-in-out;
+}
+.caseExtended a:hover {
+  color: #EEF0F2;
+}
+.caseExtended img {
+  width: 80%;
+}
+.caseExtended .multiple-image .image {
+  width: 18rem;
+  height: 32.5rem;
+  display: block;
+  background-color: #141414;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.caseExtended ul {
+  padding: 0 0 0 4.8rem;
+}
+.caseExtended ul li {
+  margin-bottom: 1.6rem;
+}
+.caseExtended ul li:before {
+  content: "•";
+  color: #9A6BF0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.caseExtended .caseIntroduction h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: #4B79FF;
+  margin-top: 1.6rem;
+  text-align: center;
+}
+.caseExtended .caseIntroduction h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #BABABA;
+}
+.caseExtended .caseIntroduction .caseParagraphs {
+  margin: auto;
+  width: 74vw;
+}
+.caseExtended .caseIntroduction .caseParagraphs p {
+  color: #ECECEC;
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+.caseExtended .caseIntroduction .image {
+  height: 48.75rem;
+  width: 27rem;
+  margin: 3.2rem auto;
+}
+.caseExtended figure {
+  margin: 3.2rem 1.6rem;
+}
+.caseExtended figure img, .caseExtended figure .image {
+  display: block;
+  margin: 0 auto 1.6rem auto;
+}
+.caseExtended figure figcaption {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ECECEC;
+  line-height: 1.7;
+  text-align: center;
+}
+.caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
+  margin: 0 auto;
+}
+.caseExtended .multiple-flex .multiple-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.caseExtended .multiple-flex .multiple-image.div-image figure {
+  width: max-content;
+  height: max-content;
+}
+
+@media screen and (min-device-width: 600px) {
+  .caseExtended {
+    grid-template-columns: auto minmax(70vw, 80rem) auto;
+    grid-row-gap: 6rem;
+  }
+  .caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
+    width: 74vw;
+    max-width: 80rem;
+  }
+  .caseExtended h1 {
+    font-size: 3rem;
+  }
+  .caseExtended ul {
+    padding: 0 0 0 4.8rem;
+  }
+  .caseExtended .multiple-flex .multiple-image .imageDesktop {
+    width: 54rem;
+    height: 30rem;
+  }
+  .caseExtended .multiple-flex .multiple-image .imageDesktop::after {
+    display: none;
+  }
+}
+@media screen and (min-device-width: 1000px) {
+  .caseExtended {
+    grid-template-columns: auto minmax(44vw, 80rem) auto;
+  }
+  .caseExtended .caseIntroduction {
+    display: grid;
+    grid-template-areas: "image description" "title description";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    column-gap: 5%;
+    margin: 0 10vw 10vh 10vw;
+  }
+  .caseExtended .caseIntroduction h1 {
+    grid-area: title;
+    justify-self: center;
+    font-size: 6.2rem;
+  }
+  .caseExtended .caseIntroduction .image {
+    grid-area: image;
+    justify-self: center;
+    align-self: center;
+  }
+  .caseExtended .caseIntroduction .image.imageDesktop {
+    width: 54rem;
+    height: 30rem;
+  }
+  .caseExtended .caseIntroduction .image.imageDesktop:after {
+    display: none;
+  }
+  .caseExtended .caseIntroduction .caseParagraphs {
+    grid-area: description;
+    align-self: center;
+    margin: 0;
+    width: inherit;
+  }
+  .caseExtended .caseIntroduction .caseParagraphs p {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #848484;
+  }
+  .caseExtended figure {
+    width: 20vw;
+    margin: 6.4rem;
+  }
+  .caseExtended figure figcaption {
+    width: 20vw;
+  }
+  .caseExtended .multiple-flex h1, .caseExtended .multiple-flex p, .caseExtended .multiple-flex ul {
+    width: 45vw;
+    max-width: 84rem;
+  }
+  .caseExtended .multiple-flex.two-images .multiple-image {
+    width: 60vw;
+  }
+  .caseExtended .multiple-flex .multiple-image {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95vw;
+    margin: 0 auto;
+  }
+  .caseExtended .multiple-flex .multiple-image figure {
+    width: 20vw;
+  }
+  .caseExtended .multiple-flex .multiple-image figure .imageDesktop {
+    width: 54rem;
+    height: 30rem;
+  }
+  .caseExtended .single-image {
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .caseExtended .single-image img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+#travello .caseExtended {
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "analysis analysis analysis" "needsStudy needsStudy needsStudy" "sketches sketches sketches" "lofi lofi lofi" "midfi midfi midfi" "hifi hifi hifi" "mistakes mistakes mistakes" "redesign redesign redesign";
+}
+#travello .caseExtended .caseIntroduction .image {
+  background-image: url("../images/travello-mobile-preview.png");
+}
+
+@media screen and (min-device-width: 600px) {
+  #travello .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." ". analysis ." ". needsStudy ." "sketches sketches sketches" ". lofi ." "midfi midfi midfi" ". hifi ." ". mistakes ." ". redesign .";
+  }
+}
+@media screen and (min-device-width: 1000px) {
+  #travello .caseExtended .caseIntroduction .caseParagraphs p {
+    font-size: 2.8rem;
+  }
+}
+.caseIntroduction {
+  grid-area: caseIntroduction;
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.designProblem {
+  grid-area: designProblem;
+}
+
+#analysis {
+  grid-area: analysis;
+}
+
+#needsStudy {
+  grid-area: needsStudy;
+}
+
+#sketches {
+  grid-area: sketches;
+}
+
+#lofi {
+  grid-area: lofi;
+}
+
+#midfi {
+  grid-area: midfi;
+}
+
+#hifi {
+  grid-area: hifi;
+}
+
+#mistakes {
+  grid-area: mistakes;
+}
+
+#redesign {
+  grid-area: redesign;
+}
+
+#beauty .caseExtended {
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "IA IA IA" "visualCon visualCon visualCon" "biggestDecision biggestDecision biggestDecision" "finalDesign finalDesign finalDesign";
+}
+#beauty .caseExtended .caseIntroduction .image {
+  background-image: url("../images/beauty-mobile-preview.png");
+}
+#beauty .caseExtended .multiple-image:not(.div-image) figure {
+  width: inherit;
+}
+#beauty .caseExtended #finalDesign #start {
+  background-image: url("../beauty/files/mobile-intro.png");
+}
+#beauty .caseExtended #finalDesign #procedure1 {
+  background-image: url("../beauty/files/mobile-procedure1.png");
+}
+#beauty .caseExtended #finalDesign #procedure2 {
+  background-image: url("../beauty/files/mobile-procedure2.png");
+}
+#beauty .caseExtended #finalDesign #priceList {
+  background-image: url("../beauty/files/mobile-contact.png");
+}
+
+@media screen and (min-device-width: 600px) {
+  #beauty .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." ". IA ." "visualCon visualCon visualCon" ". biggestDecision ." "finalDesign finalDesign finalDesign";
+  }
+  #beauty .caseExtended .caseIntroduction .image {
+    background-image: url("../images/beauty-desktop-preview.png");
+  }
+  #beauty .caseExtended #finalDesign #start {
+    background-image: url("../beauty/files/desktop-intro.png");
+  }
+  #beauty .caseExtended #finalDesign #procedure1 {
+    background-image: url("../beauty/files/desktop-procedure1.png");
+  }
+  #beauty .caseExtended #finalDesign #procedure2 {
+    background-image: url("../beauty/files/desktop-procedure2.png");
+  }
+  #beauty .caseExtended #finalDesign #priceList {
+    background-image: url("../beauty/files/desktop-contact.png");
+  }
+}
+@media screen and (min-device-width: 1500px) {
+  #beauty .caseExtended .multiple-image:not(.div-image) figure {
+    width: 22vw;
+  }
+  #beauty .caseExtended .multiple-image:not(.div-image) figure img {
+    width: 100%;
+  }
+}
+#informationArchitecture {
+  grid-area: IA;
+}
+
+#visualConcepts {
+  grid-area: visualCon;
+}
+
+#biggestDecision {
+  grid-area: biggestDecision;
+}
+
+#finalDesign {
+  grid-area: finalDesign;
+}
+#finalDesign #linkParagraph {
+  text-align: center;
+}
+
+#esensei-case .caseExtended {
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary" "designProblem designProblem designProblem" "visualCon visualCon visualCon" "biggestDecision biggestDecision biggestDecision" "visualConsistency visualConsistency visualConsistency" "finalDesign finalDesign finalDesign";
+}
+#esensei-case .caseExtended .caseIntroduction .image {
+  background-image: url("../images/esensei-mobile-preview.png");
+}
+#esensei-case .caseExtended .multiple-image:not(.div-image) figure {
+  width: 40vw;
+}
+#esensei-case .caseExtended #finalDesign #start {
+  background-image: url("../esensei/files/start-mobile.png");
+}
+#esensei-case .caseExtended #finalDesign #users {
+  background-image: url("../esensei/files/users-mobile.png");
+}
+#esensei-case .caseExtended #finalDesign #stages {
+  background-image: url("../esensei/files/stages-mobile.png");
+}
+
+@media screen and (min-device-width: 600px) {
+  #esensei-case .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." "visualCon visualCon visualCon" ". biggestDecision ." ". visualConsistency ." "finalDesign finalDesign finalDesign";
+  }
+  #esensei-case .caseExtended .caseIntroduction .image {
+    background-image: url("../images/esensei-desktop-preview.png");
+  }
+  #esensei-case .caseExtended #finalDesign #start {
+    background-image: url("../esensei/files/start.png");
+  }
+  #esensei-case .caseExtended #finalDesign #users {
+    background-image: url("../esensei/files/users.png");
+  }
+  #esensei-case .caseExtended #finalDesign #stages {
+    background-image: url("../esensei/files/stages.png");
+  }
+}
+#visualConsistency {
+  grid-area: visualConsistency;
+}
+
+.generalWork.caseExtended {
+  grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" "summary summary summary";
+}
+.generalWork.caseExtended .caseIntroduction .image {
+  background-image: url("../images/esensei-mobile-preview.png");
+}
+.generalWork.caseExtended.senseiRoyale .caseIntroduction .image {
+  background-image: url("../images/icons-preview.png");
+  width: 32.5rem;
+  height: 32.5rem;
+}
+.generalWork.caseExtended.knowledgePit .caseIntroduction .image {
+  background-image: url("../images/knowledgePit-mobile-preview.png");
+}
+.generalWork.caseExtended.moodle .caseIntroduction .image {
+  background-image: url("../images/moodle-preview.svg");
+  width: 32.5rem;
+  height: 32.5rem;
+}
+
+@media screen and (min-device-width: 600px) {
+  .generalWork.caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary .";
+  }
+  .generalWork.caseExtended.knowledgePit .caseIntroduction .image {
+    background-image: url("../images/knowledgePit-desktop-preview.png");
+  }
+}
+.aboutMe {
+  grid-area: aboutMe;
+  display: grid;
+  grid-template-areas: "sectionTitle sectionTitle" "aside aside" "bio bio" "image image" "contactInfo contactInfo";
+  grid-template-columns: auto;
+  column-gap: 12%;
+  row-gap: 1.6rem;
+}
+.aboutMe h1 {
+  grid-area: sectionTitle;
+  font-size: 7rem;
+  font-weight: 600;
+  color: #BABABA91;
+  line-height: 100%;
+}
+.aboutMe aside, .aboutMe .paragraphs p, .aboutMe .contact p {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.aboutMe .contact p {
+  width: 70vw;
+  text-align: center;
+}
+.aboutMe aside {
+  grid-area: aside;
+  color: #626262;
+}
+.aboutMe .paragraphs {
+  grid-area: bio;
+}
+.aboutMe .paragraphs p {
+  color: #ECECEC;
+}
+.aboutMe .picture {
+  grid-area: image;
+  justify-self: center;
+  width: 60%;
+  height: auto;
+  border-radius: 1rem;
+}
+.aboutMe .contact {
+  grid-area: contactInfo;
+  justify-self: center;
+  margin: 8rem 0;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.aboutMe .contact address {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3.2rem;
+}
+.aboutMe .contact address a {
+  display: block;
+  height: max-content;
+  width: max-content;
+}
+.aboutMe .contact address a img {
+  height: auto;
+  width: 5rem;
+  transition: transform 250ms ease-in-out;
+}
+.aboutMe .contact address a img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-device-width: 1000px) {
+  .aboutMe {
+    grid-template-areas: "sectionTitle sectionTitle" "aside image" "bio image" "contactInfo contactInfo";
+  }
+  .aboutMe aside, .aboutMe .paragraphs p, .aboutMe .contact p {
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .aboutMe .contact p {
+    width: max-content;
+  }
+  .aboutMe .contact address a img {
+    width: 6rem;
+  }
+}
+.case .aboutMe .contact {
+  margin-top: 0;
+}
+
+ul, li, a, h1, h2, p {
+  list-style: none;
+  color: #ECECEC;
+  font-weight: 500;
+  text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  grid-template-rows: auto;
+  grid-row-gap: 6rem;
+  font-family: Source Sans Pro, Helvetica, sans-serif;
+  font-weight: 900;
+  background-color: #141414;
+}
+
+p, ul li {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ECECEC;
+  line-height: 1.7;
+}
+
+.break {
+  display: none;
+}
+
+@media screen and (min-device-width: 600px) {
+  body {
+    grid-template-columns: auto minmax(80vw, 80rem) auto;
+    grid-row-gap: 15rem;
+  }
+  body .break {
+    display: inherit;
+    height: 0;
+    flex-basis: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,68 @@
+// _style.scss
+@use 'base' as *;
+@use 'header'; // importing menu
+@use 'homepage';
+@use 'subpages';
+@use 'about';
+
+
+
+// ********* CLEANING ALL STYLES *********
+
+ul, li, a, h1, h2, p {
+  list-style: none;
+  color: $base-text-color;
+  font-weight: $base-text-weight;
+  text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+
+
+
+// ********* GENERAL STYLE *********
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  // display
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  grid-template-rows: auto;
+  grid-row-gap: $row-gap;
+
+  font-family: $regular-font-stack;
+  font-weight: 900;
+
+  background-color: $background-color;
+}
+
+p, ul li {
+  font-size: $base-text-size;
+  font-weight: $base-text-weight;
+  color: $base-text-color;
+  line-height: 1.7;
+}
+
+.break {
+  display: none;
+}
+
+@media screen and (min-device-width: 600px) {
+  body {
+    grid-template-columns: auto minmax(80vw, $section-width) auto;
+    grid-row-gap: $desktop-row-gap;
+
+    .break {
+      display: inherit;
+      height: 0;
+      flex-basis: 100%;
+    }
+  }
+}

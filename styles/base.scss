@@ -1,0 +1,172 @@
+// _base.scss
+
+
+// fonts faces
+@font-face {
+  font-family: 'Library';
+    src: url('../files/library-3-am.otf');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Light.woff2?v=3.13") format("woff2"),
+       url("../files/Inter/Inter-Light.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Regular.woff2?v=3.13") format("woff2"),
+       url("../files/Inter/Inter-Regular.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Medium.woff2?v=3.13") format("woff2"),
+       url("../files/Inter/Inter-Medium.woff?v=3.13") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../files/Inter/Inter-SemiBold.woff2?v=3.13") format("woff2"),
+       url("../files/Inter/Inter-SemiBold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Bold.woff2?v=3.13") format("woff2"),
+       url("../files/Inter/Inter-Bold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../files/Inter/Inter-ExtraBold.woff2?v=3.13") format("woff2"),
+       url("../files/Inter/Inter-ExtraBold.woff?v=3.13") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../files/Inter/Inter-Black.woff2?v=3.13") format("woff2"),
+       url("../files/Inter/Inter-Black.woff?v=3.13") format("woff");
+}
+
+
+$regular-font-stack: Source Sans Pro, Helvetica, sans-serif;
+$title-font-stack: 'Library', Helvetica, sans-serif;
+
+// layout
+$body-padding: 0.5rem;
+$section-width: 80rem;
+$row-gap: 6rem;
+$desktop-row-gap: 15rem;
+$section-margin-height: 4rem;
+
+// colors
+$orange: #EFCC57;
+
+$main-color: #9A6BF0;
+$background-color: #141414;
+$title-text-color: #4B79FF;
+$case-title-color: rgba(75,121,255, 0.8);
+$subtitle-text-color: #BABABA;
+$intro-text-color: #848484;
+$medium-text-color: #5AFFB0;
+$section-title-color: #BABABA91;
+$orange-case-title-color: $orange;
+$link-color: $orange;
+$base-text-color: #ECECEC;
+$aside-text-color: #626262;
+$border-color: #D2D2D2;
+$border-button-color: #B4ACB4;
+$hover-color: #EEF0F2;
+
+// fonts
+$title-text-size: 3.2rem;
+$subtitle-text-size: 3rem;
+$intro-text-size: 2.2rem;
+$medium-text-size: 2.5rem;
+$navigation-title-mobile-text-size: 2.2rem;
+$case-title-size: 7rem;
+$base-text-size: 1.8rem;
+$navigation-text-size: 1.8rem;
+
+$desktop-title-text-size: 9rem;
+$desktop-subtitle-text-size: 6.2rem;
+$desktop-intro-text-size: 3.5rem;
+$desktop-medium-text-size: 3rem;
+$desktop-semimedium-text-size: 2.6rem;
+$desktop-base-text-size: 2rem;
+
+
+$title-text-weight: 700;
+$subtitle-text-weight: 500;
+$intro-text-weight: 300;
+$medium-text-weight: 600;
+$case-title-weight: 600;
+$base-text-weight: 500;
+$navigation-text-weight: 500;
+
+$text-margin: 1.6rem;
+
+// header
+$li-margin: 3rem;
+$desktop-li-margin: 10rem;
+
+// case studies
+$border-radius: 2.5rem;
+$border-width: 0.4rem;
+$phone-width: 18rem;
+$phone-height: 32.5rem;
+$desktop-width: 54rem;
+$desktop-height: 30rem;
+
+// general designs
+
+// about me
+
+// mockups
+
+// ********* MOCKUPS *********
+
+%phone-mockup {
+  position: relative;
+  display: block;
+  width: $phone-width;
+  height: $phone-height;
+  border-style: solid;
+    border-color: $border-color;
+    border-radius: $border-radius;
+    border-width: $border-width;
+  background-color: $background-color;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+      top: 1.5 * 3rem;
+      right: -2 * 0.3rem;
+    width: 0.3rem;
+    height: 3rem;
+    background-color: $border-button-color;
+    border-radius: 0 0.2rem 0.2rem 0;
+  }
+}

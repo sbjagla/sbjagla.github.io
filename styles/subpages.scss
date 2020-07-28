@@ -1,0 +1,670 @@
+// _supbages.scss
+@use 'base' as *;
+
+// ********* GENERAL *********
+
+.case {
+  grid-template-areas: ". header ."
+                        ". article ."
+                        ". aboutMe .";
+}
+
+@media screen and (min-device-width: 600px) {
+  .case {
+    grid-template-areas: ". header ."
+                          "article article article"
+                          ". aboutMe .";
+    p, ul li {
+      font-size: $desktop-base-text-size;
+    }
+  }
+}
+
+.caseExtended {
+  grid-area: article;
+
+  // display
+  display: grid;
+  grid-template-columns: 95%;
+  grid-template-rows: auto;
+  grid-row-gap: $row-gap;
+
+  h1 {
+    font-size: $medium-text-size;
+    font-weight: $subtitle-text-weight;
+    color: $case-title-color;
+    font-family: $title-font-stack;
+
+    margin-bottom: -$text-margin/2;
+  }
+
+  p {
+    padding-top: $text-margin;
+    padding-bottom: $text-margin;
+  }
+
+  a {
+    color: $link-color;
+    transition: color 0.25s ease-in-out;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+
+  img {
+    width: 80%;
+  }
+
+  .multiple-image .image {
+    width: $phone-width;
+    height: $phone-height;
+
+    display: block;
+    background-color: $background-color;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+  }
+
+  ul {
+    padding: 0 0 0 3*$text-margin;
+
+    li {
+      margin-bottom: $text-margin;
+
+      &:before {
+        content: "\2022";
+        color: $main-color;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
+  }
+
+  .caseIntroduction {
+    h1 {
+      font-size: $title-text-size;
+      font-weight: $subtitle-text-weight;
+      color: $title-text-color;
+
+      margin-top: $text-margin;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: $subtitle-text-size;
+      font-weight: $subtitle-text-weight;
+      color: $subtitle-text-color;
+    }
+
+    .caseParagraphs {
+      p {
+        color: $base-text-color;
+        font-size: $intro-text-size;
+        font-weight: $intro-text-weight;
+      }
+
+      margin: auto;
+      width: 74vw;
+    }
+
+    .image {
+      @extend %phone-mockup;
+      height: 1.5 * $phone-height;
+      width: 1.5 * $phone-width;
+
+      margin: 2*$text-margin auto;
+    }
+  }
+
+  figure {
+    margin: 2*$text-margin $text-margin;
+
+    img, .image {
+      display: block;
+      margin: 0 auto $text-margin auto;
+    }
+
+    figcaption {
+      margin-left: auto;
+      margin-right: auto;
+      font-size: $base-text-size;
+      font-weight: $base-text-weight;
+      color: $base-text-color;
+      line-height: 1.7;
+      text-align: center;
+    }
+  }
+
+  .multiple-flex {
+    h1, p, ul {
+      margin: 0 auto;
+    }
+
+    .multiple-image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &.div-image {
+        figure {
+          width: max-content;
+          height: max-content;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  .caseExtended {
+    grid-template-columns: auto minmax(70vw, $section-width) auto;
+    grid-row-gap: $row-gap;
+
+    .multiple-flex {
+      h1, p, ul {
+        width: 74vw;
+        max-width: $section-width;
+      }
+    }
+
+    h1 {
+      font-size: $subtitle-text-size;
+    }
+
+    ul {
+      padding: 0 0 0 3*$text-margin;
+    }
+
+    .multiple-flex {
+      .multiple-image {
+        .imageDesktop {
+          width: $desktop-width;
+          height: $desktop-height;
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 1000px) {
+  .caseExtended {
+    grid-template-columns: auto minmax(44vw, $section-width) auto;
+
+    .caseIntroduction {
+      display: grid;
+      grid-template-areas: "image description"
+                            "title description";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr;
+      column-gap: 5%;
+
+      margin: 0 10vw 10vh 10vw;
+
+      h1 {
+        grid-area: title;
+
+        justify-self: center;
+        font-size: $desktop-subtitle-text-size;
+      }
+
+      .image {
+        grid-area: image;
+
+        justify-self: center;
+        align-self: center;
+        &.imageDesktop {
+          width: $desktop-width;
+          height: $desktop-height;
+
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      .caseParagraphs {
+        grid-area: description;
+
+        align-self: center;
+
+        margin: 0;
+        width: inherit;
+        p {
+          font-size: $desktop-intro-text-size;
+          font-weight: 300;
+          color: $intro-text-color;
+        }
+      }
+    }
+
+    figure {
+      width: 20vw;
+      margin: 4*$text-margin;
+
+      figcaption {
+        width: 20vw;
+      }
+    }
+
+    .multiple-flex {
+
+      h1, p, ul {
+        width: 45vw;
+        max-width: 84rem;
+      }
+
+      &.two-images {
+        .multiple-image {
+          width: 60vw;
+        }
+      }
+
+      .multiple-image {
+        flex-direction: row;
+        justify-content: space-around;
+
+        width: 95vw;
+        margin: 0 auto;
+
+        figure {
+          width: 20vw;
+
+          .imageDesktop {
+            width: $desktop-width;
+            height: $desktop-height;
+          }
+        }
+      }
+    }
+
+    .single-image {
+      width: 30vw;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+// ********* TRAVELLO *********
+
+#travello {
+  .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                          "summary summary summary"
+                          "designProblem designProblem designProblem"
+                          "analysis analysis analysis"
+                          "needsStudy needsStudy needsStudy"
+                          "sketches sketches sketches"
+                          "lofi lofi lofi"
+                          "midfi midfi midfi"
+                          "hifi hifi hifi"
+                          "mistakes mistakes mistakes"
+                          "redesign redesign redesign";
+
+    .caseIntroduction {
+      .image {
+        background-image: url('../images/travello-mobile-preview.png');
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  #travello {
+    .caseExtended {
+      grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                            ". summary ."
+                            ". designProblem ."
+                            ". analysis ."
+                            ". needsStudy ."
+                            "sketches sketches sketches"
+                            ". lofi ."
+                            "midfi midfi midfi"
+                            ". hifi ."
+                            ". mistakes ."
+                            ". redesign .";
+    }
+  }
+}
+
+@media screen and (min-device-width: 1000px) {
+  #travello {
+    .caseExtended {
+      .caseIntroduction {
+        .caseParagraphs {
+          p {
+            font-size: 2.8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.caseIntroduction {
+  grid-area: caseIntroduction;
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.designProblem {
+  grid-area: designProblem;
+}
+
+#analysis {
+  grid-area: analysis;
+}
+
+#needsStudy {
+  grid-area: needsStudy;
+}
+
+#sketches {
+  grid-area: sketches;
+}
+
+#lofi {
+  grid-area: lofi;
+}
+
+#midfi {
+  grid-area: midfi;
+}
+
+#hifi {
+  grid-area: hifi;
+}
+
+#mistakes {
+  grid-area: mistakes;
+}
+
+#redesign {
+  grid-area: redesign;
+}
+
+
+// ********* BEAUTY&BEAUTY *********
+
+#beauty {
+  .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                          "summary summary summary"
+                          "designProblem designProblem designProblem"
+                          "IA IA IA"
+                          "visualCon visualCon visualCon"
+                          "biggestDecision biggestDecision biggestDecision"
+                          "finalDesign finalDesign finalDesign";
+
+    .caseIntroduction {
+      .image {
+        background-image: url('../images/beauty-mobile-preview.png');
+      }
+    }
+
+    .multiple-image {
+      &:not(.div-image) {
+        figure {
+          width: inherit;
+        }
+      }
+    }
+
+    #finalDesign {
+      #start {
+        background-image: url('../beauty/files/mobile-intro.png');
+      }
+
+      #procedure1 {
+        background-image: url('../beauty/files/mobile-procedure1.png');
+      }
+
+      #procedure2 {
+        background-image: url('../beauty/files/mobile-procedure2.png');
+
+      }
+
+      #priceList {
+        background-image: url('../beauty/files/mobile-contact.png');
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  #beauty {
+    .caseExtended {
+      grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                            ". summary ."
+                            ". designProblem ."
+                            ". IA ."
+                            "visualCon visualCon visualCon"
+                            ". biggestDecision ."
+                            "finalDesign finalDesign finalDesign";
+      .caseIntroduction {
+        .image {
+          background-image: url('../images/beauty-desktop-preview.png');
+        }
+      }
+
+      #finalDesign {
+        #start {
+          background-image: url('../beauty/files/desktop-intro.png');
+        }
+
+        #procedure1 {
+          background-image: url('../beauty/files/desktop-procedure1.png');
+        }
+
+        #procedure2 {
+          background-image: url('../beauty/files/desktop-procedure2.png');
+
+        }
+
+        #priceList {
+          background-image: url('../beauty/files/desktop-contact.png');
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 1500px) {
+  #beauty {
+    .caseExtended {
+      .multiple-image {
+        &:not(.div-image) {
+          figure {
+            width: 22vw;
+
+
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#informationArchitecture {
+  grid-area: IA;
+}
+
+#visualConcepts {
+  grid-area: visualCon;
+}
+
+#biggestDecision {
+  grid-area: biggestDecision;
+}
+
+#finalDesign {
+  grid-area: finalDesign;
+
+  #linkParagraph {
+    text-align: center;
+  }
+}
+
+
+// ********* ESENSEI *********
+
+#esensei-case {
+  .caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                          "summary summary summary"
+                          "designProblem designProblem designProblem"
+                          "visualCon visualCon visualCon"
+                          "biggestDecision biggestDecision biggestDecision"
+                          "visualConsistency visualConsistency visualConsistency"
+                          "finalDesign finalDesign finalDesign";
+
+    .caseIntroduction {
+      .image {
+        background-image: url('../images/esensei-mobile-preview.png');
+      }
+    }
+
+    .multiple-image {
+      &:not(.div-image) {
+        figure {
+          width: 40vw;
+        }
+      }
+    }
+
+    #finalDesign {
+      #start {
+        background-image: url('../esensei/files/start-mobile.png');
+      }
+
+      #users {
+        background-image: url('../esensei/files/users-mobile.png');
+      }
+
+      #stages {
+        background-image: url('../esensei/files/stages-mobile.png');
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  #esensei-case {
+    .caseExtended {
+      grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                            ". summary ."
+                            ". designProblem ."
+                            "visualCon visualCon visualCon"
+                            ". biggestDecision ."
+                            ". visualConsistency ."
+                            "finalDesign finalDesign finalDesign";
+      .caseIntroduction {
+        .image {
+          background-image: url('../images/esensei-desktop-preview.png');
+        }
+      }
+
+      #finalDesign {
+        #start {
+          background-image: url('../esensei/files/start.png');
+        }
+
+        #users {
+          background-image: url('../esensei/files/users.png');
+        }
+
+        #stages {
+          background-image: url('../esensei/files/stages.png');
+        }
+      }
+    }
+  }
+}
+
+#visualConsistency {
+  grid-area: visualConsistency;
+}
+
+// ********* GENERAL WORK*********
+
+.generalWork {
+  &.caseExtended {
+    grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                          "summary summary summary";
+
+    .caseIntroduction {
+      .image {
+        background-image: url('../images/esensei-mobile-preview.png');
+      }
+    }
+
+    &.senseiRoyale {
+      .caseIntroduction {
+        .image {
+          background-image: url('../images/icons-preview.png');
+          width: $phone-height;
+          height: $phone-height;
+        }
+      }
+    }
+    &.knowledgePit {
+      .caseIntroduction {
+        .image {
+          background-image: url('../images/knowledgePit-mobile-preview.png');
+        }
+      }
+    }
+    &.moodle {
+      .caseIntroduction {
+        .image {
+          background-image: url('../images/moodle-preview.svg');
+          width: $phone-height;
+          height: $phone-height;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-device-width: 600px) {
+  .generalWork {
+    &.caseExtended {
+      grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction"
+                            ". summary .";
+
+      &.knowledgePit {
+        .caseIntroduction {
+          .image {
+            background-image: url('../images/knowledgePit-desktop-preview.png');
+          }
+        }
+      }
+    }
+  }
+}

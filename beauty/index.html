@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="../styles/style.css" rel="stylesheet">
+    <script src="../main.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="Sebastian Jagla">
+    <meta property="og:image" content="https://sjagla.com/images/final.png">
+
+    <title>Beauty&Beauty - Sebastian Jagla</title>
+  </head>
+
+  <body class="case" id="beauty">
+
+    <!-- *** NAVIGATION *** -->
+    <header id="navbar">
+
+      <h1> <a href="../index.html">sebastian jagla</a> </h1>
+
+      <!-- visible menu toggle -->
+      <button class="menuToggle" onclick="toggleMenu()"></button>
+
+      <nav>
+        <ul>
+          <li> <a class="navLink" href="../index.html#caseStudies">case studies</a> </li>
+          <li> <a class="navLink" href="../index.html#generalWork">general designs</a> </li>
+          <li> <a class="navLink" href="../index.html#aboutMe">about me</a> </li>
+          <li> <a class="navLink" href="../index.htmlfiles/CV_Sebastian_Jagla_(ENG).pdf">cv (warning: white background)</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+    <article class="caseExtended" id="beautyArticle">
+
+      <section class="caseIntroduction">
+        <h1>
+        Beauty&Beauty
+        </h1>
+        <div class="image imageDesktop"></div>
+        <!-- TODO: to rozwiazanie nie jest dostepne -->
+        <div class="caseParagraphs">
+          <p>
+            One-page website for a small beauty salon that offers depilation
+            and endermology. It's mainly directed at women, but anybody can use
+            their services.
+          </p>
+          <p>
+            See the website <a href="https://depilacja-laserowa-poznan.pl/">here</a>.
+          </p>
+        </div>
+      </section>
+
+      <section class="summary">
+        <h1>Summary</h1>
+        <p>
+          The project was focused around two biggest pain points of the old design:
+          information architecture (IA) and UI design. The IA needed a revamp to
+          reflect that the salon is focused on two procedures. The visual side had
+          to change to give an inviting, refreshing but also elegant impression.
+        </p>
+        <p>
+          After going through all the information on the previous website I proposed
+          an IA and three different visual concepts – the client chose the one they
+          preferred. I designed the website according to the concept and later
+          wrote the website in vanilla HTML, CSS and JS.
+        </p>
+      </section>
+
+      <section class="designProblem">
+        <h1>Design problem</h1>
+        <p>
+          The biggest problems for the previous website were clarity, visual
+          integrity and not being mobile-friendly. I would include a picture, but
+          I'm not mean enough.
+        </p>
+        <p>
+          The layout and information architecture were convoluted with unclear
+          names, duplicated information, seemingly random promotional images and
+          no visual hints towards the service the website is supposed to promote.
+          Moreover, the website did not have a mobile version.
+        </p>
+        <p>
+          I talked with the client about the problems they saw with their website.
+          The main issue was that <b> the website needed a general update</b>, so I focused
+          heavily on the visual side of the project.
+        </p>
+      </section>
+
+      <section id="informationArchitecture">
+        <h1>Information architecture</h1>
+        <p>The previous website consisted of:</p>
+        <ul class="list">
+          <li>landing page with some prices and contact info,</li>
+          <li>'About us' page,</li>
+          <li>page on depilation with prices,</li>
+          <li>prices page,</li>
+          <li>contact info page.</li>
+        </ul>
+        <p>
+          So the pricing table was repeated 3 times in different configurations,
+          one procedure got much more attention than the other and there were three
+          different places for contact info and text about the salon.
+        </p>
+        <p>
+          I must admit that the one-pager idea came to me immediately and I just
+          stuck with it, but I still believe there wasn't enough important info to merit
+          a subpage. For tables and longer text I went for expandable
+          titles. I did that first because of scrollability and second because I
+          expect some people will want to read the descriptions, the FAQs and
+          precautions, while others will be good with a short sentence on what, when,
+          where and for how much.
+        </p>
+        <p>
+          When it comes to information itself, I decided to go with a segmented
+          price table for both procedures and then two separate sections with
+          the same stucture:
+        </p>
+        <ul class="list">
+          <li>quick description,</li>
+          <li>icons presenting the time one visit takes, the frequency for the
+          best result,</li>
+          <li>FAQ,</li>
+          <li>contraindications and precautions,</li>
+          <li>more info about the procedure.</li>
+        </ul>
+      </section>
+
+      <section id="visualConcepts" class="multiple-flex">
+        <h1>Visual concepts</h1>
+        <p>
+          The website needed to give a general impression related to cosmetics
+          and the beauty industry, but this could be taken into different directions.
+          The first one for me was "spa". The website would be relaxing the same
+          way the beauty salon is (anyone who experienced laser depilation will
+          realise why this idea didn't take off). The second idea was heavily
+          influenced by my talks with the client – they showed me other websites
+          they liked, I took elements that could be promising and made something
+          new. The third direction was focused around the effects of the procedures:
+          clean and vivid skin, feeling of freshness and youthfullness. That's why
+          I went with a picture of some perfectly fine legs.
+        </p>
+        <div class="multiple-image">
+          <figure>
+            <img src="files/first-concept.png" alt="">
+            <figcaption>First direction: calming and fresh.
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="files/second-concept.png" alt="">
+            <figcaption>Second direction: visuals liked by the client.
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="files/third-concept.png" alt="">
+            <figcaption>Third direction: vivid and fresh feelings.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p>
+          We talked about the designs and chose the third direction, but I still
+          wanted to incorporate the visual elements that the client liked. We
+          also talked about the various menu options – we settled on the third
+          option.
+        </p>
+      </section>
+
+      <section id="biggestDecision">
+        <h1>Most important decisions</h1>
+        <p>
+          There were some decisions I should mention here. <b>First is the logo</b>.
+          I decided against doing anything with it. The logo was there and it was
+          already on the sign above the salon's doors and on marketing material.
+          Changing it just to change it or fit the font used on the website would
+          only cause incosistency or (if we were to change all the materials) a
+          huge financial burden.
+        </p>
+        <p>
+          The <b>second decision was the menu</b>: personally I felt that a side menu fit
+          the style the client showed me, but also gave an opportunity for the
+          logo to be closer to the center of the action (it's a small venue in an
+          increasingly competitive industry, so brand recognition is important).
+          My only regret is not implementing an indicator for the current section.
+          This would increase the feeling of responsiveness, but I did not have
+          the time to learn JS enough.
+        </p>
+        <p>
+          The <b>third decision was to not include any interactive map</b> on the website.
+          This decision was easy for me, but the opposite's become the standard,
+          so I will explain myself. Firstly, I would not do it well by myself and
+          didn't want to risk it. Secondly, such plugins often break the style
+          of the website. Thirdly, the salon is in a smaller city, so the streets
+          are rather known to people who live there (although I admit some outsider
+          might be left out). The last reason is privacy: the obvious choice would
+          be Google, but those guys aren't really known for respecting data, so
+          I wasn't going to sell the users' data only for the map.
+        </p>
+      </section>
+
+      <section id="finalDesign" class="multiple-flex">
+        <h1>Final design</h1>
+        <p>
+          After the visual concepts and taking some decisions, I designed the rest
+          of the website. I had to edit the picture to give the purple a more
+          mild look, make some icons (and take some from Font Awesome). Later I
+          wrote the HTML and CSS, but stumbled upon a problem with the burger menu
+          for mobile, so I used Javascript. Here are the final results.
+        </p>
+
+        <div class="multiple-image div-image">
+          <figure>
+            <div id="start" class="image imageDesktop"></div>
+            <figcaption>Start of the page.
+            </figcaption>
+          </figure>
+          <figure>
+            <div id="procedure1" class="image imageDesktop"></div>
+            <figcaption>Description of one of the procedures.
+            </figcaption>
+          </figure>
+          <div class="break">
+
+          </div>
+          <figure>
+            <div id="procedure2" class="image imageDesktop"></div>
+            <figcaption>Part 2 of the description.
+            </figcaption>
+          </figure>
+          <figure>
+            <div id="priceList" class="image imageDesktop"></div>
+            <figcaption>Contact information.
+            </figcaption>
+          </figure>
+        </div>
+
+        <p id="linkParagraph">
+          You can see the whole website <a href="https://depilacja-laserowa-poznan.pl/">here</a>.
+        </p>
+
+      </section>
+
+    </article>
+
+    <article class="aboutMe">
+      <section class="contact">
+        <p>
+          If you wish to contact me, pick any of these.
+        </p>
+        <address>
+          <a href="mailto:sjagla@fastmail.com" id="mail"><img src="../images/mail-icon.svg" alt="Mail: contact@sjagla.com"></a>
+          <a href="https://www.linkedin.com/in/sebastian-jagla" id="linkedin"><img src="../images/linkedin-icon.svg" alt="Linkedin"></a>
+          <a href="https://twitter.com/sebastian_jagla" id="twitter"><img src="../images/twitter-icon.svg" alt="Twitter"></a>
+        </address>
+      </section>
+    </article>
+
+  </body>
+</html>
