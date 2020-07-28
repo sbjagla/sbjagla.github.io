@@ -1,2 +1,3 @@
-# Portfolio website in pure CSS 
-This is a basic portfolio website that I created as my first website ever. 
+# Portfolio website in SASS and vanilla JS
+This is a basic portfolio website that I designed and wrote. I used some animations
+developed by other people.
