@@ -721,9 +721,6 @@ header.menu-is-open .menuToggle::after {
   #beauty .caseExtended {
     grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." ". IA ." "visualCon visualCon visualCon" ". biggestDecision ." "finalDesign finalDesign finalDesign";
   }
-  #beauty .caseExtended .caseIntroduction .image {
-    background-image: url("../images/beauty-desktop-preview.png");
-  }
   #beauty .caseExtended #finalDesign #start {
     background-image: url("../beauty/files/desktop-intro.png");
   }
@@ -735,6 +732,11 @@ header.menu-is-open .menuToggle::after {
   }
   #beauty .caseExtended #finalDesign #priceList {
     background-image: url("../beauty/files/desktop-contact.png");
+  }
+}
+@media screen and (min-device-width: 1000px) {
+  #beauty .caseExtended .caseIntroduction .image {
+    background-image: url("../images/beauty-desktop-preview.png");
   }
 }
 @media screen and (min-device-width: 1500px) {
@@ -787,9 +789,6 @@ header.menu-is-open .menuToggle::after {
   #esensei-case .caseExtended {
     grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary ." ". designProblem ." "visualCon visualCon visualCon" ". biggestDecision ." ". visualConsistency ." "finalDesign finalDesign finalDesign";
   }
-  #esensei-case .caseExtended .caseIntroduction .image {
-    background-image: url("../images/esensei-desktop-preview.png");
-  }
   #esensei-case .caseExtended #finalDesign #start {
     background-image: url("../esensei/files/start.png");
   }
@@ -798,6 +797,11 @@ header.menu-is-open .menuToggle::after {
   }
   #esensei-case .caseExtended #finalDesign #stages {
     background-image: url("../esensei/files/stages.png");
+  }
+}
+@media screen and (min-device-width: 1000px) {
+  #esensei-case .caseExtended .caseIntroduction .image {
+    background-image: url("../images/esensei-desktop-preview.png");
   }
 }
 #visualConsistency {
@@ -828,6 +832,8 @@ header.menu-is-open .menuToggle::after {
   .generalWork.caseExtended {
     grid-template-areas: "caseIntroduction caseIntroduction caseIntroduction" ". summary .";
   }
+}
+@media screen and (min-device-width: 1000px) {
   .generalWork.caseExtended.knowledgePit .caseIntroduction .image {
     background-image: url("../images/knowledgePit-desktop-preview.png");
   }
