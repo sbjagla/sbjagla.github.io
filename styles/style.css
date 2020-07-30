@@ -8,49 +8,42 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("../files/Inter/Inter-Light.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Light.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-ExtraLight.ttf") format("ttf");
 }
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../files/Inter/Inter-Regular.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Regular.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Light.ttf") format("ttf");
 }
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../files/Inter/Inter-Medium.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Medium.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Regular.ttf") format("ttf");
 }
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../files/Inter/Inter-SemiBold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-SemiBold.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Semibold.ttf") format("ttf");
 }
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../files/Inter/Inter-Bold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Bold.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Bold.ttf") format("ttf");
 }
 @font-face {
   font-family: "Inter";
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url("../files/Inter/Inter-ExtraBold.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-ExtraBold.woff?v=3.13") format("woff");
-}
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../files/Inter/Inter-Black.woff2?v=3.13") format("woff2"), url("../files/Inter/Inter-Black.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Black.ttf") format("ttf");
 }
 .caseExtended .caseIntroduction .image, #caseStudies a section .image, #generalWork a section .image {
   position: relative;
@@ -312,7 +305,7 @@ header.menu-is-open .menuToggle::after {
 }
 #caseStudies a section p, #generalWork a section p {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 300;
   width: 23.4rem;
   text-align: center;
   color: #B5B5B5;
@@ -517,7 +510,7 @@ header.menu-is-open .menuToggle::after {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 300;
   color: #ECECEC;
   line-height: 1.7;
   text-align: center;
@@ -856,7 +849,7 @@ header.menu-is-open .menuToggle::after {
 }
 .aboutMe aside, .aboutMe .paragraphs p, .aboutMe .contact p {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 300;
 }
 .aboutMe .contact p {
   width: 70vw;
@@ -929,7 +922,7 @@ header.menu-is-open .menuToggle::after {
 ul, li, a, h1, h2, p {
   list-style: none;
   color: #ECECEC;
-  font-weight: 500;
+  font-weight: 300;
   text-decoration: none;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -947,14 +940,14 @@ body {
   grid-template-columns: auto 90vw auto;
   grid-template-rows: auto;
   grid-row-gap: 6rem;
-  font-family: Source Sans Pro, Helvetica, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 900;
   background-color: #141414;
 }
 
 p, ul li {
   font-size: 1.8rem;
-  font-weight: 500;
+  font-weight: 300;
   color: #ECECEC;
   line-height: 1.7;
 }

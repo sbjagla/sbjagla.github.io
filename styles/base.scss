@@ -11,32 +11,28 @@
   font-style:  normal;
   font-weight: 300;
   font-display: swap;
-  src: url("../files/Inter/Inter-Light.woff2?v=3.13") format("woff2"),
-       url("../files/Inter/Inter-Light.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-ExtraLight.ttf") format("ttf");
 }
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../files/Inter/Inter-Regular.woff2?v=3.13") format("woff2"),
-       url("../files/Inter/Inter-Regular.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Light.ttf") format("ttf");
 }
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../files/Inter/Inter-Medium.woff2?v=3.13") format("woff2"),
-       url("../files/Inter/Inter-Medium.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Regular.ttf") format("ttf");
 }
 @font-face {
   font-family: 'Inter';
   font-style:  normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../files/Inter/Inter-SemiBold.woff2?v=3.13") format("woff2"),
-       url("../files/Inter/Inter-SemiBold.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Semibold.ttf") format("ttf");
 }
 
 @font-face {
@@ -44,8 +40,7 @@
   font-style:  normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../files/Inter/Inter-Bold.woff2?v=3.13") format("woff2"),
-       url("../files/Inter/Inter-Bold.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Bold.ttf") format("ttf");
 }
 
 @font-face {
@@ -53,21 +48,11 @@
   font-style:  normal;
   font-weight: 800;
   font-display: swap;
-  src: url("../files/Inter/Inter-ExtraBold.woff2?v=3.13") format("woff2"),
-       url("../files/Inter/Inter-ExtraBold.woff?v=3.13") format("woff");
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("../files/Inter/Inter-Black.woff2?v=3.13") format("woff2"),
-       url("../files/Inter/Inter-Black.woff?v=3.13") format("woff");
+  src: url("../files/files/SourceSansPro/SourceSansPro-Black.ttf") format("ttf");
 }
 
 
-$regular-font-stack: Source Sans Pro, Helvetica, sans-serif;
+$regular-font-stack: 'Source Sans Pro', Helvetica, sans-serif;
 $title-font-stack: 'Library', Helvetica, sans-serif;
 
 // layout
@@ -119,7 +104,7 @@ $subtitle-text-weight: 500;
 $intro-text-weight: 300;
 $medium-text-weight: 600;
 $case-title-weight: 600;
-$base-text-weight: 500;
+$base-text-weight: 300;
 $navigation-text-weight: 500;
 
 $text-margin: 1.6rem;
