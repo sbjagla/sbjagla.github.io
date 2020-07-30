@@ -134,14 +134,16 @@ $desktop-height: 30rem;
   display: block;
   width: $phone-width;
   height: $phone-height;
+
   border-style: solid;
-    border-color: $border-color;
-    border-radius: $border-radius;
-    border-width: $border-width;
+  border-color: $border-color;
+  border-radius: $border-radius;
+  border-width: $border-width;
+
   background-color: $background-color;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 
   &::after {
     content: '';
