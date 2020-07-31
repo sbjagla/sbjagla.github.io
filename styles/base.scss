@@ -7,48 +7,43 @@
     src: url('../files/library-3-am.otf');
 }
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
+  font-family: 'Source Sans Pro';
+  font-weight: 200;
+  src: url("../files/SourceSansPro/SourceSansPro-ExtraLight.ttf");
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
   font-weight: 300;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-ExtraLight.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Light.ttf");
 }
+// for some reason weight 400 gives a bold
+
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Light.ttf") format("ttf");
-}
-@font-face {
-  font-family: 'Inter';
+  font-family: 'Source Sans Pro';
   font-style:  normal;
   font-weight: 500;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Regular.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Regular.ttf");
 }
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Source Sans Pro';
   font-style:  normal;
   font-weight: 600;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Semibold.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Semibold.ttf");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Source Sans Pro';
   font-style:  normal;
   font-weight: 700;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Bold.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Bold.ttf");
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: 'Source Sans Pro';
   font-style:  normal;
   font-weight: 800;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Black.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Black.ttf");
 }
 
 
@@ -75,7 +70,7 @@ $medium-text-color: #5AFFB0;
 $section-title-color: #BABABA91;
 $orange-case-title-color: $orange;
 $link-color: $orange;
-$base-text-color: #ECECEC;
+$base-text-color: #F8F8F8;
 $aside-text-color: #626262;
 $border-color: #D2D2D2;
 $border-button-color: #B4ACB4;

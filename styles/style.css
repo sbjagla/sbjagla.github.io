@@ -4,46 +4,38 @@
   src: url("../files/library-3-am.otf");
 }
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
+  font-family: "Source Sans Pro";
+  font-weight: 200;
+  src: url("../files/SourceSansPro/SourceSansPro-ExtraLight.ttf");
+}
+@font-face {
+  font-family: "Source Sans Pro";
   font-weight: 300;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-ExtraLight.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Light.ttf");
 }
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Light.ttf") format("ttf");
-}
-@font-face {
-  font-family: "Inter";
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 500;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Regular.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Regular.ttf");
 }
 @font-face {
-  font-family: "Inter";
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Semibold.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Semibold.ttf");
 }
 @font-face {
-  font-family: "Inter";
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Bold.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Bold.ttf");
 }
 @font-face {
-  font-family: "Inter";
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 800;
-  font-display: swap;
-  src: url("../files/files/SourceSansPro/SourceSansPro-Black.ttf") format("ttf");
+  src: url("../files/SourceSansPro/SourceSansPro-Black.ttf");
 }
 .caseExtended .caseIntroduction .image, #caseStudies a section .image, #generalWork a section .image {
   position: relative;
@@ -490,7 +482,7 @@ header.menu-is-open .menuToggle::after {
   width: 74vw;
 }
 .caseExtended .caseIntroduction .caseParagraphs p {
-  color: #ECECEC;
+  color: #F8F8F8;
   font-size: 2.2rem;
   font-weight: 300;
 }
@@ -511,7 +503,7 @@ header.menu-is-open .menuToggle::after {
   margin-right: auto;
   font-size: 1.8rem;
   font-weight: 300;
-  color: #ECECEC;
+  color: #F8F8F8;
   line-height: 1.7;
   text-align: center;
 }
@@ -869,7 +861,7 @@ header.menu-is-open .menuToggle::after {
   grid-area: bio;
 }
 .aboutMe .paragraphs p {
-  color: #ECECEC;
+  color: #F8F8F8;
 }
 .aboutMe .picture {
   grid-area: image;
@@ -927,7 +919,7 @@ header.menu-is-open .menuToggle::after {
 
 ul, li, a, h1, h2, p {
   list-style: none;
-  color: #ECECEC;
+  color: #F8F8F8;
   font-weight: 300;
   text-decoration: none;
   margin-block-start: 0;
@@ -948,13 +940,14 @@ body {
   grid-row-gap: 6rem;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   font-weight: 900;
+  font-style: normal;
   background-color: #141414;
 }
 
 p, ul li {
   font-size: 1.8rem;
   font-weight: 300;
-  color: #ECECEC;
+  color: #F8F8F8;
   line-height: 1.7;
 }
 
