@@ -258,9 +258,8 @@ header.menu-is-open .menuToggle::after {
   #intro {
     display: grid;
     grid-template-areas: "title title ." "subtitle description description";
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.9fr 1fr 1fr;
     grid-template-rows: auto 1fr;
-    column-gap: 8%;
     margin: 26vh 0 8vh 0;
   }
   #intro p {
