@@ -204,11 +204,11 @@
       display: grid;
       grid-template-areas: "image description"
                             "title description";
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 0.8fr 1fr;
       grid-template-rows: auto 1fr;
-      column-gap: 5%;
+      column-gap: 7%;
 
-      margin: 0 10vw 10vh 10vw;
+      margin: 6vh 9vw 10vh 9vw;
 
       h1 {
         grid-area: title;

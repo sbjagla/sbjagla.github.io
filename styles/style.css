@@ -157,7 +157,7 @@ header.menu-is-open .menuToggle::after {
 @media screen and (min-device-width: 1200px) {
   header {
     bottom: 89%;
-    padding: 0.5rem 0.5rem 0.5rem 14%;
+    padding: 0.5rem 0.5rem 0.5rem 10vw;
   }
   header h1 {
     flex-basis: 100%;
@@ -551,10 +551,10 @@ header.menu-is-open .menuToggle::after {
   .caseExtended .caseIntroduction {
     display: grid;
     grid-template-areas: "image description" "title description";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.8fr 1fr;
     grid-template-rows: auto 1fr;
-    column-gap: 5%;
-    margin: 0 10vw 10vh 10vw;
+    column-gap: 7%;
+    margin: 6vh 9vw 10vh 9vw;
   }
   .caseExtended .caseIntroduction h1 {
     grid-area: title;
