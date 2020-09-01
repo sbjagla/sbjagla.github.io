@@ -32,8 +32,7 @@
   h1 {
     font-size: $medium-text-size;
     font-weight: $subtitle-text-weight;
-    color: $case-title-color;
-    font-family: $title-font-stack;
+    color: $section-title-color;
 
     margin-bottom: -$text-margin/2;
   }
@@ -89,6 +88,8 @@
       font-size: $title-text-size;
       font-weight: $subtitle-text-weight;
       color: $title-text-color;
+      font-family: $title-font-stack;
+
 
       margin-top: $text-margin;
       text-align: center;

@@ -289,8 +289,8 @@ header.menu-is-open .menuToggle::after {
   margin: 4rem 0;
 }
 #caseStudies a section h2, #generalWork a section h2 {
-  margin-top: 2rem;
-  color: #5AFFB0;
+  margin-top: 1.6rem;
+  color: #B5B5B5;
   font-weight: 500;
   transition: color 0.25s ease-in-out;
 }
@@ -298,7 +298,9 @@ header.menu-is-open .menuToggle::after {
   font-size: 1.8rem;
   font-weight: 300;
   width: 23.4rem;
+  margin-top: 0.4rem;
   text-align: center;
+  line-height: 1.4;
   color: #B5B5B5;
 }
 #caseStudies a:hover section h2, #generalWork a:hover section h2 {
@@ -310,7 +312,7 @@ header.menu-is-open .menuToggle::after {
   color: #BABABA91;
   line-height: 85%;
   position: relative;
-  top: 4rem;
+  top: 7vh;
 }
 #caseStudies h2, #generalWork h2 {
   font-size: 2.5rem;
@@ -355,9 +357,6 @@ header.menu-is-open .menuToggle::after {
 #generalWork a section#moodle .image:after {
   display: none;
 }
-#generalWork a section h2 {
-  color: #EFCC57;
-}
 
 @media screen and (min-device-width: 600px) {
   #caseStudies, #generalWork {
@@ -369,6 +368,7 @@ header.menu-is-open .menuToggle::after {
     height: fit-content;
     flex-basis: 100%;
     margin-left: 9vw;
+    top: 4rem;
   }
 
   #caseStudies a section#esensei .image, #caseStudies a section#beauty .image {
@@ -423,8 +423,7 @@ header.menu-is-open .menuToggle::after {
 .caseExtended h1 {
   font-size: 2.5rem;
   font-weight: 500;
-  color: rgba(75, 121, 255, 0.8);
-  font-family: "Library", Helvetica, sans-serif;
+  color: #BABABA91;
   margin-bottom: -0.8rem;
 }
 .caseExtended p {
@@ -468,6 +467,7 @@ header.menu-is-open .menuToggle::after {
   font-size: 3.2rem;
   font-weight: 500;
   color: #4B79FF;
+  font-family: "Library", Helvetica, sans-serif;
   margin-top: 1.6rem;
   text-align: center;
 }

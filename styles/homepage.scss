@@ -113,8 +113,8 @@
       }
 
       h2 {
-        margin-top: 2rem;
-        color: $medium-text-color;
+        margin-top: 1.6rem;
+        color: #B5B5B5;
 
         font-weight: 500;
 
@@ -125,7 +125,9 @@
         font-size: $base-text-size;
         font-weight: $base-text-weight;
         width: 1.3 * $phone-width;
+        margin-top: 0.4rem;
         text-align: center;
+        line-height: 1.4;
         color: #B5B5B5;
       }
     }
@@ -145,7 +147,7 @@
       color: $section-title-color;
       line-height: 85%;
     position: relative;
-      top: 4rem;
+      top: 7vh;
   }
 
   h2 {
@@ -218,10 +220,6 @@
           }
         }
       }
-
-      h2 {
-        color: $orange-case-title-color;
-      }
     }
   }
 }
@@ -238,6 +236,8 @@
       height: fit-content;
       flex-basis: 100%;
       margin-left: 9vw;
+      top: 4rem;
+
     }
   }
 
