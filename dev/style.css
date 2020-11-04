@@ -9,16 +9,62 @@ header, nav.section, #manifest, #oNas aside ul, #wspieraj, #media, #oNas, footer
   grid-row: 1;
 }
 
-.button, button {
+button {
   display: block;
   width: max-content;
   max-width: 90vw;
   padding: 1em 2em;
+  position: relative;
   background-color: #060D03;
   color: #FAF8EC;
   border: 0;
   font-weight: 500;
   text-align: left;
+}
+@media screen and (min-width: 1024px-1px) and (orientation: landscape), (min-width: 1024px) {
+  button {
+    max-width: 35vw;
+  }
+}
+
+.button {
+  display: block;
+  width: max-content;
+  max-width: 90vw;
+  padding: 1em 2em;
+  position: relative;
+  overflow: hidden;
+  background-color: #060D03;
+  color: #FAF8EC;
+  border: 0;
+  font-weight: 500;
+  text-align: left;
+}
+.button span {
+  position: relative;
+  z-index: 1;
+}
+.button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+  border-radius: 50%;
+  background-color: #66CC33;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+}
+.button:hover::before {
+  opacity: 1;
+  transition-duration: 0.85s;
+  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+.button:hover span {
+  color: #060D03;
 }
 
 ul, ol, li, a, h1, h2, p, a {
@@ -33,19 +79,21 @@ ul, ol, li, a, h1, h2, p, a {
 }
 
 body {
-  background-color: #FAF8EC;
   font-family: "Fira Sans", Helvetica, Ubuntu, sans-serif;
   font-weight: 400;
   color: #060D03;
   display: block;
   max-width: 1700px;
   margin: 16px auto 0 auto;
-  padding: 0 2vw;
+  padding: 0 5vw;
   overflow-x: hidden;
+  background-color: #FAF8EC;
+  background-image: radial-gradient(rgba(234, 226, 175, 0.8) 1.2px, rgba(250, 248, 236, 0.8) 1.2px);
+  background-size: 24px 24px;
 }
 
 p, li {
-  font-size: calc(0.22vw + 16.9230769231px);
+  font-size: calc(0vw + 18px);
   line-height: 1.9;
 }
 
@@ -65,19 +113,19 @@ h1 {
 }
 
 h2 {
-  font-size: calc(2.5659601605vw + 74.0180815536px);
+  font-size: calc(1.4966955862vw + 43.17391114px);
 }
 
 h3 {
-  font-size: calc(1.1894129298vw + 53.3710930032px);
+  font-size: calc(0.7938625811vw + 35.6220388944px);
 }
 
 h4 {
-  font-size: calc(0.4900753728vw + 37.6981056px);
+  font-size: calc(0.3742869312vw + 28.7913024px);
 }
 
 h5 {
-  font-size: calc(0.1514448vw + 26.2116px);
+  font-size: calc(0.1323504vw + 22.9068px);
 }
 
 img {
@@ -85,7 +133,7 @@ img {
   width: auto;
 }
 
-.button, button {
+.button {
   font-family: "Fira Sans", Helvetica, Ubuntu, sans-serif !important;
 }
 
@@ -188,6 +236,10 @@ nav.section ul.secondary li img {
   width: 2vw;
   min-width: 40px;
   height: auto;
+  transition: filter 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+nav.section ul.secondary li img:hover {
+  filter: invert(66%) sepia(58%) saturate(540%) hue-rotate(54deg) brightness(93%) contrast(93%);
 }
 @media (min-width: 680px) {
   nav.section {
@@ -202,12 +254,13 @@ nav.section ul.secondary li img {
   grid-row: 2;
 }
 #manifest .tabs button {
-  font-size: calc(0.52vw + 15px);
-  font-weight: 400;
+  font-size: calc(0.1323504vw + 22.9068px);
+  font-weight: 300;
+  line-height: 135%;
   background-color: inherit;
   color: #060D03;
   padding: 0.25rem 1rem;
-  margin: 1.5vh 0;
+  margin: 1vh 0;
   display: flex;
   position: relative;
   align-items: center;
@@ -215,13 +268,13 @@ nav.section ul.secondary li img {
   transition: color 200ms ease-in-out;
 }
 #manifest .tabs button span {
-  font-size: calc(1.25vw + 24.0384615385px);
-  font-weight: 300;
+  font-size: calc(0.3742869312vw + 28.7913024px);
+  font-weight: 400;
   margin-right: 2rem;
 }
 @media screen and (min-width: 1024px-1px) and (orientation: landscape), (min-width: 1024px) {
   #manifest .tabs button {
-    padding: 0.25rem 8rem 0.25rem 1rem;
+    padding: 1rem 8rem 1rem 1rem;
   }
   #manifest .tabs button:before {
     position: absolute;
@@ -238,6 +291,12 @@ nav.section ul.secondary li img {
   }
   #manifest .tabs button.active:before {
     left: 0;
+  }
+  #manifest .tabs button.active:hover::before {
+    left: 0;
+  }
+  #manifest .tabs button:hover::before {
+    left: -110%;
   }
 }
 #manifest .tabs a {
@@ -265,7 +324,7 @@ nav.section ul.secondary li img {
 #manifest .tab-contents h3 {
   margin-top: 0;
   margin-bottom: 1rem;
-  font-size: calc(0.4900753728vw + 37.6981056px);
+  font-size: calc(0.3742869312vw + 28.7913024px);
 }
 
 #media #links {
@@ -289,26 +348,52 @@ nav.section ul.secondary li img {
   margin-bottom: 0;
 }
 #media #links a p {
-  font-size: calc(0.1514448vw + 26.2116px);
+  font-size: calc(0.1323504vw + 22.9068px);
   margin-bottom: -0.5rem;
+  transition: filter 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 #media #links a p:after {
   content: "";
-  height: calc(0.1514448vw + 26.2116px);
-  width: calc(0.1514448vw + 26.2116px);
+  height: calc(0.1323504vw + 22.9068px);
+  width: calc(0.1323504vw + 22.9068px);
   background: url("src/assets/images/arrow.svg") no-repeat;
   background-size: contain;
   background-position: center;
   position: relative;
-  top: calc(calc(0.1514448vw + 26.2116px) * 0.2);
+  top: calc(calc(0.1323504vw + 22.9068px) * 0.2);
   left: 1rem;
   display: inline-block;
 }
 #media #links a img.animal {
   height: calc(9.8vw + 80.7692307692px);
   min-height: 12.5rem;
+  overflow: hidden;
   display: block;
   margin: 0 auto;
+  transition: filter 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#media #links a img.animal::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  z-index: 0;
+  border-radius: 50%;
+  background-color: #66CC33;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1), transform 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: 0;
+}
+#media #links a:hover img.animal {
+  filter: invert(66%) sepia(58%) saturate(540%) hue-rotate(54deg) brightness(93%) contrast(93%);
+}
+#media #links a:hover p {
+  color: #66CC33;
+}
+#media #links a:hover p::after {
+  filter: invert(66%) sepia(58%) saturate(540%) hue-rotate(54deg) brightness(93%) contrast(93%);
 }
 @media (min-width: 680px) {
   #media #links {
@@ -344,7 +429,7 @@ nav.section ul.secondary li img {
   grid-row-start: 3;
 }
 #oNas aside p {
-  font-size: calc(0.1514448vw + 26.2116px);
+  font-size: calc(0.1323504vw + 22.9068px);
   margin-bottom: 0;
 }
 #oNas aside ul {
@@ -393,7 +478,7 @@ nav.section ul.secondary li img {
 }
 @media screen and (min-width: 1024px-1px) and (orientation: landscape), (min-width: 1024px) {
   #wspieraj h3 {
-    margin-left: -5vw;
+    margin-left: -15vw;
     grid-row: auto;
   }
 }
@@ -412,7 +497,7 @@ nav.section ul.secondary li img {
 }
 #wspieraj section h4 {
   margin: 0;
-  font-size: calc(0.1514448vw + 26.2116px);
+  font-size: calc(0.1323504vw + 22.9068px);
 }
 #wspieraj section#dolacz {
   grid-row: 4;
@@ -440,7 +525,7 @@ nav.section ul.secondary li img {
 }
 
 footer.section {
-  grid-column-gap: 8rem;
+  grid-column-gap: 16rem;
   justify-items: center;
   width: 60vw;
   position: relative;
@@ -451,10 +536,10 @@ footer.section {
   background-color: #F5F1D9;
 }
 footer.section h2 {
-  font-size: calc(0.1514448vw + 26.2116px);
+  font-size: calc(0.1323504vw + 22.9068px);
 }
 footer.section h3 {
-  font-size: calc(0.1514448vw + 26.2116px);
+  font-size: calc(0.1323504vw + 22.9068px);
   margin-top: 0;
 }
 
